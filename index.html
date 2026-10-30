@@ -556,6 +556,215 @@ mark.k{background:#FFE27A;border-radius:4px;padding:0 2px;font-weight:900}
   .c2-head{grid-template-columns:1fr}
 }
 
+/* ================= DLC：修辭樂園 ================= */
+.rh-hero{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin-bottom:18px;background:linear-gradient(120deg,#FFD6E8 0%,#FFF1B8 50%,#CDEFFF 100%)}
+.rh-hero h2{margin:0 0 4px}
+.rh-hero p{margin:0 0 10px}
+.rh-hero .bsvg,.rh-hero .rh-sp{width:140px;height:auto}
+.rh-final{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-align:left;width:100%;cursor:pointer;color:#fff;background:linear-gradient(120deg,#E8443A,#7B5CFF);border:3px solid var(--ink);border-radius:22px;box-shadow:0 6px 0 var(--ink);padding:12px 16px;margin-bottom:18px}
+.rh-final:active{transform:translateY(4px);box-shadow:0 2px 0 var(--ink)}
+.rh-final .ic{font-size:44px;width:70px;height:70px;border-radius:18px;background:#fff;border:3px solid var(--ink);display:grid;place-items:center}
+.rh-final b{font-size:20px;font-weight:900;display:block}
+.rh-zone{margin-bottom:18px;padding:14px;border:3px solid var(--ink);border-radius:24px;background:#fff;box-shadow:0 6px 0 var(--ink);transition:filter .5s}
+.rh-zone.grey{filter:grayscale(.75)}
+.rh-zone h3{margin:0;font-size:21px;font-weight:900;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rh-zone h3 small{font-size:13px;color:var(--ink2);font-weight:800}
+.rh-zone h3 .zb{width:14px;height:14px;border-radius:50%;background:var(--zc);border:2.5px solid var(--ink)}
+.rh-rides{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:10px}
+.rh-ride{text-align:left;color:var(--ink);cursor:pointer;background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:0 5px 0 var(--ink);padding:10px 12px;display:grid;grid-template-columns:58px 1fr;gap:10px;align-items:center;font-size:13px;line-height:1.4}
+.rh-ride:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.rh-ride .ic{width:58px;height:58px;border-radius:16px;background:var(--zc);border:3px solid var(--ink);display:grid;place-items:center;font-size:32px}
+.rh-ride b{display:block;font-size:17px;font-weight:900}
+.rh-ride .stars{font-size:16px}
+.rh-sp{display:block;width:100%;height:auto;overflow:visible}
+.rh-book{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px}
+.rh-card{border:3px solid var(--ink);border-radius:18px;background:#fff;box-shadow:0 4px 0 var(--ink);padding:10px 8px;text-align:center;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:4px;font-size:13px}
+.rh-card.locked{background:#F1EEF8;cursor:default;color:var(--ink2)}
+.rh-card .sp{width:84px}
+.rh-card b{font-weight:900;font-size:16px}
+.rh-know{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0}
+.rh-know .k{display:grid;grid-template-columns:64px 1fr;gap:10px;align-items:start;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px;font-size:15px;line-height:1.6}
+.rh-know .k b{font-size:18px}
+.rh-know .k .ex{background:#FFFDF2;border-radius:10px;padding:4px 8px;margin-top:4px}
+.rh-tbl{width:100%;border-collapse:collapse;margin:8px 0;font-size:15px;background:#fff}
+.rh-tbl th,.rh-tbl td{border:2px solid var(--ink);padding:4px 8px;text-align:center}
+.rh-tbl th{background:var(--sun)}
+.rh-wrap{overflow-x:auto}
+.rh-hud{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.rh-hud .sp{flex:1}
+.rh-sent{font-size:clamp(19px,2.8vw,23px);line-height:2.2;margin:4px 0 12px}
+.rh-chunk{font:inherit;font-size:inherit;border:0;background:none;padding:2px 3px;margin:0 1px;border-radius:8px;border-bottom:3px dotted #C9C2DC;cursor:pointer;color:var(--ink);line-height:1.6}
+.rh-chunk:hover{background:#F4F1FB}
+.rh-chunk.on{background:#FFE27A;border-bottom-color:var(--ink)}
+.rh-chunk.ok{background:var(--goodBg);border-bottom-color:var(--good);color:#0C7A49;font-weight:800}
+.rh-chunk.no{background:#ECEAF2;color:#8E86A6;border-bottom-color:transparent}
+.rh-chunk.bad{animation:shake .4s;background:var(--badBg)}
+.rh-chunk.sel{background:#DDEBFF;border-bottom-color:#2E7DFF}
+.rh-chunk:disabled{cursor:default}
+.rh-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.rh-slot{border:3px dashed var(--ink2);border-radius:14px;padding:6px 8px;text-align:center;background:#FFFDF2;min-height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.rh-slot small{font-weight:900;color:var(--ink2)}
+.rh-slot .v{font-family:var(--kai);font-size:24px;font-weight:900;min-height:1.2em}
+.rh-slot.cur{border-style:solid;border-color:#2E7DFF;background:#EAF3FF}
+.rh-slot.done{border-style:solid;border-color:var(--good);background:var(--goodBg)}
+.rh-big{display:flex;gap:10px;flex-wrap:wrap}
+.rh-big .btn{font-size:20px;padding:.5em 1.1em}
+.rh-magic{display:flex;align-items:center;justify-content:center;gap:16px;min-height:120px;font-size:64px;border:3px solid var(--ink);border-radius:20px;background:radial-gradient(circle,#3C2A73 0,#2B2140 80%);margin-bottom:12px;position:relative;overflow:hidden}
+.rh-magic .hat{animation:bob 2s ease-in-out infinite}
+.rh-magic .from,.rh-magic .to{display:inline-block}
+.rh-magic.go .from{animation:shrinkOut .6s forwards}
+.rh-magic.go .to{animation:growIn .7s .45s backwards}
+.rh-magic .arr{font-size:32px;color:#FFE27A}
+@keyframes shrinkOut{to{transform:scale(.2) rotate(180deg);opacity:.3}}
+@keyframes growIn{from{transform:scale(0) rotate(-180deg);opacity:0}}
+.rh-magic .lbl{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-size:14px;color:#fff;font-weight:800}
+.rh-belt{position:relative;height:150px;border:3px solid var(--ink);border-radius:18px;overflow:hidden;background:#EEF5FF;margin-bottom:12px}
+.rh-belt .track{position:absolute;left:0;right:0;bottom:16px;height:26px;background:repeating-linear-gradient(90deg,#5E5378 0 18px,#7C7398 18px 36px);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);animation:beltmove 1s linear infinite}
+@keyframes beltmove{to{background-position:-36px 0}}
+.rh-belt .edge{position:absolute;left:0;bottom:0;width:30px;height:60px;background:linear-gradient(90deg,#E8443A,transparent);opacity:.35}
+.rh-belt .card{position:absolute;bottom:48px;width:min(360px,70%);background:#fff;border:3px solid var(--ink);border-radius:14px;padding:8px 12px;font-size:clamp(15px,2.2vw,18px);font-weight:700;line-height:1.5;box-shadow:0 4px 0 var(--ink)}
+.rh-belt .card.fly{transition:transform .5s ease-in,opacity .5s;transform:translateY(120px) scale(.4);opacity:0}
+.rh-belt .card.fall{transition:transform .6s ease-in,opacity .6s;transform:translate(-80px,120px) rotate(-30deg);opacity:0}
+.rh-bins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rh-bin{border:3px solid var(--ink);border-radius:16px;background:var(--bc);box-shadow:0 5px 0 var(--ink);padding:10px 6px;cursor:pointer;color:var(--ink);font-weight:900;font-size:clamp(17px,2.4vw,21px);display:flex;flex-direction:column;align-items:center;gap:2px}
+.rh-bin small{font-size:12px;font-weight:800;opacity:.85}
+.rh-bin:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.rh-bin.bad{animation:shake .4s;filter:saturate(.3)}
+.rh-bin.good{box-shadow:0 0 0 5px rgba(22,167,101,.6),0 5px 0 var(--ink)}
+.rh-photo{position:relative;width:min(320px,100%);aspect-ratio:4/3;margin:0 auto 12px;border:8px solid #fff;outline:3px solid var(--ink);border-radius:6px;background:#FFF6D6;display:grid;place-items:center;font-size:clamp(70px,12vw,96px);box-shadow:0 8px 0 rgba(43,33,64,.25);overflow:hidden}
+.rh-photo .pic{filter:blur(16px) grayscale(1) brightness(.6);transition:filter 1.6s ease;letter-spacing:6px}
+.rh-photo.dev .pic{filter:none}
+.rh-photo .tag{position:absolute;top:6px;left:8px;font-size:13px;font-weight:900;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:0 8px}
+.rh-idiom{display:flex;justify-content:center;gap:8px;margin-bottom:12px}
+.rh-idiom span{width:64px;height:64px;display:grid;place-items:center;font-family:var(--kai);font-size:40px;font-weight:900;border:3px solid var(--ink);border-radius:12px;background:#fff var(--tzg) center/100% 100% no-repeat}
+.rh-idiom span.blank{background-color:#FFFDF2;border-style:dashed;color:#2E5BD8}
+.rh-idiom span.blank.cur{border-color:#2E7DFF;border-style:solid;animation:pulse 1.2s infinite}
+.rh-idiom span.ok{background-color:var(--goodBg);border-color:var(--good);color:var(--good)}
+.rh-scene{display:block;width:100%;height:clamp(170px,30vw,270px);transition:filter 1s}
+.rh-scene .sun{transition:transform 1.4s cubic-bezier(.3,1.3,.5,1);transform:translateY(90px)}
+.rh-scene.s1 .sun{transform:none}
+.rh-scene .whead{transform-box:fill-box;transform-origin:50% 0;transition:transform 1s}
+.rh-scene.s2 .whead{transform:rotate(14deg) translateY(6px)}
+.rh-scene.s3 .wbody{animation:sway 1.6s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+.rh-scene .fl .mouth{opacity:0;transition:opacity .4s}
+.rh-scene.s4 .fl .mouth{opacity:1}
+.rh-scene.s4 .fl .arm{animation:wave .6s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:0 100%}
+@keyframes wave{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
+.rh-scene .notes{opacity:0}
+.rh-scene.s5 .notes{opacity:1}
+.rh-scene .notes text{animation:noteUp 1.6s ease-in-out infinite}
+.rh-scene.s5 .bird{animation:hop .45s ease-in-out infinite alternate;transform-box:fill-box}
+.rh-portal{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:12px}
+.rh-ped{border:3px solid var(--ink);border-radius:18px;background:#fff;padding:10px;text-align:center}
+.rh-ped p{margin:0 0 8px;font-weight:900}
+.rh-ped .two{display:flex;gap:8px;justify-content:center}
+.rh-ped .two .btn{font-size:18px}
+.rh-ped .two .btn.on{background:var(--sun)}
+.rh-gate{width:clamp(90px,16vw,140px);aspect-ratio:1;border-radius:50%;border:4px solid var(--ink);background:conic-gradient(#B49CFF,#5BC8FF,#FF7EB3,#FFC93C,#B49CFF);display:grid;place-items:center;font-size:clamp(38px,6vw,56px);position:relative}
+.rh-gate.spin{animation:spin 1.2s linear}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rh-gate .in{background:#fff;border-radius:50%;width:72%;aspect-ratio:1;display:grid;place-items:center;border:3px solid var(--ink)}
+.rh-chars{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0 12px}
+.rh-ch{width:40px;height:44px;font-family:var(--kai);font-size:25px;font-weight:700;border:2.5px solid var(--ink);border-radius:9px;background:#fff var(--tzg) center/100% 100% no-repeat;cursor:pointer;padding:0;color:var(--ink);display:grid;place-items:center;line-height:1}
+.rh-ch.p{border-color:transparent;background:none;cursor:default;width:20px}
+.rh-ch.glow{background-color:#BDEBFF;border-color:#2E7DFF;animation:pop2 .45s}
+.rh-ch.miss{background-color:#ECEAF2;color:#A49BB8}
+.rh-ch.link{background-color:#FFE27A;border-color:var(--warn)}
+.rh-valley{position:relative;height:130px;border:3px solid var(--ink);border-radius:18px;overflow:hidden;margin-bottom:12px;background:linear-gradient(#C8EEFF,#EAF8FF)}
+.rh-valley svg{position:absolute;inset:0;width:100%;height:100%}
+.rh-valley .wave{position:absolute;left:50%;top:40%;font-weight:900;font-size:22px;color:#2E5BD8;opacity:0;white-space:nowrap}
+.rh-valley.boom .wave{animation:echo 2.4s ease-out forwards}
+.rh-valley.boom .wave:nth-child(3){animation-delay:.5s}
+.rh-valley.boom .wave:nth-child(4){animation-delay:1s}
+@keyframes echo{0%{opacity:1;transform:translateX(-50%) scale(.7)}100%{opacity:0;transform:translateX(-50%) scale(1.8)}}
+.rh-sky{position:relative;height:clamp(260px,40vw,340px);border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:linear-gradient(#BDEBFF,#F3FBFF 80%,#9EE29C 80%);margin-bottom:12px}
+.rh-ball{position:absolute;left:50%;transform:translateX(-50%);width:min(420px,88%);background:#fff;border:3px solid var(--ink);border-radius:22px;padding:10px 14px;font-size:clamp(16px,2.3vw,19px);font-weight:700;line-height:1.55;box-shadow:0 4px 0 var(--ink);text-align:center}
+.rh-ball::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:36px;background:var(--ink)}
+.rh-ball::before{content:"❓";position:absolute;left:-14px;top:-16px;font-size:28px}
+.rh-ball.caught{transition:transform .5s,opacity .5s;opacity:0;transform:translateX(-50%) translateY(120px) scale(.4)}
+.rh-bros{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rh-bro{border:3px solid var(--ink);border-radius:18px;background:#fff;box-shadow:0 5px 0 var(--ink);padding:8px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--ink)}
+.rh-bro:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.rh-bro .sp{width:clamp(56px,9vw,80px)}
+.rh-bro b{font-size:17px;font-weight:900}
+.rh-bro small{font-size:12px;font-weight:800;color:var(--ink2)}
+.rh-bro.jump .sp{animation:jump .5s}
+@keyframes jump{40%{transform:translateY(-22px)}}
+.rh-bro.bad{animation:shake .4s}
+.rh-mirror{display:grid;grid-template-columns:1fr 12px 1fr;gap:6px;align-items:stretch;margin-bottom:12px}
+.rh-mirror .m{border:3px solid var(--ink);border-radius:16px;background:linear-gradient(135deg,#E8F7FF,#fff 60%,#E8F7FF);min-height:64px;padding:8px 10px;display:flex;flex-direction:column;gap:4px;justify-content:center;font-family:var(--kai);font-size:clamp(17px,2.5vw,21px);font-weight:800;text-align:center}
+.rh-mirror .m small{font-family:var(--font);font-size:12px;color:var(--ink2)}
+.rh-mirror .bar2{background:repeating-linear-gradient(#B49CFF 0 8px,#fff 8px 12px);border-radius:6px;border:2px solid var(--ink)}
+.rh-pairs{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.rh-pairs div{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;background:var(--goodBg);border:2.5px solid var(--good);border-radius:12px;padding:4px 10px;font-family:var(--kai);font-weight:800;font-size:17px}
+.rh-tower{display:flex;flex-direction:column-reverse;align-items:center;gap:4px;min-height:60px;margin:6px 0 12px}
+.rh-tower .blk{background:var(--bc,#FFC93C);border:3px solid var(--ink);border-radius:10px;padding:4px 14px;font-family:var(--kai);font-weight:800;font-size:clamp(17px,2.5vw,21px);box-shadow:0 3px 0 var(--ink);animation:drop .45s cubic-bezier(.3,1.5,.5,1) backwards}
+@keyframes drop{from{transform:translateY(-60px);opacity:0}}
+.rh-tslot{display:inline-flex;min-width:2.4em;height:1.5em;align-items:center;justify-content:center;border:2.5px dashed var(--ink2);border-radius:8px;background:#FFFDF2;margin:0 2px;padding:0 4px;vertical-align:middle;font-weight:900;cursor:pointer}
+.rh-tslot.cur{border-style:solid;border-color:#2E7DFF;background:#EAF3FF}
+.rh-tslot.fill{border-style:solid;border-color:var(--ink)}
+.rh-tslot.ok{border-color:var(--good);background:var(--goodBg)}
+.rh-tslot.bad{border-color:var(--bad);background:var(--badBg)}
+.rh-open input{font-family:var(--kai);font-size:20px;font-weight:800;width:6em;border:3px solid var(--ink);border-radius:10px;padding:2px 6px;background:#FFFDF2;margin:0 4px}
+.rh-lab{position:relative;height:clamp(170px,26vw,230px);border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:radial-gradient(circle at 50% 60%,#fff 0,#E9E3FF 70%);display:grid;place-items:center;margin-bottom:12px}
+.rh-lab .obj{font-size:76px;transition:transform .7s cubic-bezier(.3,1.5,.5,1)}
+.rh-lab .obj.big{transform:scale(2.1)}
+.rh-lab .obj.small{transform:scale(.4)}
+.rh-lab .obj.same{animation:shake .5s}
+.rh-lab .wand{position:absolute;left:12px;bottom:10px;font-size:46px;transform-origin:80% 80%}
+.rh-lab.fire .wand{animation:wandz .5s}
+@keyframes wandz{40%{transform:rotate(-30deg)}}
+.rh-lab .beam{position:absolute;left:60px;bottom:50px;height:8px;width:0;border-radius:6px;background:linear-gradient(90deg,#FFC93C,#FF7EB3,#B49CFF);opacity:0}
+.rh-lab.fire .beam{animation:beam .55s ease-out}
+@keyframes beam{0%{width:0;opacity:1}70%{width:42%;opacity:1}100%{width:42%;opacity:0}}
+.rh-modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rh-modes .btn{font-size:clamp(15px,2.2vw,18px);padding:.6em .4em}
+.rh-app{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.rh-app .btn{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:17px;padding:.5em .3em}
+.rh-app .btn span{font-size:34px}
+.rh-show{border:3px solid var(--ink);border-radius:18px;background:#F8F6FF;min-height:150px;padding:12px;margin-bottom:12px;display:grid;place-items:center}
+.rh-saw{width:100%;max-width:520px;position:relative;height:150px}
+.rh-saw .plank{position:absolute;left:4%;right:4%;top:70px;height:12px;background:#C97B3A;border:3px solid var(--ink);border-radius:8px;transform-origin:50% 50%;animation:tilt 2.4s ease-in-out infinite alternate}
+@keyframes tilt{from{transform:rotate(-8deg)}to{transform:rotate(8deg)}}
+.rh-saw .seat{position:absolute;bottom:18px;max-width:46%;background:#fff;border:3px solid var(--ink);border-radius:12px;padding:4px 8px;font-family:var(--kai);font-weight:800;font-size:clamp(14px,2.1vw,17px);text-align:center}
+.rh-saw .fulc{position:absolute;left:50%;top:80px;transform:translateX(-50%);width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:50px solid var(--ink)}
+.rh-train{position:relative;display:flex;align-items:flex-end;gap:26px;flex-wrap:wrap;padding:14px 10px 26px;border:3px solid var(--ink);border-radius:20px;background:linear-gradient(transparent 82%,#BFB6D6 82%),#E9F7FF;margin-bottom:12px;overflow:hidden;transition:gap .6s}
+.rh-train.coupled{gap:4px}
+.rh-train.go .car{transition:transform 1.8s ease-in;transform:translateX(120vw)}
+.rh-train.split .car:nth-child(even){transition:transform .9s;transform:translateX(30px) rotate(3deg)}
+.rh-car{position:relative;background:var(--cc,#FFC93C);border:3px solid var(--ink);border-radius:12px;padding:8px 10px 14px;font-family:var(--kai);font-weight:800;font-size:clamp(16px,2.4vw,20px);box-shadow:0 3px 0 var(--ink);max-width:100%}
+.rh-car::before,.rh-car::after{content:"";position:absolute;bottom:-14px;width:20px;height:20px;border-radius:50%;background:#2B2140;border:3px solid #fff}
+.rh-car::before{left:14px}.rh-car::after{right:14px}
+.rh-car .engine{font-size:26px;margin-right:4px}
+.rh-car mark{background:#FFE27A;border-radius:4px}
+.rh-car .rh-chars{margin:2px 0 0}
+.rh-car .rh-ch{width:34px;height:38px;font-size:22px}
+.rh-rush-top{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin-bottom:10px}
+.rh-rush-top .mm{width:90px}
+.rh-timer{height:14px;border:3px solid var(--ink);border-radius:999px;overflow:hidden;background:#fff;margin-top:6px}
+.rh-timer i{display:block;height:100%;background:linear-gradient(90deg,#45D08A,#FFC93C,#FF5A4E)}
+.rh-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rh-opts .btn{font-size:clamp(18px,2.6vw,22px);padding:.6em .4em}
+.rh-opts .btn.right{background:var(--goodBg);border-color:var(--good)}
+.rh-opts .btn.wrong{background:var(--badBg);border-color:var(--bad)}
+.dlcspot{grid-column:1/-1;background:linear-gradient(120deg,#FFD6E8,#FFF1B8 55%,#CDEFFF)!important}
+.dlcspot .ic{background:#fff!important}
+@media (max-width:640px){
+  .rh-hero{grid-template-columns:1fr}
+  .rh-hero .rh-sp{width:110px}
+  .rh-slots{gap:6px}
+  .rh-slot .v{font-size:19px}
+  .rh-portal{grid-template-columns:1fr;justify-items:center}
+  .rh-ped{width:100%}
+  .rh-idiom span{width:54px;height:54px;font-size:32px}
+  .rh-ch{width:34px;height:38px;font-size:21px}
+  .rh-opts{grid-template-columns:1fr}
+  .rh-final{grid-template-columns:auto 1fr}
+  .rh-final .go2{grid-column:1/-1}
+}
+
+@media (max-width:440px){ .nav button{padding:3px 3px;font-size:11px} .nav button .ni{font-size:20px} }
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
@@ -572,6 +781,7 @@ mark.k{background:#FFE27A;border-radius:4px;padding:0 2px;font-weight:900}
     <button data-go="fill"><span class="ni">💰</span>尋寶</button>
     <button data-go="typo"><span class="ni">🔍</span>偵探</button>
     <button data-go="ch2"><span class="ni">🏰</span>第二章</button>
+    <button data-go="dlc"><span class="ni">🎡</span>樂園</button>
     <button data-go="report"><span class="ni">🏆</span>成績</button>
   </nav>
   <div class="stats">
@@ -648,6 +858,9 @@ mark.k{background:#FFE27A;border-radius:4px;padding:0 2px;font-weight:900}
 
   <!-- CHAPTER 2 -->
   <section class="screen" id="scr-ch2"><div id="c2"></div></section>
+
+  <!-- DLC -->
+  <section class="screen" id="scr-dlc"><div id="dlc"></div></section>
 
   <!-- REPORT -->
   <section class="screen" id="scr-report">
@@ -2066,8 +2279,8 @@ function sceneSVG(kind){
    <path class="ripple" d="M40 196 C100 184 150 206 220 194 S330 176 380 188" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:-.6s"/>
    <path d="M120 210 Q160 150 210 128 Q240 116 270 112" stroke="#E7CFA0" stroke-width="16" fill="none" stroke-linecap="round"/>
    <g transform="translate(44 34)"><rect x="18" y="56" width="14" height="70" fill="#8B5A2B" stroke="${INK}" stroke-width="2.5"/><g class="leaves"><circle cx="25" cy="44" r="34" fill="#3E9B4F" stroke="${INK}" stroke-width="2.5"/><circle cx="0" cy="60" r="20" fill="#47AE5A" stroke="${INK}" stroke-width="2.5"/><circle cx="50" cy="60" r="20" fill="#47AE5A" stroke="${INK}" stroke-width="2.5"/></g>
-    <g class="bird" transform="translate(6 30)"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FFC93C" stroke="${INK}" stroke-width="2"/><path d="M19 7 l6 2 l-6 2z" fill="#FF7A45"/><circle cx="14" cy="6" r="1.5" fill="${INK}"/></g>
-    <g class="bird" transform="translate(40 22)" style="animation-delay:.2s"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FF7EB3" stroke="${INK}" stroke-width="2"/><path d="M1 7 l-6 2 l6 2z" fill="#FF7A45"/><circle cx="6" cy="6" r="1.5" fill="${INK}"/></g></g>
+    <g transform="translate(6 30)"><g class="bird"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FFC93C" stroke="${INK}" stroke-width="2"/><path d="M19 7 l6 2 l-6 2z" fill="#FF7A45"/><circle cx="14" cy="6" r="1.5" fill="${INK}"/></g></g>
+    <g transform="translate(40 22)"><g class="bird" style="animation-delay:.2s"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FF7EB3" stroke="${INK}" stroke-width="2"/><path d="M1 7 l-6 2 l6 2z" fill="#FF7A45"/><circle cx="6" cy="6" r="1.5" fill="${INK}"/></g></g></g>
    <g class="birdnotes" font-size="18" font-weight="900" fill="${INK}"><text x="40" y="54">♪</text><text x="96" y="46" style="animation-delay:.6s">♫</text></g>
   </svg>`;
 }
@@ -2556,6 +2769,700 @@ const _home = RENDER.home;
 RENDER.home = function(){ _home(); ensure(); const done = AREAS.filter(a=>pct(a)===100).length; const nextI = PLAN.findIndex((_,i)=>!S.c2.plan[i]);
   $("#map").insertAdjacentHTML("afterbegin", `<button class="spot c2spot" data-go="ch2" style="--c:#fff"><span class="ic" style="font-size:40px">🏰</span><span><b>第二章：亂字魔大鬧語文王國</b>量詞、擬聲詞、複句、關聯詞、同音形近字：五個地方，五種玩法。<span class="prog">已修復 ${done} / 5${nextI>=0?`　📅 今日：第 ${nextI+1} 日`:""}</span></span></button>`); };
 return {ensure, SYN, snd, stopMole, AREAS, pct};
+})();
+
+/* ---------- DLC：修辭樂園（只用六年級語文工作紙（八）（九）（十）內容） ---------- */
+const RH = {
+ 明喻:{c:"#FFB020",g:"像",def:"有本體、比喻詞、喻體三部分。比喻詞例如：好像、如同、彷彿、似。",ex:"天上的繁星好像一盞盞明亮的小燈泡。"},
+ 暗喻:{c:"#FF7A45",g:"是",def:"有本體同喻體，冇比喻詞（工作紙寫「／」），通常用「是」連住。",ex:"天上的繁星是一盞盞明亮的小燈泡。"},
+ 借喻:{c:"#E8443A",g:"藏",def:"只有喻體，本體同比喻詞都收埋咗，直接用喻體代替本體。",ex:"夜色漸濃，明亮的小燈泡滿佈夜空。"},
+ 擬人:{c:"#FF7EB3",g:"人",def:"把物當作人，賦予人的思想、感情及行為。",ex:"那穿上彩衣的蝴蝶在花間翩翩起舞。"},
+ 擬物:{c:"#B49CFF",g:"物",def:"1. 把人當作物；2. 把甲物當作乙物。",ex:"聽到警車的響號聲，那些流氓全都抱頭鼠竄了。"},
+ 反復:{c:"#5BC8FF",g:"又",def:"連續反復：相同的詞語或句子放在一起，中間不加插其他詞語。間隔反復：相同的詞語或句子間隔出現，中間加插了其他詞語。",ex:"母親，我回來了！我回來了！"},
+ 疑問:{c:"#9AA6BA",g:"？",def:"不知而問。",ex:"這是你的雨傘嗎？"},
+ 設問:{c:"#45D08A",g:"答",def:"自問自答。",ex:"眼前的人是誰？他就是我最敬愛的朱老師。"},
+ 反問:{c:"#7B5CFF",g:"反",def:"明知故問。如果問題的語氣是肯定的，隱藏的答案便是否定的；如果問題的語氣是否定的，隱藏的答案便是肯定的。",ex:"沒有辛勤的耕耘，難道會有豐富的收穫嗎？（隱藏的答案是「沒有」。）"},
+ 對偶:{c:"#3FD1B5",g:"雙",def:"字數相等、結構相同的兩組句子並列在一起。",ex:"白日依山盡，黃河入海流。"},
+ 排比:{c:"#FFC93C",g:"三",def:"三句或以上結構相同、性質相似、意思上有緊密聯繫的句子並列在一起。",ex:"這裏有清澈的小溪，幽靜的山谷，柔和的海風，令人流連忘返。"},
+ 誇張:{c:"#FF5A4E",g:"大",def:"誇大或縮小某事物的特徵，以營造或突出某種感情。分兩種：1. 誇大事物或事情；2. 縮小事物或事情。",ex:"我的肚子餓得可以吃下一頭牛。（誇大了他的食量。）"},
+ 對比:{c:"#2E7DFF",g:"比",def:"把兩個相對或相反的事物，或者一個事物的兩個不同面並列，相互對照。能使事物的特點、形態更顯著，形象更鮮明、突出，亦能把道理說得更深刻。分「兩體對比」同「一體兩面對比」。",ex:"「朱門酒肉臭，路有凍死骨。」杜甫（兩體：「富」與「貧」對）"},
+ 頂真:{c:"#16A765",g:"接",def:"把上句末尾的詞語作為下句開頭的詞語，使鄰接的句子頭尾蟬聯。作用：詞句遞接緊湊，表達生動暢達。",ex:"竹葉燒了，還有竹枝；竹枝斷了，還有竹鞭；竹鞭砍了，還有深埋在地下的竹根。（袁鷹《井岡翠竹》）"}
+};
+const RH_ORDER = ["明喻","暗喻","借喻","擬人","擬物","反復","疑問","設問","反問","對偶","排比","誇張","對比","頂真"];
+
+// 變身魔術：chunk「文字:角色」，角色 本／詞／喻；詞2 = 亦接受作比喻詞
+const RH_MAGIC = [
+ {ch:"天上的|繁星:本|好像:詞|一盞盞明亮的|小燈泡:喻|。",t:"明喻",e:["⭐","💡"]},
+ {ch:"天上的|繁星:本|是|一盞盞明亮的|小燈泡:喻|。",t:"暗喻",e:["⭐","💡"]},
+ {ch:"夜色漸濃，|明亮的|小燈泡:喻|滿佈夜空。",t:"借喻",e:["⭐","💡"],hid:"繁星"},
+ {ch:"媽媽傷心極了，|眼淚:本|彷彿:詞|泉水:喻|般:詞2|湧了出來。",t:"明喻",e:["💧","⛲"]},
+ {ch:"片片|雪花:本|，|如同:詞|潔白的|花瓣:喻|，從天上落下來。",t:"明喻",e:["❄️","🌸"]},
+ {ch:"演奏完畢，台下響起了|雷鳴:喻|似:詞|的|掌聲:本|。",t:"明喻",e:["👏","⛈️"]},
+ {ch:"眼睛:本|是|人類的|靈魂之窗:喻|。",t:"暗喻",e:["👀","🪟"]},
+ {ch:"春天:本|是|剛落地的|娃娃:喻|，散發著無盡的生命力。",t:"暗喻",e:["🌱","👶"]},
+ {ch:"那長長的|巨龍:喻|又在屯門公路上出現，|使屯門的居民飽受交通擠塞之苦。",t:"借喻",e:["🚗","🐉"],hid:"長長的車龍"}
+];
+// 比喻輸送帶：[句子, 類別, 提示, 工作紙（二）]
+const RH_BELT = [
+ ["天上的繁星好像一盞盞明亮的小燈泡。","明喻","有比喻詞「好像」。"],
+ ["天上的繁星是一盞盞明亮的小燈泡。","暗喻","「繁星是小燈泡」：本體＋是＋喻體，冇比喻詞。"],
+ ["夜色漸濃，明亮的小燈泡滿佈夜空。","借喻","只有喻體「小燈泡」，代替咗繁星。"],
+ ["媽媽傷心極了，眼淚彷彿泉水般湧了出來。","明喻","有比喻詞「彷彿」。"],
+ ["片片雪花，如同潔白的花瓣，從天上落下來。","明喻","有比喻詞「如同」。"],
+ ["演奏完畢，台下響起了雷鳴似的掌聲。","明喻","有比喻詞「似」。"],
+ ["眼睛是人類的靈魂之窗。","暗喻","「眼睛是靈魂之窗」。"],
+ ["春天是剛落地的娃娃，散發著無盡的生命力。","暗喻","「春天是娃娃」。"],
+ ["那長長的巨龍又在屯門公路上出現，使屯門的居民飽受交通擠塞之苦。","借喻","只有喻體「巨龍」，代替咗長長嘅車龍。"],
+ ["蜿蜒盤旋的萬里長城好像一條長龍在飛舞。","明喻","有比喻詞「好像」。",1],
+ ["春天的雨是細而密的牛毛。","暗喻","「雨是牛毛」。",1],
+ ["大明湖清澈明亮，如同一面鏡子。","明喻","有比喻詞「如同」。",1],
+ ["我們之間的那一堵牆愈來愈厚，把我們分隔得愈來愈遠。","借喻","只有喻體「牆」，代替咗我哋之間嘅隔膜。",1],
+ ["亂箭從天上落下來，叫街上的行人措手不及。","借喻","只有喻體「亂箭」，本體同比喻詞都冇寫出嚟。",1],
+ ["灰黑色的大鐵鳥，展開翅膀，向西方的天邊飛去了。","借喻","只有喻體「大鐵鳥」，代替咗飛機。",1],
+ ["這次考試的壓力，彷彿巨石般沉重，把我壓得透不過氣來。","明喻","有比喻詞「彷彿……般」。",1],
+ ["深秋的楓葉是燃燒的火焰，不斷向四面八方擴展。","暗喻","「楓葉是火焰」。",1]
+];
+// 成語沖曬館：[四個字, 空格位置, 圖, 意思]
+const RH_IDIOM = [
+ [["心","急","如","焚"],[1,3],"😰🔥","心裏急得好像火燒一樣。"],
+ [["歸","心","似","箭"],[0,3],"🏠🏹","想回家的心，好像射出的箭一樣快。"],
+ [["心","亂","如","麻"],[1,3],"😵🧶","心裏亂得好像一團亂麻。"],
+ [["鐵","證","如","山"],[0,3],"📜⛰️","證據確鑿，好像山一樣推不倒。"],
+ [["揮","金","如","土"],[0,3],"💰🟫","花錢好像撒泥土一樣，形容非常浪費。"],
+ [["貨","如","輪","轉"],[2,3],"📦🛞","貨物好像車輪一樣轉個不停，形容貨物賣得快。"]
+];
+const RH_IDIOM_X = ["火","弓","線","石","沙","車"];
+// 喚醒春天：[文字, 目標編號（1–5）, 0 = 普通, -1/-2 = 有說明]
+const RH_SPRING = [
+ ["春天",0],["悄悄地",1],["來到了大地。",0],["四周是鬱鬱蔥蔥的樹木，",0],["其中最引人注目的是",0],["低垂着頭",2],["的柳樹。",0],["她在微風中",0],["舒展著柔軟的腰肢，翩翩起舞",3],["，彷彿一位舞蹈家。",-1],["樹下是一片嫩綠的草坪，",0],["草坪上滿是紅的、黃的、紫的小花，",0],["她們在盛開，",-2],["在微笑，在向我招手",4],["。鳥兒也在枝頭上",0],["歌唱，熱情地歡迎",5],["春天的來臨。",0]
+];
+// 變身門：from/to 人或物；t A 以物擬人／B 以人擬物／C 以物擬物
+const RH_PORTAL = [
+ {s:"吐露港公路上大霧迷濛，昏黃的路燈張著惺忪的睡眼。",t:"A",a:"路燈",b:"人（張著惺忪的睡眼）",hl:["路燈","張著惺忪的睡眼"],e:["💡","😴"],ws:1},
+ {s:"騙子終於露出狐狸的尾巴了。",t:"B",a:"騙子",b:"狐狸",hl:["騙子","狐狸的尾巴"],e:["🦹","🦊"],ws:1},
+ {s:"月光偷偷溜進屋內，照著徹夜難眠的遊子。",t:"A",a:"月光",b:"人（偷偷溜進屋內）",hl:["月光","偷偷溜進"],e:["🌙","🥷"],ws:1},
+ {s:"葉子飄落在小溪，緩緩地向前航行，向大海進發。",t:"C",a:"葉子",b:"船（航行、進發）",hl:["葉子","航行","進發"],e:["🍃","⛵"],ws:1},
+ {s:"洪水張牙舞爪，蹂躪了長江流域。",t:"C",a:"洪水",b:"猛獸（張牙舞爪）",hl:["洪水","張牙舞爪"],e:["🌊","🐯"],ws:1},
+ {s:"陳先生放棄了移民外國的念頭，決心植根香港。",t:"B",a:"陳先生",b:"植物（植根）",hl:["陳先生","植根"],e:["👨","🌳"],ws:1},
+ {s:"那穿上彩衣的蝴蝶在花間翩翩起舞。",t:"A",a:"蝴蝶",b:"人（穿上彩衣、翩翩起舞）",hl:["蝴蝶","穿上彩衣","翩翩起舞"],e:["🦋","💃"]},
+ {s:"聽到警車的響號聲，那些流氓全都抱頭鼠竄了。",t:"B",a:"流氓",b:"老鼠（抱頭鼠竄）",hl:["流氓","抱頭鼠竄"],e:["🦹","🐭"]},
+ {s:"我們走到郊外，沐浴在微風之中。",t:"C",a:"微風",b:"清水（沐浴）",hl:["沐浴","微風"],e:["🌬️","🛁"]}
+];
+const RH_PT = {A:"以物擬人",B:"以人擬物",C:"以物擬物"};
+// 回音谷（反復）
+const RH_ECHO = [
+ {s:"小妹妹在哭著、哭著，母親立刻溫柔地哄她道：「乖孩子，別再哭了。」",rep:"哭著",t:"連續",fx:["表示情況緊急","表示哭聲連續不斷","表示妹妹的頑皮"],a:1},
+ {s:"母校，你是我們成長的見證；母校，你是我們心中的家鄉；母校，你是一個幸福的大家庭。",rep:"母校",t:"間隔",fx:["強調母校的歷史悠久","表示對母校深厚的感情","表示將要離開母校"],a:1},
+ {s:"看到哥哥的成績表，爸爸掩不住內心的興奮，高聲道：「我實在太高興了！太高興了！」",rep:"太高興了",t:"連續",fx:["突出爸爸興奮喜悅的心情","表示爸爸對哥哥的讚賞","強調家人之間應互相勉勵"],a:0},
+ {s:"母親，我回來了！我回來了！",rep:"我回來了",t:"連續"},
+ {s:"我一定要離開這裏，無論有多大的困難，我一定要離開這裏。",rep:"我一定要離開這裏",t:"間隔"}
+];
+// 問號三兄弟：[句子, 類別, 說明, 反問隱藏答案選項, 正確選項]
+const RH_Q = [
+ ["你會參加下星期舉行的排球比賽嗎？","疑問","真係唔知，所以問。",0,0,1],
+ ["香港的名勝望夫石在哪裡呢？它就在沙田的紅梅谷。","設問","問完即刻自己答：「它就在沙田的紅梅谷。」",0,0,1],
+ ["明天會下雨嗎？","疑問","真係唔知，所以問。",0,0,1],
+ ["你知不知道乘搭甚麼交通工具可以直達香港大學？我必須在八時前到達。","疑問","後面嗰句唔係答案，佢真係唔知所以問。",0,0,1],
+ ["你到底去了哪裡？請你告訴我。","疑問","「請你告訴我」唔係答案，佢仲等緊人答。",0,0,1],
+ ["加入了新的成員，球隊不是更有生氣和活力嗎？","反問","明知故問：問題語氣否定（不是……嗎），隱藏答案就係肯定。",["是，更有生氣和活力","不是"],0,1],
+ ["憑你一面之詞，叫我怎能相信呢？","反問","明知故問：問題語氣肯定（怎能相信），隱藏答案就係否定。",["能夠相信","不能相信"],1,1],
+ ["這個公園的特點是甚麼？就是設計精巧，古樸高雅。","設問","問完即刻自己答：「就是設計精巧，古樸高雅。」",0,0,1],
+ ["在今屆奧運會中，中國共奪得多少面金牌？","疑問","真係唔知，所以問。",0,0,1],
+ ["李麗珊能夠為香港奪得首面奧運金牌，難道只是憑運氣嗎？","反問","明知故問：問題語氣肯定（只是憑運氣），隱藏答案就係否定。",["是，只是憑運氣","不是只憑運氣"],1,1],
+ ["這是你的雨傘嗎？","疑問","不知而問。",0,0],
+ ["現在是甚麼時間？","疑問","不知而問。",0,0],
+ ["眼前的人是誰？他就是我最敬愛的朱老師。","設問","自問自答。",0,0],
+ ["你忘記今天是甚麼日子嗎？今天是媽媽的生日。","設問","自問自答。",0,0],
+ ["沒有辛勤的耕耘，難道會有豐富的收穫嗎？","反問","工作紙：隱藏的答案是「沒有」。",["有","沒有"],1],
+ ["白白放棄這次機會，不是太可惜嗎？","反問","工作紙：隱藏的答案是「是」。",["是","不是"],0]
+];
+// 鏡子：對偶文章 [文字, 組別]
+const RH_MIRROR = [
+ ["雨停了，天空慢慢晴朗，乳白色的薄雲，在綠玉一般的蕉園上頭，緩緩飄動。",0],["雀兒穿梭的飛",1],["，",0],["蝶兒回環的舞",1],["。",0],["小河裏的鴨兒呷呷的叫",2],["，",0],["河畔上的牛兒哞哞的鳴",2],["。",0],["疊疊的蕉果，彷彿散發著迷人的香氣",3],["；",0],["鬱鬱的蕉林，宛如溢出了蜜味的甜漿",3],["，好一個欣欣向榮的田園畫景。",0]
+];
+// 排比積木塔
+const RH_TOWER = [
+ {src:"細雨灑遍大地，山巒、田野和茅屋都濕透了。",pre:"細雨灑遍大地，",cl:["山巒濕透了","{0}濕透了","{1}也{2}了"],post:"。",a:["田野","茅屋","濕透"],swap:[0,1],x:["山巒","大地","細雨"]},
+ {src:"香港的夏天炎熱和潮濕，叫人不好受。",pre:"香港的夏天",cl:["是{0}的","是{1}的","是叫人不好受的"],post:"。",a:["炎熱","潮濕"],swap:[0,1],x:["寒冷","乾燥","好受"]},
+ {src:"這房子光線充足，整潔而寬敞，是一個舒適的地方。",pre:"這房子是",cl:["那麼的光亮","那麼的{0}","那麼的{1}","那麼的舒適"],post:"。",a:["整潔","寬敞"],swap:[0,1],x:["光線","地方","充足"]},
+ {src:"天上的白雲有時像羊兒……變化多端。",pre:"天上的白雲",cl:["有時像羊兒","有時像{0}","有時像{1}","有時像{2}"],post:"，變化多端。",open:1}
+];
+// 誇張魔法棒：[句子, 大/小/無, 物件, 說明]
+const RH_ZAP = [
+ ["看到如此美味的食物，任誰都垂涎三尺。","大","🤤","口水流到三尺咁長？誇大咗口水，突出食物有幾美味。",1],
+ ["你突然出現，把我嚇得連心臟也跳了出來。","大","💓","心臟點會真係跳出嚟？誇大咗驚嚇。",1],
+ ["你房間內的垃圾已堆積如山，還不快點收拾一下。","大","🗑️","垃圾點會有座山咁高？誇大咗垃圾有幾多。",1],
+ ["翩翩起舞的蝴蝶正在慶祝春天的到來。","無","🦋","冇誇張。蝴蝶「慶祝」春天，係把物當作人（擬人）。",1],
+ ["一陣寒風吹來，我冷得全身發抖。","無","🥶","冇誇張。凍到全身發抖，係現實真係會發生嘅事。",1],
+ ["這套電影真是感人，我的淚如泉湧。","大","😭","眼淚好似泉水咁湧出嚟？誇大咗眼淚有幾多。",1],
+ ["小狗的鼻子很靈敏，千里以外的氣味都聞得到。","大","🐶","千里以外都聞到？誇大咗小狗嘅嗅覺。",1],
+ ["我的肚子餓得可以吃下一頭牛。","大","🐮","誇大了他的食量。（工作紙例子）"],
+ ["她說話的聲音比蚊子還小。","小","🦟","縮小了她說話的聲音。（工作紙例子）"]
+];
+// 對比遊樂場：[句子, 類別, 部分]
+const RH_SEE = [
+ ["九月的第一天上課日，小弟弟上學時愁眉不展，但他在放學時卻是滿臉笑容。","對比",["上學時愁眉不展","放學時卻是滿臉笑容"],1],
+ ["嫩綠的小草，參天的大樹，鮮艷的野花一同告訴大家：「春天來了！」","排比",["嫩綠的小草","參天的大樹","鮮艷的野花"],1],
+ ["抽刀斷水水更流，舉杯銷愁愁更愁。","對偶",["抽刀斷水水更流","舉杯銷愁愁更愁"],1],
+ ["疫情期間，尖沙咀的街道人煙稀少；疫情過後，尖沙咀的街道再次人來人往，非常熱鬧。","對比",["疫情期間：人煙稀少","疫情過後：人來人往"],1],
+ ["年輕時，獵人的槍法十分精準。現在老了，他的槍法大不如前。","對比",["年輕時：十分精準","現在老了：大不如前"],1],
+ ["這裏有清澈的小溪，幽靜的山谷，柔和的海風，令人流連忘返。","排比",["清澈的小溪","幽靜的山谷","柔和的海風"]],
+ ["白日依山盡，黃河入海流。","對偶",["白日依山盡","黃河入海流"]],
+ ["雀兒穿梭的飛，蝶兒回環的舞。","對偶",["雀兒穿梭的飛","蝶兒回環的舞"]],
+ ["細雨灑遍大地，山巒濕透了，田野濕透了，茅屋也濕透了。","排比",["山巒濕透了","田野濕透了","茅屋也濕透了"]]
+];
+// 頂真火車：cars, links（第 i 個 link 接 car i 同 car i+1）
+const RH_TRAIN = [
+ {c:["讀書不忘救國","救國不忘讀書"],sep:["，"],end:"。",l:["救國"]},
+ {c:["前人種樹","後人乘涼"],sep:["，"],end:"。",l:null,why:"上句尾係「種樹」，下句頭係「後人」，接唔上。"},
+ {c:["熟能生巧","巧能生精"],sep:["，"],end:"。",l:["巧"]},
+ {c:["人同此心","心同此理"],sep:["，"],end:"。",l:["心"]},
+ {c:["聽一遍不如看一遍","看一遍不如做一遍"],sep:["，"],end:"。",l:["看一遍"]},
+ {c:["父母很辛苦","我要好好孝順他們"],sep:["，"],end:"。",l:null,why:"上句尾係「辛苦」，下句頭係「我」，接唔上。"},
+ {c:["生命就是時間","時間就是生命"],sep:["，"],end:"。",l:["時間"]},
+ {c:["沒有國就沒有家","沒有家又哪裡會有我們呢"],sep:["，"],end:"？",l:["沒有家"]},
+ {c:["夏蟲也為我沉默","沉默是今晚的康橋"],sep:["，"],end:"。",l:["沉默"],src:"徐志摩《再別康橋》：「但我不能放歌，悄悄是別離的笙簫；夏蟲也為我沉默，沉默是今晚的康橋。」"},
+ {c:["竹葉燒了，還有竹枝","竹枝斷了，還有竹鞭","竹鞭砍了，還有深埋在地下的竹根"],sep:["；","；"],end:"。",l:["竹枝","竹鞭"],src:"袁鷹《井岡翠竹》"}
+];
+// 修辭過山車：[句子, 答案, 唔可以做錯誤選項嘅手法（句子同時有）]
+const RH_RUSH = [
+ ["天上的繁星好像一盞盞明亮的小燈泡。","明喻",""],["片片雪花，如同潔白的花瓣，從天上落下來。","明喻",""],["演奏完畢，台下響起了雷鳴似的掌聲。","明喻",""],["蜿蜒盤旋的萬里長城好像一條長龍在飛舞。","明喻","擬人"],["大明湖清澈明亮，如同一面鏡子。","明喻",""],["這次考試的壓力，彷彿巨石般沉重，把我壓得透不過氣來。","明喻","誇張"],
+ ["天上的繁星是一盞盞明亮的小燈泡。","暗喻",""],["眼睛是人類的靈魂之窗。","暗喻",""],["春天是剛落地的娃娃，散發著無盡的生命力。","暗喻","擬人"],["春天的雨是細而密的牛毛。","暗喻",""],["深秋的楓葉是燃燒的火焰，不斷向四面八方擴展。","暗喻","誇張"],
+ ["夜色漸濃，明亮的小燈泡滿佈夜空。","借喻",""],["那長長的巨龍又在屯門公路上出現，使屯門的居民飽受交通擠塞之苦。","借喻",""],["我們之間的那一堵牆愈來愈厚，把我們分隔得愈來愈遠。","借喻",""],["亂箭從天上落下來，叫街上的行人措手不及。","借喻",""],["灰黑色的大鐵鳥，展開翅膀，向西方的天邊飛去了。","借喻",""],
+ ["吐露港公路上大霧迷濛，昏黃的路燈張著惺忪的睡眼。","擬人",""],["月光偷偷溜進屋內，照著徹夜難眠的遊子。","擬人",""],["那穿上彩衣的蝴蝶在花間翩翩起舞。","擬人",""],["翩翩起舞的蝴蝶正在慶祝春天的到來。","擬人",""],
+ ["騙子終於露出狐狸的尾巴了。","擬物","借喻 暗喻"],["陳先生放棄了移民外國的念頭，決心植根香港。","擬物",""],["葉子飄落在小溪，緩緩地向前航行，向大海進發。","擬物","擬人"],["洪水張牙舞爪，蹂躪了長江流域。","擬物","擬人"],["聽到警車的響號聲，那些流氓全都抱頭鼠竄了。","擬物",""],["我們走到郊外，沐浴在微風之中。","擬物",""],
+ ["小妹妹在哭著、哭著，母親立刻溫柔地哄她道：「乖孩子，別再哭了。」","反復",""],["看到哥哥的成績表，爸爸高聲道：「我實在太高興了！太高興了！」","反復",""],["母親，我回來了！我回來了！","反復",""],["我一定要離開這裏，無論有多大的困難，我一定要離開這裏。","反復",""],["母校，你是我們成長的見證；母校，你是我們心中的家鄉；母校，你是一個幸福的大家庭。","反復","排比 暗喻"],
+ ["香港的名勝望夫石在哪裡呢？它就在沙田的紅梅谷。","設問",""],["這個公園的特點是甚麼？就是設計精巧，古樸高雅。","設問",""],["眼前的人是誰？他就是我最敬愛的朱老師。","設問",""],["你忘記今天是甚麼日子嗎？今天是媽媽的生日。","設問",""],
+ ["加入了新的成員，球隊不是更有生氣和活力嗎？","反問",""],["憑你一面之詞，叫我怎能相信呢？","反問",""],["李麗珊能夠為香港奪得首面奧運金牌，難道只是憑運氣嗎？","反問",""],["沒有辛勤的耕耘，難道會有豐富的收穫嗎？","反問",""],["白白放棄這次機會，不是太可惜嗎？","反問",""],
+ ["你會參加下星期舉行的排球比賽嗎？","疑問",""],["明天會下雨嗎？","疑問",""],["在今屆奧運會中，中國共奪得多少面金牌？","疑問",""],["你到底去了哪裡？請你告訴我。","疑問",""],["這是你的雨傘嗎？","疑問",""],
+ ["白日依山盡，黃河入海流。","對偶",""],["嚴以待己，寬以待人。","對偶","對比"],["抽刀斷水水更流，舉杯銷愁愁更愁。","對偶","反復"],["雀兒穿梭的飛，蝶兒回環的舞。","對偶",""],["小河裏的鴨兒呷呷的叫，河畔上的牛兒哞哞的鳴。","對偶",""],
+ ["這裏有清澈的小溪，幽靜的山谷，柔和的海風，令人流連忘返。","排比",""],["嫩綠的小草，參天的大樹，鮮艷的野花一同告訴大家：「春天來了！」","排比","擬人"],["細雨灑遍大地，山巒濕透了，田野濕透了，茅屋也濕透了。","排比","反復"],["這房子是那麼的光亮，那麼的整潔，那麼的寬敞，那麼的舒適。","排比","反復"],
+ ["看到如此美味的食物，任誰都垂涎三尺。","誇張",""],["你突然出現，把我嚇得連心臟也跳了出來。","誇張",""],["你房間內的垃圾已堆積如山，還不快點收拾一下。","誇張","明喻"],["這套電影真是感人，我的淚如泉湧。","誇張","明喻"],["小狗的鼻子很靈敏，千里以外的氣味都聞得到。","誇張",""],["我的肚子餓得可以吃下一頭牛。","誇張",""],["她說話的聲音比蚊子還小。","誇張","明喻 對比"],
+ ["九月的第一天上課日，小弟弟上學時愁眉不展，但他在放學時卻是滿臉笑容。","對比",""],["疫情期間，尖沙咀的街道人煙稀少；疫情過後，尖沙咀的街道再次人來人往，非常熱鬧。","對比","對偶"],["年輕時，獵人的槍法十分精準。現在老了，他的槍法大不如前。","對比",""],["朱門酒肉臭，路有凍死骨。","對比","對偶"],
+ ["讀書不忘救國，救國不忘讀書。","頂真","對偶 反復"],["熟能生巧，巧能生精。","頂真","對偶"],["人同此心，心同此理。","頂真","對偶"],["聽一遍不如看一遍，看一遍不如做一遍。","頂真","對偶 反復"],["生命就是時間，時間就是生命。","頂真","對偶 暗喻 反復"],["沒有國就沒有家，沒有家又哪裡會有我們呢？","頂真","反問 反復"]
+];
+
+/* ================= DLC：修辭樂園 ================= */
+const DLC = (function(){
+"use strict";
+function ensure(){ if (!S.dlc || typeof S.dlc !== "object") S.dlc = {}; const d = {intro:false, st:{}, m:{}, best:0}; for (const k in d) if (S.dlc[k] === undefined) S.dlc[k] = d[k]; }
+const st = k => { ensure(); return S.dlc.st[k] || 0; };
+function miss(label, tip){ ensure(); const o = S.dlc.m[label] || {n:0, t:""}; o.n++; if (tip) o.t = tip; S.dlc.m[label] = o; save(); }
+const root = () => $("#dlc");
+const V = {g:null, raf:0};
+const starTxt = n => '<span class="stars">'+[0,1,2].map(k=>`<span class="${k<n?"on":""}">★</span>`).join("")+'</span>';
+const rate = (ok, tot) => ok/tot >= .9 ? 3 : ok/tot >= .65 ? 2 : 1;
+const PUN = /^[，。、；：「」！？]$/;
+const ccount = s => chars(s).filter(c=>!PUN.test(c)).length;
+function stopLoop(){ if (V.raf) cancelAnimationFrame(V.raf); V.raf = 0; }
+function loop(fn){ stopLoop(); let last = performance.now(); const g = V.g;
+  const tick = now => { const dt = Math.min(.06, (now-last)/1000); last = now;
+    if (current !== "dlc" || V.g !== g || fn(dt) === false){ V.raf = 0; return; }
+    V.raf = requestAnimationFrame(tick); };
+  V.raf = requestAnimationFrame(tick); }
+const later = (ms, fn) => { const g = V.g; setTimeout(()=>{ if (V.g === g) fn(); }, ms); };
+function fbSet(cls, html){ const f = $("#rfb"); if (!f) return; f.className = "fbx "+cls; f.innerHTML = html; }
+function hlWords(s, ws){ let h = esc(s); [...ws].sort((a,b)=>b.length-a.length).forEach(w=>{ h = h.split(esc(w)).join(`\u0001${esc(w)}\u0002`); }); return h.replace(/\u0001/g,'<mark class="k">').replace(/\u0002/g,'</mark>'); }
+
+const RH_KEY = {明喻:"有比喻詞「好像、如同、彷彿、似」",暗喻:"「A 是 B」，冇比喻詞",借喻:"只有喻體，本體收埋咗",擬人:"把物當作人",擬物:"把人當作物，或者把甲物當作乙物",反復:"相同的詞語或句子重複出現",疑問:"不知而問",設問:"自問自答",反問:"明知故問，答案藏喺問題入面",對偶:"兩組句子字數相等、結構相同",排比:"三句或以上結構相同的句子並列",誇張:"誇大或縮小事物的特徵",對比:"兩個相對或相反的事物相互對照",頂真:"上句末尾＝下句開頭"};
+const RIDES = {
+ magic:{ic:"🎩",name:"變身魔術",topic:"本體、比喻詞、喻體",how:"順序撳出句子入面嘅本體、比喻詞、喻體（冇就撳「冇 ／」），帽子就會變魔術。最後判斷係明喻、暗喻定借喻！",dev:["明喻","暗喻","借喻"],extra:()=>`<div class="panel rh-wrap" style="margin-bottom:12px"><table class="rh-tbl"><tr><th>類別</th><th>本體</th><th>比喻詞</th><th>喻體</th></tr><tr><td>1. 明喻</td><td>繁星</td><td>好像</td><td>小燈泡</td></tr><tr><td>2. 暗喻</td><td>繁星</td><td>／</td><td>小燈泡</td></tr><tr><td>3. 借喻</td><td>／</td><td>／</td><td>小燈泡</td></tr></table></div>`},
+ belt:{ic:"🏭",name:"比喻輸送帶",topic:"明喻、暗喻、借喻",how:"句子卡喺輸送帶上面行，跌落去之前撳啱個箱：明喻、暗喻定借喻？連續答啱有連擊加分，愈玩愈快！",dev:["明喻","暗喻","借喻"]},
+ idiom:{ic:"📸",name:"成語沖曬館",topic:"成語中的比喻",how:"揀字填好成語，相片就會慢慢沖曬出嚟。六個成語都有「如」或者「似」，即係都用咗比喻。",dev:["明喻"]},
+ spring:{ic:"🌷",name:"喚醒春天",topic:"擬人",how:"悶悶怪令春天公園變晒灰色！喺文章入面撳出有擬人成分嘅詞句，每搵到一處，公園就醒返一部分。",dev:["擬人"]},
+ portal:{ic:"🌀",name:"變身門",topic:"以物擬人、以人擬物、以物擬物",how:"讀句子：句子講緊嘅嘢原本係人定物？佢被寫成人定物？揀好兩邊，變身門就會啟動。",dev:["擬人","擬物"],extra:()=>`<div class="panel rh-wrap" style="margin-bottom:12px"><table class="rh-tbl"><tr><th>A. 以物擬人</th><th>B. 以人擬物</th><th>C. 以物擬物</th></tr><tr><td>🧸 物 ➜ 🧑 人</td><td>🧑 人 ➜ 🧸 物</td><td>🧸 物 ➜ 🧸 另一種物</td></tr></table></div>`},
+ echo:{ic:"⛰️",name:"回音谷",topic:"反復",how:"向山谷大叫！撳出句子入面重複嘅詞語，聽吓回音，再分連續反復定間隔反復，同埋揀出佢嘅作用。",dev:["反復"]},
+ qbro:{ic:"❓",name:"問號三兄弟",topic:"疑問、設問、反問",how:"問題氣球慢慢跌落嚟，跌到落地之前撳啱嗰位兄弟接住佢。反問仔接到之後，仲有加分題：講出隱藏答案！",dev:["疑問","設問","反問"]},
+ mirror:{ic:"🪞",name:"魔鏡同積木塔",topic:"對偶、排比",how:"第一關：喺田園文章搵出三組對偶句，放入魔鏡。第二關：填積木，將句子改寫成排比句，砌出排比塔。",dev:["對偶","排比"]},
+ zap:{ic:"🪄",name:"誇張魔法棒",topic:"誇張",how:"揀一種魔法：誇大、縮小，定冇誇張？射中句子入面嘅物件，睇吓佢變大定變細！",dev:["誇張"]},
+ seesaw:{ic:"⚖️",name:"對比遊樂場",topic:"對比、排比、對偶",how:"每句句子要坐啱遊樂設施：蹺蹺板（對比）、積木塔（排比）、魔鏡（對偶）。",dev:["對比","排比","對偶"],extra:()=>`<div class="panel rh-wrap" style="margin-bottom:12px"><table class="rh-tbl"><tr><th>類別</th><th>說明</th><th>例子</th></tr><tr><td>兩體對比</td><td style="text-align:left">把兩種根本對立的事物放在一起進行對照，使好的顯得更好，壞的顯得更壞，大的顯得更大，小的顯得更小。</td><td style="text-align:left">「朱門酒肉臭，路有凍死骨。」杜甫<br>兩體：「富」與「貧」對</td></tr><tr><td>一體兩面對比</td><td style="text-align:left">把同一事物的正反兩個方面放在一起來說，能把事理說得更透徹、更全面。</td><td style="text-align:left">「時間是勤奮者的財富，創造者的寶庫；時間是懶惰者的包袱，浪費者的墳墓。」<br>一體：「時間」的正面與反面對比</td></tr></table></div>`},
+ train:{ic:"🚂",name:"頂真火車",topic:"頂真",how:"上一卡車尾同下一卡車頭係同一個詞，車卡先接得埋！先判斷接唔接得埋，再撳出接駁嘅詞，火車就會開出。",dev:["頂真"]},
+ rush:{ic:"🎢",name:"修辭過山車",topic:"全部 14 種修辭",how:"60 秒極速挑戰！每句揀啱修辭手法，就會攻擊悶悶怪。連擊愈高，傷害愈大。打到佢 HP 0 就勝利！",dev:[],extra:()=>`<div class="rh-know">${RH_ORDER.map(n=>`<div class="k" style="grid-template-columns:44px 1fr"><div>${sprite(n)}</div><div><b>${n}</b><div>${esc(RH_KEY[n])}</div></div></div>`).join("")}</div>`}
+};
+const ZONES = [
+ {name:"比喻魔術屋",ws:"工作紙（八）修辭一",c:"#FFD27A",rides:["magic","belt","idiom"]},
+ {name:"比擬變身工場",ws:"工作紙（九）修辭二",c:"#FFC2DB",rides:["spring","portal","echo"]},
+ {name:"修辭城堡",ws:"工作紙（十）修辭三",c:"#BDEBFF",rides:["qbro","mirror","zap","seesaw","train"]}
+];
+const RIDE_UNLOCK = {magic:["明喻","暗喻","借喻"],belt:["明喻","暗喻","借喻"],idiom:["明喻"],spring:["擬人"],portal:["擬人","擬物"],echo:["反復"],qbro:["疑問","設問","反問"],mirror:["對偶","排比"],zap:["誇張"],seesaw:["對比","排比","對偶"],train:["頂真"]};
+const unlocked = n => Object.keys(RIDE_UNLOCK).some(r=>RIDE_UNLOCK[r].includes(n) && st(r)>0);
+
+/* ---------- 角色 ---------- */
+function sprite(name, cls, locked){
+  const r = RH[name], i = RH_ORDER.indexOf(name), c = locked ? "#D9D3E8" : r.c;
+  const top = [
+   `<path d="M50 18 V5" stroke="${INK}" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="5" r="5" fill="#FFC93C" stroke="${INK}" stroke-width="3"/>`,
+   `<path d="M50 18 C40 2 62 -2 60 13Z" fill="#45D08A" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>`,
+   `<path d="M30 26 L23 6 L41 19Z M70 26 L77 6 L59 19Z" fill="${c}" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>`,
+   `<path d="M35 20 L39 6 L50 15 L61 6 L65 20Z" fill="#FFC93C" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>`][i%4];
+  return `<svg class="rh-sp ${cls||""}" viewBox="0 0 100 100" aria-hidden="true">${top}
+   <path d="M16 72 C8 40 28 16 50 16 C72 16 92 40 84 72 C80 93 20 93 16 72Z" fill="${c}" stroke="${INK}" stroke-width="4"/>
+   <ellipse cx="50" cy="68" rx="21" ry="16" fill="#fff" stroke="${INK}" stroke-width="3"/>
+   <text x="50" y="76" text-anchor="middle" font-size="21" font-weight="900" fill="${INK}" font-family="LXGW WenKai TC, Kaiti TC, STKaiti, serif">${locked?"？":r.g}</text>
+   ${locked?"":`<circle cx="37" cy="42" r="5.5" fill="${INK}"/><circle cx="63" cy="42" r="5.5" fill="${INK}"/><circle cx="38.6" cy="40.4" r="1.8" fill="#fff"/><circle cx="64.6" cy="40.4" r="1.8" fill="#fff"/><ellipse cx="27" cy="52" rx="5" ry="3" fill="#FFB3C1"/><ellipse cx="73" cy="52" rx="5" ry="3" fill="#FFB3C1"/>`}
+  </svg>`;
+}
+function mmSVG(cls){ return `<svg class="bsvg ${cls||""}" viewBox="0 0 200 200" aria-hidden="true">
+  <text x="20" y="44" font-size="26" font-weight="900" fill="#8E8AA3" transform="rotate(-14 20 44)" font-family="serif">悶</text>
+  <text x="150" y="58" font-size="22" font-weight="900" fill="#8E8AA3">Zz</text>
+  <path d="M30 150 C14 108 32 52 100 46 C168 52 186 108 170 150 C160 180 40 180 30 150Z" fill="#A9A6B8" stroke="${INK}" stroke-width="6"/>
+  <path d="M46 84 Q60 60 84 70" stroke="#8E8AA3" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <g class="e-n" stroke="${INK}" stroke-width="6" fill="none" stroke-linecap="round"><path d="M60 98 Q72 106 84 98"/><path d="M116 98 Q128 106 140 98"/></g>
+  <g class="e-h" stroke="${INK}" stroke-width="5" stroke-linecap="round"><path d="M64 90 L80 106 M80 90 L64 106 M120 90 L136 106 M136 90 L120 106"/></g>
+  <ellipse cx="100" cy="134" rx="16" ry="20" fill="${INK}"/><ellipse cx="100" cy="142" rx="9" ry="6" fill="#FF8FA8"/>
+ </svg>`; }
+
+/* ---------- 地圖、故事、圖鑑、攻略 ---------- */
+function rbar(title){ return `<div class="c2-bar"><button class="btn sm" data-rh="map">◀ 修辭樂園</button><span class="ttl">${title}</span><span class="sp"></span></div>`; }
+const INTRO = [
+ {art:"🎡", who:"故事", txt:"墨墨收到一張金色門票：「修辭樂園」開幕喇！樂園入面每部機動遊戲，都由一隻修辭精靈打理。"},
+ {art:"mm", who:"悶悶怪", txt:"呵～～欠～～我最憎有趣嘅句子！我已經將樂園所有比喻、擬人、誇張……全部變到好悶，精靈都俾我收埋晒！"},
+ {art:"cat", who:"墨墨", txt:""}
+];
+function renderIntro(i){
+  const p = INTRO[i];
+  const art = p.art==="mm" ? `<div style="width:160px;margin:0 auto">${mmSVG("bob")}</div>` : p.art==="cat" ? `<div style="width:150px;margin:0 auto">${catSVG({cls:"bob"})}</div>` : `<div style="font-size:90px;text-align:center">${p.art}</div>`;
+  const txt = p.art==="cat" ? `${nm()}，我哋去玩晒所有機動遊戲，救返 14 隻修辭精靈！鍾意玩邊部就玩邊部，冇時間限制。最後坐埋修辭過山車，打敗悶悶怪！` : p.txt;
+  root().innerHTML = `<div class="panel" style="max-width:640px;margin:0 auto;text-align:center">${art}<p style="font-weight:900;margin:10px 0 4px">${p.who}</p><p style="font-size:19px;line-height:1.7;margin:0 0 16px">${esc(txt)}</p>
+   <div class="row-btns" style="justify-content:center">${i>0?`<button class="btn sm" data-rh="intro" data-a="${i-1}">◀ 上一頁</button>`:""}${i<INTRO.length-1?`<button class="btn y" data-rh="intro" data-a="${i+1}">下一頁 ▶</button>`:`<button class="btn y" data-rh="introdone">入場！</button>`}</div></div>`;
+  if (p.art==="mm") tone(220,.6,"sine",.1,0,140);
+}
+function renderMap(){
+  ensure(); if (!S.dlc.intro){ renderIntro(0); return; }
+  const got = RH_ORDER.filter(unlocked).length;
+  root().innerHTML = `<div class="panel rh-hero"><div>${got>=14?sprite("頂真","bob"):mmSVG("bob")}</div><div>
+     <h2 class="sec">🎡 DLC：修辭樂園</h2>
+     <p>${got>=14?`${esc(nm())}收集齊 14 隻修辭精靈！樂園全面重開 🎉`:`悶悶怪令樂園啲句子變到好悶。玩機動遊戲、收集修辭精靈，令句子重新生動！已收集 ${got} / 14 隻。`}</p>
+     <div class="row-btns"><button class="btn sm y" data-rh="book">📒 精靈圖鑑（${got} / 14）</button><button class="btn sm" data-rh="intro" data-a="0">📜 重睇故事</button></div></div></div>
+   <button class="rh-final" data-rh="ride" data-a="rush"><span class="ic">🎢</span><span><b>修辭過山車：打敗悶悶怪</b>60 秒極速挑戰，14 種修辭全部混埋一齊。最佳傷害：${S.dlc.best||0}</span><span class="go2">${starTxt(st("rush"))}</span></button>
+   ${ZONES.map(z=>{ const any = z.rides.some(r=>st(r)>0); return `<div class="rh-zone ${any?"":"grey"}" style="--zc:${z.c}"><h3><span class="zb"></span>${z.name} <small>${z.ws}</small></h3>
+     <div class="rh-rides">${z.rides.map(r=>{ const R = RIDES[r]; return `<button class="rh-ride" data-rh="ride" data-a="${r}" style="--zc:${z.c}"><span class="ic">${R.ic}</span><span><b>${R.name}</b>${R.topic}<br>${starTxt(st(r))}</span></button>`; }).join("")}</div></div>`; }).join("")}`;
+}
+function renderBook(){
+  root().innerHTML = rbar("精靈圖鑑") + `<p class="sub">玩機動遊戲就可以收集修辭精靈。撳已收集嘅精靈，睇返佢嘅定義同例子。</p>
+   <div class="rh-book">${RH_ORDER.map(n=>{ const u = unlocked(n); const by = Object.keys(RIDE_UNLOCK).filter(r=>RIDE_UNLOCK[r].includes(n)).map(r=>RIDES[r].name);
+     return `<button class="rh-card ${u?"":"locked"}" ${u?`data-rh="spr1" data-a="${n}"`:"disabled"}><span class="sp">${sprite(n, u?"bob":"", !u)}</span><b>${u?n+"精靈":"？？？"}</b><span>${u?esc(RH_KEY[n]):"玩「"+by[0]+"」解鎖"}</span></button>`; }).join("")}</div>`;
+}
+function spriteModal(n){ modal(`<div style="width:120px;margin:0 auto">${sprite(n,"bob")}</div><h3>${n}精靈</h3><p style="text-align:left">${esc(RH[n].def)}</p><div class="fbx info" style="text-align:left">例：${esc(RH[n].ex)} ${sayBtn(RH[n].ex.replace(/（.*?）/g,""),true)}</div><div class="row"><button class="btn y" data-close>收埋</button></div>`); }
+function guide(r){
+  const R = RIDES[r];
+  root().innerHTML = rbar(R.name) + `<div class="panel" style="margin-bottom:12px"><h2 class="sec" style="font-size:24px">${R.ic} ${R.name}</h2><p style="margin:0">🎮 玩法：${esc(R.how)}</p></div>
+   ${R.extra?R.extra():""}
+   ${R.dev.length?`<div class="rh-know">${R.dev.map(n=>`<div class="k"><div>${sprite(n)}</div><div><b>${n}</b><div>${esc(RH[n].def)}</div><div class="ex">例：${esc(RH[n].ex)} ${sayBtn(RH[n].ex.replace(/（.*?）/g,""),true)}</div></div></div>`).join("")}</div>`:""}
+   <div style="text-align:center;margin-top:8px"><button class="btn y" data-rh="play" data-a="${r}" style="font-size:20px">開始玩 ▶</button></div>`;
+}
+function finish(r, n, msg){
+  ensure(); const before = RH_ORDER.filter(unlocked);
+  S.dlc.st[r] = Math.max(S.dlc.st[r]||0, n); save();
+  const newly = RH_ORDER.filter(x=>unlocked(x) && !before.includes(x));
+  SFX.win(); confetti(90);
+  const z = ZONES.find(z=>z.rides.includes(r)), nextR = z ? z.rides[z.rides.indexOf(r)+1] : null;
+  modal(`<div style="width:110px;margin:0 auto">${catSVG({cls:"happy bob"})}</div><h3>完成！</h3>
+   <div class="bigstars">${[0,1,2].map(k=>`<span class="${k<n?"on":""}" style="animation-delay:${.15+k*.2}s">★</span>`).join("")}</div><p style="margin:4px 0">${msg}</p>
+   ${newly.length?`<p style="font-weight:900;margin:10px 0 6px">✨ 新精靈加入！</p><div class="rh-book" style="grid-template-columns:repeat(${Math.min(newly.length,3)},minmax(0,1fr))">${newly.map(x=>`<div class="rh-card"><span class="sp">${sprite(x,"bob")}</span><b>${x}精靈</b></div>`).join("")}</div>`:""}
+   <div class="row"><button class="btn y" data-rh="play" data-a="${r}">↺ 再玩</button>${nextR?`<button class="btn g" data-rh="ride" data-a="${nextR}">下一個遊戲 ▶</button>`:""}<button class="btn" data-rh="map">返回樂園</button></div>`);
+}
+
+/* ---------- 🎩 變身魔術 ---------- */
+const SLOT_ROLE = ["本","詞","喻"], SLOT_NAME = ["本體","比喻詞","喻體"];
+const parseCh = s => s.split("|").map(x=>{ const [t, r] = x.split(":"); return {t, r:r||""}; });
+const plainM = i => parseCh(RH_MAGIC[i].ch).map(c=>c.t).join("");
+function magicStart(){ V.g = {k:"magic", i:0, ok:0}; magicItem(); }
+function magicItem(){ const g = V.g; g.ch = parseCh(RH_MAGIC[g.i].ch); g.slot = 0; g.vals = ["","",""]; g.phase = "pick"; g.bad = false; magicDraw(); }
+function magicDraw(fb){
+  const g = V.g, it = RH_MAGIC[g.i], done = g.phase === "done";
+  root().innerHTML = rbar(`變身魔術 ${g.i+1} / ${RH_MAGIC.length}`) + `
+   <div class="rh-magic ${done?"go":""}">${done?`<span class="from">${it.e[0]}</span><span class="arr">✨➜</span><span class="to">${it.e[1]}</span>`:`<span class="hat">🎩</span>`}<span class="lbl">${done?it.t+"！":"搵齊三樣材料，帽子先變到魔術"}</span></div>
+   <div class="panel"><div class="rh-sent">${g.ch.map((c,k)=>PUN.test(c.t)?esc(c.t):`<button class="rh-chunk ${c.r&&g.vals.includes(c.t)?"ok":""}" data-rh="mch" data-a="${k}" ${g.phase!=="pick"?"disabled":""}>${esc(c.t)}</button>`).join("")}</div>
+   <div class="rh-slots">${SLOT_NAME.map((n,k)=>`<div class="rh-slot ${k===g.slot&&g.phase==="pick"?"cur":""} ${g.vals[k]?"done":""}"><small>${n}</small><span class="v">${esc(g.vals[k])}</span>${k===g.slot&&g.phase==="pick"?`<button class="btn sm" data-rh="mnone">冇 ／</button>`:""}</div>`).join("")}</div>
+   ${g.phase==="pick"?`<p style="font-weight:800;margin:0;color:var(--ink2)">👆 撳句子入面嘅「${SLOT_NAME[g.slot]}」；句子冇嘅話，撳「冇 ／」。</p>`:""}
+   ${g.phase==="type"?`<p style="font-weight:900;margin:0 0 8px">材料齊喇！呢句係邊種比喻？</p><div class="rh-big">${["明喻","暗喻","借喻"].map(t=>`<button class="btn" data-rh="mtype" data-a="${t}" style="background:${RH[t].c}">${t}</button>`).join("")}</div>`:""}
+   <div class="fbx ${fb?fb[0]:""}" id="rfb">${fb?fb[1]:""}</div>
+   ${done?`<div style="margin-top:12px"><button class="btn y" data-rh="mnext">${g.i<RH_MAGIC.length-1?"下一句 ▶":"完成 🎉"}</button></div>`:""}</div>`;
+}
+function magicWrong(t){ const g = V.g; SFX.bad(); if (!g.bad){ g.bad = true; miss(`比喻：${plainM(g.i)}`, RH_MAGIC[g.i].t); } fbSet("bad", esc(t)); }
+function magicAdv(){ const g = V.g; g.slot++; if (g.slot >= 3) g.phase = "type"; SFX.good(); magicDraw(); }
+function magicChunk(k){ const g = V.g; if (g.phase !== "pick") return; const c = g.ch[k], need = SLOT_ROLE[g.slot];
+  if (c.r === need || (need === "詞" && c.r === "詞2")){ g.vals[g.slot] = c.t; magicAdv(); return; }
+  magicWrong(c.t === "是" && need === "詞" ? "工作紙入面，暗喻嘅比喻詞寫「／」。「是」只係連住本體同喻體，撳「冇 ／」。" : `「${c.t}」唔係${SLOT_NAME[g.slot]}，再搵吓！`); }
+function magicNone(){ const g = V.g; if (g.phase !== "pick") return; const need = SLOT_ROLE[g.slot];
+  if (!g.ch.some(c=>c.r===need)){ g.vals[g.slot] = "／"; magicAdv(); } else magicWrong(`句子入面有${SLOT_NAME[g.slot]}㗎，再搵吓！`); }
+function magicType(t){ const g = V.g, it = RH_MAGIC[g.i]; if (g.phase !== "type") return;
+  if (t === it.t){ if (!g.bad) g.ok++; g.phase = "done"; SFX.chest();
+    const row = `<div class="rh-wrap"><table class="rh-tbl"><tr><th>類別</th><th>本體</th><th>比喻詞</th><th>喻體</th></tr><tr><td>${it.t}</td><td>${esc(g.vals[0])}</td><td>${esc(g.vals[1])}</td><td>${esc(g.vals[2])}</td></tr></table></div>`;
+    magicDraw(["good", `✔ ${it.t}！${it.hid?`（本體「${esc(it.hid)}」冇寫出嚟，直接用「${esc(g.vals[2])}」代替。）`:""}${row}`]);
+  } else magicWrong(`唔係${t}。記住：三樣都有＝明喻；冇比喻詞＝暗喻；只得喻體＝借喻。`); }
+
+/* ---------- 🏭 比喻輸送帶 ---------- */
+const BIN_HINT = {明喻:"有像、如同、彷彿、似",暗喻:"A 是 B",借喻:"只有喻體"};
+const BIN_WHY = {明喻:"明喻要有比喻詞（像、如同、彷彿、似）。",暗喻:"暗喻係「A 是 B」，有本體同喻體，冇比喻詞。",借喻:"借喻只有喻體，冇本體。"};
+function beltStart(){
+  const all = RH_BELT.map((_,i)=>i), ws = all.filter(i=>RH_BELT[i][3]), rest = shuffle(all.filter(i=>!RH_BELT[i][3])).slice(0,4);
+  V.g = {k:"belt", q:shuffle([...ws, ...rest]), done:0, ok:0, combo:0, score:0, missed:new Set(), cur:null, pos:1, pause:0, tot:ws.length+rest.length};
+  root().innerHTML = rbar("比喻輸送帶") + `<div class="rh-hud"><span class="chip">⭐ <span id="bsc">0</span></span><span class="chip">🔥 連擊 <span id="bco">0</span></span><span class="chip">📦 <span id="bdn">0</span> / ${V.g.tot}</span></div>
+   <div class="rh-belt" id="belt"><div class="edge"></div><div class="track"></div></div>
+   <div class="rh-bins">${["明喻","暗喻","借喻"].map(t=>`<button class="rh-bin" data-rh="bin" data-a="${t}" style="--bc:${RH[t].c}" id="bin-${t}">${t}<small>${BIN_HINT[t]}</small></button>`).join("")}</div>
+   <div class="fbx info" id="rfb">句子卡跌落去之前，撳啱個箱！</div>`;
+  beltNext(); beltLoop();
+}
+function beltNext(){
+  const g = V.g; if (!g.q.length){ stopLoop(); later(500, ()=>finish("belt", rate(g.ok, g.tot), `一次答啱 ${g.ok} / ${g.tot} 張，得分 ${g.score}。`)); return; }
+  g.cur = g.q.shift(); g.pos = 1; g.pause = 0; g.wrong = false; g.T = Math.max(9, 15 - g.done*.5);
+  const b = $("#belt"); if (!b) return; const old = $("#bcard"); if (old) old.remove();
+  const c = document.createElement("div"); c.className = "card"; c.id = "bcard"; c.textContent = RH_BELT[g.cur][0]; b.appendChild(c); placeCard();
+}
+function placeCard(){ const g = V.g, b = $("#belt"), c = $("#bcard"); if (!b || !c) return; const W = b.clientWidth - c.offsetWidth - 8; c.style.left = (4 + Math.max(0, W) * g.pos) + "px"; }
+function beltLoop(){ loop(dt=>{ const g = V.g; if (g.cur === null) return true; if (g.pause > 0){ g.pause -= dt; return true; }
+  g.pos -= dt / g.T; placeCard();
+  if (g.pos <= 0){ const c = $("#bcard"); if (c){ c.classList.add("fall"); c.id = ""; }
+    g.combo = 0; $("#bco").textContent = 0; SFX.bad(); g.missed.add(g.cur); g.q.push(g.cur);
+    fbSet("bad", "哎呀，跌咗落去！呢張卡稍後會再出現。"); g.cur = null; later(700, beltNext); }
+  return true; }); }
+function beltBin(t){
+  const g = V.g; if (!g || g.cur === null || g.pause > 0) return; const it = RH_BELT[g.cur];
+  if (t === it[1]){
+    if (!g.missed.has(g.cur) && !g.wrong) g.ok++; g.done++; g.combo++; g.score += 100 + g.combo*20; SFX.chest();
+    const c = $("#bcard"); if (c){ c.classList.add("fly"); c.id = ""; } flash($("#bin-"+t), "good", 700);
+    $("#bsc").textContent = g.score; $("#bco").textContent = g.combo; $("#bdn").textContent = g.done;
+    fbSet("good", `✔ ${t}：${esc(it[2])}`); g.cur = null; later(1500, beltNext);
+  } else {
+    SFX.bad(); flash($("#bin-"+t), "bad", 450); g.combo = 0; $("#bco").textContent = 0;
+    if (!g.wrong){ g.wrong = true; miss(`比喻：${it[0]}`, `${it[1]}：${it[2]}`); }
+    fbSet("bad", `唔係${t}！${BIN_WHY[t]}`); g.pause = .6;
+  }
+}
+
+/* ---------- 📸 成語沖曬館 ---------- */
+function idiomStart(){ V.g = {k:"idiom", i:0, ok:0}; idiomItem(); }
+function idiomItem(){ const g = V.g, it = RH_IDIOM[g.i]; g.fill = []; g.bad = false;
+  const ans = it[1].map(k=>it[0][k]);
+  const others = shuffle([...new Set([...RH_IDIOM.flatMap(x=>x[1].map(k=>x[0][k])), ...RH_IDIOM_X])].filter(c=>!ans.includes(c))).slice(0,4);
+  g.pool = shuffle([...ans, ...others]); idiomDraw(); }
+function idiomDraw(){
+  const g = V.g, it = RH_IDIOM[g.i], done = g.fill.length === it[1].length;
+  root().innerHTML = rbar(`成語沖曬館 ${g.i+1} / ${RH_IDIOM.length}`) + `<div class="panel">
+   <div class="rh-photo ${done?"dev":""}" id="photo"><span class="tag">相 ${g.i+1}</span><span class="pic">${it[2]}</span></div>
+   <div class="rh-idiom">${it[0].map((c,k)=>{ const bi = it[1].indexOf(k); if (bi < 0) return `<span>${c}</span>`; const v = g.fill[bi]; return `<span class="blank ${v?"ok":""} ${bi===g.fill.length&&!done?"cur":""}">${v||""}</span>`; }).join("")}</div>
+   ${done?`<div class="fbx good">✔ ${it[0].join("")}：${esc(it[3])} ${sayBtn(it[0].join(""),true)}<br><small>成語入面有「${it[0].includes("似")?"似":"如"}」，所以都係一種比喻。</small></div>
+     <div style="margin-top:12px;text-align:center"><button class="btn y" data-rh="inext">${g.i<RH_IDIOM.length-1?"下一張相 ▶":"完成 🎉"}</button></div>`
+   :`<p style="font-weight:800;text-align:center;margin:0 0 8px">揀字填成語，相片就會沖曬出嚟：</p><div class="chips" style="justify-content:center">${g.pool.map(c=>`<button class="chip2" data-rh="ich" data-a="${c}" style="font-size:28px">${c}</button>`).join("")}</div><div class="fbx" id="rfb"></div>`}</div>`;
+}
+function idiomCh(c, el){ const g = V.g, it = RH_IDIOM[g.i]; if (g.fill.length >= it[1].length) return; const need = it[0][it[1][g.fill.length]];
+  if (c === need){ g.fill.push(c); if (g.fill.length === it[1].length){ if (!g.bad) g.ok++; SFX.chest(); } else SFX.good(); idiomDraw(); }
+  else { SFX.bad(); el.classList.add("bad"); if (!g.bad){ g.bad = true; miss(`成語中的比喻：${it[0].join("")}`, it[3]); } fbSet("bad", `「${c}」唔啱，睇吓相片嘅影子再諗吓！`); } }
+
+/* ---------- 🌷 喚醒春天 ---------- */
+const SPR_MSG = {1:"春天「悄悄地」嚟，好似人咁靜靜雞行過嚟。",2:"柳樹好似人咁「低垂着頭」。",3:"柳樹好似舞蹈家咁「舒展著柔軟的腰肢，翩翩起舞」。",4:"小花好似人咁「在微笑，在向我招手」。",5:"鳥兒好似人咁「歌唱，熱情地歡迎」春天。"};
+function springScene(){ const fl = [[210,"#FF5A4E"],[262,"#FFC93C"],[314,"#B49CFF"]];
+  return `<svg class="rh-scene" id="rhs" viewBox="0 0 400 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="filter:grayscale(1)">
+  <rect width="400" height="210" fill="#C8EEFF"/>
+  <g class="sun"><circle cx="330" cy="46" r="26" fill="#FFC93C" stroke="${INK}" stroke-width="3"/><path d="M330 10 v-8 M372 46 h8 M288 46 h-8 M358 18 l5 -5 M302 18 l-5 -5" stroke="#FFB020" stroke-width="4" stroke-linecap="round"/></g>
+  <path d="M0 150 Q100 126 200 144 T400 136 V210 H0Z" fill="#8FD67E"/>
+  <g transform="translate(70 34)"><g class="wbody"><rect x="22" y="44" width="14" height="86" fill="#8B5A2B" stroke="${INK}" stroke-width="2.5"/>
+   <g class="whead"><ellipse cx="29" cy="42" rx="46" ry="26" fill="#5FB356" stroke="${INK}" stroke-width="2.5"/>
+    <path d="M-10 46 q-4 30 2 56 M5 54 q-4 30 2 54 M20 58 q-2 28 2 50 M38 58 q2 28 -2 50 M53 54 q4 30 -2 54 M68 46 q4 30 -2 56" stroke="#3E9B4F" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <g transform="translate(50 4)"><g class="bird"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FF7EB3" stroke="${INK}" stroke-width="2"/><path d="M19 7 l6 2 l-6 2z" fill="#FF7A45"/><circle cx="14" cy="6" r="1.6" fill="${INK}"/></g></g></g></g>
+   <g class="notes" font-size="18" font-weight="900" fill="${INK}"><text x="84" y="2">♪</text><text x="102" y="16" style="animation-delay:.6s">♫</text></g></g>
+  ${fl.map(([x,c],i)=>`<g class="fl" transform="translate(${x} 150)"><path d="M0 0 v40" stroke="#3E9B4F" stroke-width="4"/><path class="arm" d="M0 22 q12 -8 18 -2" stroke="#3E9B4F" stroke-width="4" fill="none" stroke-linecap="round" style="animation-delay:${i*.2}s"/>${[0,72,144,216,288].map(a=>`<circle cx="${(Math.cos(a*Math.PI/180)*12).toFixed(1)}" cy="${(Math.sin(a*Math.PI/180)*12).toFixed(1)}" r="9" fill="${c}" stroke="${INK}" stroke-width="2"/>`).join("")}<circle r="9" fill="#FFE27A" stroke="${INK}" stroke-width="2"/><circle cx="-3" cy="-2" r="1.5" fill="${INK}"/><circle cx="3" cy="-2" r="1.5" fill="${INK}"/><path class="mouth" d="M-4 2 q4 4 8 0" stroke="${INK}" stroke-width="1.8" fill="none"/></g>`).join("")}
+ </svg>`; }
+function springStart(){ V.g = {k:"spring", found:new Set(), err:0, tapped:new Set()};
+  root().innerHTML = rbar(`喚醒春天`) + `<div class="scene-wrap">${springScene()}</div>
+   <div class="panel"><p style="font-weight:800;margin:0 0 6px">撳出有擬人成分嘅詞句（共 5 處）：<span id="sprn">0</span> / 5</p>
+   <div class="rh-sent" style="font-size:clamp(17px,2.4vw,20px)">${RH_SPRING.map(([t],k)=>`<button class="rh-chunk" data-rh="spr" data-a="${k}" id="sp${k}">${esc(t)}</button>`).join("")}</div>
+   <div class="fbx" id="rfb"></div></div>`; }
+function springTap(k){ const g = V.g, [t, id] = RH_SPRING[k], el = $("#sp"+k); if (!el || el.disabled) return;
+  if (id > 0){ g.found.add(id); el.classList.add("ok"); el.disabled = true; SFX.chest();
+    const sc = $("#rhs"); sc.classList.add("s"+id); const n = g.found.size; sc.style.filter = `grayscale(${(1 - n/5).toFixed(2)})`; $("#sprn").textContent = n;
+    fbSet("good", "✔ "+esc(SPR_MSG[id]));
+    if (n === 5) later(1500, ()=>finish("spring", g.err===0?3:g.err<=2?2:1, `搵齊 5 處擬人，撳錯 ${g.err} 次。`)); return; }
+  el.classList.add("no"); el.disabled = true;
+  if (id === -1) fbSet("info", "「彷彿一位舞蹈家」係比喻（明喻），今次要搵嘅係擬人詞句。");
+  else if (id === -2) fbSet("info", "花本身就會盛開，呢度唔算擬人。再搵吓小花仲做咗咩人先會做嘅動作？");
+  else { g.err++; SFX.bad(); if (g.err === 1) miss("擬人：春天文章（悄悄地、低垂着頭、翩翩起舞、微笑招手、歌唱歡迎）", ""); fbSet("bad", `「${esc(t)}」冇擬人成分，再搵吓！`); } }
+
+/* ---------- 🌀 變身門 ---------- */
+function portalStart(){ V.g = {k:"portal", q:shuffle(RH_PORTAL.map((_,i)=>i)), i:0, ok:0}; portalItem(); }
+function portalItem(){ const g = V.g; g.from = null; g.to = null; g.bad = 0; g.done = false; portalDraw(); }
+function portalDraw(fb){
+  const g = V.g, it = RH_PORTAL[g.q[g.i]];
+  const ped = (side, label) => `<div class="rh-ped"><p>${label}</p><div class="two">${["人","物"].map(v=>`<button class="btn ${g[side]===v?"on":""}" data-rh="pside" data-a="${side}:${v}" ${g.done?"disabled":""}>${v==="人"?"🧑 人":"🧸 物"}</button>`).join("")}</div></div>`;
+  root().innerHTML = rbar(`變身門 ${g.i+1} / ${g.q.length}`) + `<div class="panel"><div class="rh-sent">${g.done?hlWords(it.s, it.hl):esc(it.s)}</div>
+   <div class="rh-portal">${ped("from","句子講緊嘅嘢，原本係：")}<div class="rh-gate ${g.done?"spin":""}"><div class="in">${g.done?it.e[1]:(g.from?it.e[0]:"🌀")}</div></div>${ped("to","佢被寫成：")}</div>
+   <div class="fbx ${fb?fb[0]:"info"}" id="rfb">${fb?fb[1]:"揀好左右兩邊，變身門就會啟動。"}</div>
+   ${g.done?`<div style="margin-top:12px"><button class="btn y" data-rh="pnext">${g.i<g.q.length-1?"下一句 ▶":"完成 🎉"}</button></div>`:""}</div>`;
+}
+function portalSide(arg){ const g = V.g; if (g.done) return; const [side, v] = arg.split(":"); g[side] = v; SFX.click();
+  if (!(g.from && g.to)){ portalDraw(); return; }
+  const it = RH_PORTAL[g.q[g.i]];
+  if (g.from === "人" && g.to === "人"){ g.to = null; portalDraw(["info","人寫成人，就唔係比擬喇。再諗吓！"]); return; }
+  const t = g.from === "物" && g.to === "人" ? "A" : g.from === "人" ? "B" : "C";
+  if (t === it.t){ g.done = true; if (!g.bad) g.ok++; SFX.chest(); portalDraw(["good", `✔ ${RH_PT[t]}：「${esc(it.a)}」被寫成${esc(it.b)}。`]); }
+  else { g.bad++; SFX.bad(); if (g.bad === 1) miss(`比擬：${it.s}`, `${RH_PT[it.t]}：${it.a}寫成${it.b}`); g.from = null; g.to = null;
+    portalDraw(["bad", esc(g.bad >= 2 ? `提示：句子講緊「${it.a}」，佢被寫成${it.b}。` : `變身失敗！再睇清楚句子講緊「${it.a}」：佢原本係人定物？被寫成咩？`)]); } }
+
+/* ---------- ⛰️ 回音谷 ---------- */
+function echoStart(){ V.g = {k:"echo", i:0, ok:0}; echoItem(); }
+function echoItem(){ const g = V.g, it = RH_ECHO[g.i]; g.step = 1; g.bad = false; g.miss = []; g.ranges = [];
+  const cs = chars(it.s), rc = chars(it.rep);
+  for (let k = 0; k <= cs.length - rc.length; k++){ if (cs.slice(k, k+rc.length).join("") === it.rep){ g.ranges.push([k, k+rc.length]); k += rc.length - 1; } }
+  echoDraw(); }
+const inR = (g, k) => g.ranges.some(([a,b])=>k>=a && k<b);
+function echoDraw(fb, boom){
+  const g = V.g, it = RH_ECHO[g.i];
+  const tiles = chars(it.s).map((c,k)=>{ const p = PUN.test(c); const cls = p ? "p" : (g.step>1 && inR(g,k) ? "glow" : g.miss.includes(k) ? "miss" : ""); return `<button class="rh-ch ${cls}" data-rh="ech" data-a="${k}" ${p||g.step>1?"disabled":""}>${esc(c)}</button>`; }).join("");
+  let step = "";
+  if (g.step === 1) step = `<p style="font-weight:800;margin:0">👆 第一步：撳出重複出現嘅詞語。</p>`;
+  if (g.step === 2) step = `<p style="font-weight:800;margin:0 0 8px">第二步：「${esc(it.rep)}」係點樣重複？</p><div class="rh-big"><button class="btn b" data-rh="etype" data-a="連續">🔊🔊 連續反復<br><small>緊貼住，中間冇加插其他詞語</small></button><button class="btn v" data-rh="etype" data-a="間隔">🔊 … 🔊 間隔反復<br><small>中間加插咗其他詞語</small></button></div>`;
+  if (g.step === 3) step = `<p style="font-weight:800;margin:0 0 8px">第三步：呢個反復有咩作用？</p><div class="rh-big" style="flex-direction:column;align-items:stretch">${it.fx.map((f,k)=>`<button class="btn" data-rh="efx" data-a="${k}">${esc(f)}</button>`).join("")}</div>`;
+  root().innerHTML = rbar(`回音谷 ${g.i+1} / ${RH_ECHO.length}`) + `<div class="rh-valley" id="valley"><svg viewBox="0 0 400 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 130 L60 30 L120 100 L180 20 L240 90 L300 10 L360 80 L400 40 V130Z" fill="#B7BED0" stroke="${INK}" stroke-width="3"/><path d="M0 130 L80 72 L150 120 L230 62 L310 116 L400 82 V130Z" fill="#7CCB6B" stroke="${INK}" stroke-width="3"/></svg><span class="wave">${esc(it.rep)}！</span><span class="wave">${esc(it.rep)}！</span><span class="wave">${esc(it.rep)}……</span></div>
+   <div class="panel"><div class="rh-chars">${tiles}</div>${step}<div class="fbx ${fb?fb[0]:""}" id="rfb">${fb?fb[1]:""}</div>
+   ${g.step===4?`<div style="margin-top:12px"><button class="btn y" data-rh="enext">${g.i<RH_ECHO.length-1?"下一句 ▶":"完成 🎉"}</button></div>`:""}</div>`;
+  if (boom) requestAnimationFrame(()=>{ const v = $("#valley"); if (v) v.classList.add("boom"); });
+}
+function echoSound(w){ if (!S.sound) return; [0,.4,.8].forEach((d,i)=>tone(660,.2,"sine",.12/(i+1),d,520));
+  try { if ("speechSynthesis" in window){ speechSynthesis.cancel(); if (!voices.length) loadVoices(); const v = voices.find(x=>/zh[-_]HK|yue/i.test(x.lang)) || voices.find(x=>/^zh/i.test(x.lang));
+    [1,.45,.18].forEach(vol=>{ const u = new SpeechSynthesisUtterance(w); if (v){ u.voice = v; u.lang = v.lang; } else u.lang = "zh-HK"; u.volume = vol; u.rate = .9; speechSynthesis.speak(u); }); } } catch(e){} }
+function echoWrong(t){ const g = V.g; SFX.bad(); if (!g.bad){ g.bad = true; const it = RH_ECHO[g.i]; miss(`反復：${it.s}`, `${it.t}反復「${it.rep}」`); } fbSet("bad", esc(t)); }
+function echoTap(k){ const g = V.g; if (g.step !== 1) return;
+  if (inR(g, k)){ g.step = 2; SFX.good(); echoSound(RH_ECHO[g.i].rep); echoDraw(["good", `✔ 「${esc(RH_ECHO[g.i].rep)}」出現咗 ${g.ranges.length} 次！`], true); }
+  else { g.miss.push(k); echoDraw(); echoWrong("呢個字冇重複，再聽吓邊個詞語講咗幾次！"); } }
+function echoType(t){ const g = V.g, it = RH_ECHO[g.i]; if (g.step !== 2) return;
+  if (t === it.t){ SFX.good(); if (it.fx){ g.step = 3; echoDraw(["good", `✔ ${t}反復！`]); } else { g.step = 4; if (!g.bad) g.ok++; SFX.chest(); echoDraw(["good", `✔ ${t}反復！${t==="連續"?"相同嘅句子緊貼住，中間冇加插其他詞語。":"相同嘅句子之間，加插咗其他詞語。"}`]); } }
+  else echoWrong(t === "連續" ? "睇吓兩個重複嘅詞語中間，係咪加插咗其他詞語？" : "兩個重複嘅詞語係咪緊貼住？（中間只有標點）"); }
+function echoFx(k){ const g = V.g, it = RH_ECHO[g.i]; if (g.step !== 3) return;
+  if (k === it.a){ g.step = 4; if (!g.bad) g.ok++; SFX.chest(); echoDraw(["good", `✔ 作用：${esc(it.fx[k])}。`]); }
+  else echoWrong(`「${it.fx[k]}」唔啱，再讀吓成句句子嘅意思。`); }
+
+/* ---------- ❓ 問號三兄弟 ---------- */
+const BRO = [["疑問","唔知所以問"],["設問","自問自答"],["反問","明知故問"]];
+const BRO_WHY = {疑問:"疑問係真係唔知先問。",設問:"設問係問完自己即刻答。",反問:"反問係明知故問，答案藏喺問題入面。"};
+function qbStart(){
+  const all = RH_Q.map((_,i)=>i), ws = all.filter(i=>RH_Q[i][5]), ex = shuffle(all.filter(i=>!RH_Q[i][5])).slice(0,2);
+  V.g = {k:"qbro", q:shuffle([...ws, ...ex]), done:0, ok:0, combo:0, score:0, missed:new Set(), cur:null, y:0, pause:0, tot:ws.length+ex.length, phase:"fall"};
+  root().innerHTML = rbar("問號三兄弟") + `<div class="rh-hud"><span class="chip">⭐ <span id="qsc">0</span></span><span class="chip">🔥 連擊 <span id="qco">0</span></span><span class="chip">🎈 <span id="qdn">0</span> / ${V.g.tot}</span></div>
+   <div class="rh-sky" id="sky"></div>
+   <div class="rh-bros">${BRO.map(([n,d])=>`<button class="rh-bro" data-rh="bro" data-a="${n}" id="bro-${n}"><span class="sp">${sprite(n)}</span><b>${n}仔</b><small>${d}</small></button>`).join("")}</div>
+   <div class="fbx info" id="rfb">問題氣球跌到落地之前，撳啱嗰位兄弟接住佢！</div><div id="qextra"></div>`;
+  qbNext(); qbLoop(); }
+function qbNext(){ const g = V.g; const ex = $("#qextra"); if (ex) ex.innerHTML = "";
+  if (!g.q.length){ stopLoop(); later(400, ()=>finish("qbro", rate(g.ok, g.tot), `一次答啱 ${g.ok} / ${g.tot} 個，得分 ${g.score}。`)); return; }
+  g.cur = g.q.shift(); g.y = 0; g.pause = 0; g.wrong = false; g.phase = "fall"; g.T = Math.max(10, 16 - g.done*.5);
+  const sky = $("#sky"); if (!sky) return; sky.innerHTML = `<div class="rh-ball" id="ball">${esc(RH_Q[g.cur][0])}</div>`; placeBall(); }
+function placeBall(){ const g = V.g, sky = $("#sky"), b = $("#ball"); if (!sky || !b) return; const H = sky.clientHeight - b.offsetHeight - 48; b.style.top = (8 + Math.max(0, H) * Math.min(1, g.y)) + "px"; }
+function qbLoop(){ loop(dt=>{ const g = V.g; if (g.cur === null || g.phase !== "fall") return true; if (g.pause > 0){ g.pause -= dt; return true; }
+  g.y += dt / g.T; placeBall();
+  if (g.y >= 1){ g.combo = 0; $("#qco").textContent = 0; SFX.bad(); g.missed.add(g.cur); g.q.push(g.cur); fbSet("bad", "冇人接到！呢個氣球稍後會再飄返嚟。"); g.cur = null; later(700, qbNext); }
+  return true; }); }
+function qbBro(n){ const g = V.g; if (!g || g.cur === null || g.phase !== "fall") return; const it = RH_Q[g.cur];
+  if (n === it[1]){ flash($("#bro-"+n), "jump", 500); const b = $("#ball"); if (b) b.classList.add("caught"); SFX.chest(); g.combo++; g.score += 100 + g.combo*20;
+    $("#qsc").textContent = g.score; $("#qco").textContent = g.combo;
+    if (n === "反問" && it[3]){ g.phase = "bonus"; fbSet("good", "✔ 反問：明知故問！"); $("#qextra").innerHTML = `<div class="panel" style="margin-top:10px"><p style="font-weight:900;margin:0 0 6px">🎁 加分題：呢句反問隱藏咗咩答案？</p><p class="rh-sent" style="margin:0 0 8px;font-size:18px">「${esc(it[0])}」</p><p style="margin:0 0 8px;font-size:14px;color:var(--ink2)">💡 問題語氣係肯定，隱藏答案就係否定；問題語氣係否定，隱藏答案就係肯定。</p><div class="rh-big">${it[3].map((o,k)=>`<button class="btn" data-rh="qhid" data-a="${k}">${esc(o)}</button>`).join("")}</div></div>`;  const qx = $("#qextra"); if (qx) qx.scrollIntoView({behavior:"smooth", block:"nearest"}); }
+    else { fbSet("good", `✔ ${n}：${esc(it[2])}`); qbDone(1500); } }
+  else { SFX.bad(); flash($("#bro-"+n), "bad", 450); g.combo = 0; $("#qco").textContent = 0;
+    if (!g.wrong){ g.wrong = true; miss(`疑問／設問／反問：${it[0]}`, `${it[1]}：${it[2]}`); }
+    fbSet("bad", `唔係${n}！${BRO_WHY[n]}`); g.pause = .6; } }
+function qbHid(k){ const g = V.g; if (!g || g.phase !== "bonus") return; const it = RH_Q[g.cur];
+  if (k === it[4]){ g.score += 50; $("#qsc").textContent = g.score; SFX.good(); $("#qextra").innerHTML = `<div class="fbx good">✔ 隱藏答案：「${esc(it[3][it[4]])}」。${esc(it[2])} +50 分</div>`; }
+  else { SFX.bad(); if (!g.wrong){ g.wrong = true; miss(`反問隱藏答案：${it[0]}`, it[2]); } $("#qextra").innerHTML = `<div class="fbx bad">隱藏答案係「${esc(it[3][it[4]])}」。${esc(it[2])}</div>`; }
+  qbDone(2200); }
+function qbDone(ms){ const g = V.g; g.phase = "done"; if (!g.missed.has(g.cur) && !g.wrong) g.ok++; g.done++; $("#qdn").textContent = g.done; g.cur = null; later(ms, qbNext); }
+
+/* ---------- 🪞 魔鏡同積木塔 ---------- */
+function mirrorStart(){ V.g = {k:"mirror", part:1, found:new Set(), sel:null, err:0, t:0}; mirrorDraw(); }
+function mirrorDraw(fb){
+  const g = V.g;
+  if (g.part === 1){
+    const pairs = [...g.found].map(p=>{ const ab = RH_MIRROR.filter(x=>x[1]===p).map(x=>x[0]); return `<div><span>${esc(ab[0])}</span><span>🪞</span><span>${esc(ab[1])}</span></div>`; }).join("");
+    const selT = g.sel !== null ? RH_MIRROR[g.sel][0] : "";
+    root().innerHTML = rbar(`魔鏡配對（${g.found.size} / 3）`) + `<div class="panel">
+     <p style="font-weight:800;margin:0 0 6px">搵出文章入面三組對偶句：先撳一句，再撳同佢字數相等、結構相同嘅另一句。</p>
+     <div class="rh-mirror"><div class="m">${selT?esc(selT)+`<small>${ccount(selT)} 個字</small>`:"<small>撳一句放入魔鏡</small>"}</div><div class="bar2"></div><div class="m" style="opacity:.6"><small>${selT?"搵返佢嘅對偶句":""}</small></div></div>
+     ${pairs?`<div class="rh-pairs">${pairs}</div>`:""}
+     <div class="rh-sent" style="font-size:clamp(17px,2.4vw,20px)">${RH_MIRROR.map(([t,p],k)=>PUN.test(t)?esc(t):`<button class="rh-chunk ${p&&g.found.has(p)?"ok":""} ${g.sel===k?"sel":""}" data-rh="mir" data-a="${k}" ${p&&g.found.has(p)?"disabled":""}>${esc(t)}</button>`).join("")}</div>
+     <div class="fbx ${fb?fb[0]:""}" id="rfb">${fb?fb[1]:""}</div></div>`;
+    return;
+  }
+  const it = RH_TOWER[g.t];
+  const fillCl = c => c.replace(/\{(\d)\}/g, (m,d)=>g.fill[+d]||"");
+  const blocks = g.tdone ? it.cl.map((c,i)=>`<div class="blk" style="animation-delay:${i*.18}s;--bc:${["#FFC93C","#FF7EB3","#5BC8FF","#45D08A"][i%4]}">${esc(fillCl(c))}</div>`).join("") : "";
+  let body;
+  if (it.open && !g.tdone) body = it.cl.map(c=>c.replace(/\{(\d)\}/g,(m,d)=>`<input id="to${d}" maxlength="8" autocomplete="off" lang="zh-Hant-HK" aria-label="第 ${+d+1} 格">`)).join("，");
+  else body = it.cl.map(c=>c.replace(/\{(\d)\}/g,(m,d)=>{ const v = g.fill[+d]; return g.tdone ? `<mark>${esc(v)}</mark>` : `<span class="rh-tslot ${v?"fill":""} ${+d===g.fill.length?"cur":""}">${v?esc(v):"？"}</span>`; })).join("，");
+  root().innerHTML = rbar(`排比積木塔 ${g.t+1} / ${RH_TOWER.length}`) + `<div class="panel">
+   <p style="margin:0 0 6px"><b>原句：</b>${esc(it.src)}</p><p style="margin:0 0 8px"><b>任務：</b>${it.open?"續寫成排比句（答案合理即可，自由發揮！）":"改寫成排比句。"}</p>
+   <div class="rh-tower">${blocks}</div>
+   <div class="rh-sent ${it.open?"rh-open":""}">${esc(it.pre)}${body}${esc(it.post)}</div>
+   ${!it.open && !g.tdone ? `<div class="chips">${g.pool.map(w=>`<button class="chip2" data-rh="tw" data-a="${w}">${w}</button>`).join("")}</div>` : ""}
+   ${it.open && !g.tdone ? `<div class="row-btns" style="margin-top:8px"><button class="btn y" data-rh="topen">🧱 砌塔</button></div>` : ""}
+   <div class="fbx ${fb?fb[0]:""}" id="rfb">${fb?fb[1]:""}</div>
+   ${g.tdone?`<div style="margin-top:12px"><button class="btn y" data-rh="tnext">${g.t<RH_TOWER.length-1?"下一座塔 ▶":"完成 🎉"}</button></div>`:""}</div>`;
+}
+function mirTap(k){ const g = V.g, [t, p] = RH_MIRROR[k];
+  if (!p){ g.err++; SFX.bad(); if (g.err === 1) miss("對偶：田園文章三組對偶句", "雀兒穿梭的飛，蝶兒回環的舞……"); g.sel = null; mirrorDraw(["bad","呢句唔係對偶句，再搵吓！"]); return; }
+  if (g.sel === null || g.sel === k){ g.sel = k; SFX.click(); mirrorDraw(); return; }
+  if (RH_MIRROR[g.sel][1] === p){ g.found.add(p); g.sel = null; SFX.chest(); const ab = RH_MIRROR.filter(x=>x[1]===p).map(x=>x[0]);
+    mirrorDraw(["good", `✔ 對偶！「${esc(ab[0])}」同「${esc(ab[1])}」都係 ${ccount(ab[0])} 個字，結構一樣。`]);
+    if (g.found.size === 3) later(1700, ()=>{ g.part = 2; g.t = 0; towerItem(); }); }
+  else { g.err++; SFX.bad(); if (g.err === 1) miss("對偶：田園文章三組對偶句", "雀兒穿梭的飛，蝶兒回環的舞……"); const a = RH_MIRROR[g.sel][0]; g.sel = null;
+    mirrorDraw(["bad", `兩句唔係一對！「${esc(a)}」有 ${ccount(a)} 個字，「${esc(t)}」有 ${ccount(t)} 個字。對偶要字數相等、結構相同。`]); } }
+function towerItem(){ const g = V.g, it = RH_TOWER[g.t]; g.fill = []; g.tdone = false; g.pool = it.open ? [] : shuffle([...it.a, ...it.x]); mirrorDraw(); }
+function towerOK(it, f){ if (f.every((v,i)=>v===it.a[i])) return true; if (it.swap){ const s = it.a.slice(); [s[it.swap[0]], s[it.swap[1]]] = [s[it.swap[1]], s[it.swap[0]]]; return f.every((v,i)=>v===s[i]); } return false; }
+function towerTap(w){ const g = V.g, it = RH_TOWER[g.t]; if (g.tdone || it.open) return; g.fill.push(w); SFX.click();
+  if (g.fill.length < it.a.length){ mirrorDraw(); return; }
+  if (towerOK(it, g.fill)){ g.tdone = true; SFX.chest(); const full = it.pre + it.cl.map(c=>c.replace(/\{(\d)\}/g,(m,d)=>g.fill[+d])).join("，") + it.post; mirrorDraw(["good", `✔ 排比塔砌好喇！${esc(full)} ${sayBtn(full,true)}`]); }
+  else { g.err++; SFX.bad(); miss(`排比：${it.src}`, "改寫成排比句"); g.fill = []; mirrorDraw(["bad", "積木塔冧咗！再對照原句，諗吓每格應該填咩。"]); } }
+function towerOpen(){ const g = V.g, it = RH_TOWER[g.t]; const vals = [0,1,2].map(d=>{ const el = $("#to"+d); return el ? el.value.trim() : ""; });
+  if (vals.some(v=>!v)){ fbSet("info", "三格都要填呀！諗吓白雲仲似咩？"); return; }
+  g.fill = vals; g.tdone = true; SFX.chest(); const full = it.pre + it.cl.map(c=>c.replace(/\{(\d)\}/g,(m,d)=>vals[+d])).join("，") + it.post;
+  mirrorDraw(["good", `✔ 你嘅排比句：${esc(full)} ${sayBtn(full,true)}<br><small>四句都用「有時像……」，結構相同，就係排比。</small>`]); speak(full); }
+
+/* ---------- 🪄 誇張魔法棒 ---------- */
+function zapStart(){ V.g = {k:"zap", q:shuffle(RH_ZAP.map((_,i)=>i)), i:0, ok:0}; zapItem(); }
+function zapItem(){ const g = V.g; g.bad = 0; g.done = false; g.lock = false; zapDraw(); }
+function zapDraw(fb, anim){ const g = V.g, it = RH_ZAP[g.q[g.i]];
+  root().innerHTML = rbar(`誇張魔法棒 ${g.i+1} / ${g.q.length}`) + `<div class="rh-lab" id="lab"><span class="wand">🪄</span><span class="beam"></span><span class="obj" id="obj">${it[2]}</span></div>
+   <div class="panel"><div class="rh-sent">${esc(it[0])}</div>
+   <div class="rh-modes">${[["大","🔍 誇大","b"],["小","🔬 縮小","p"],["無","🚫 冇誇張",""]].map(([m,l,c])=>`<button class="btn ${c}" data-rh="zap" data-a="${m}" ${g.done?"disabled":""}>${l}</button>`).join("")}</div>
+   <div class="fbx ${fb?fb[0]:"info"}" id="rfb">${fb?fb[1]:"揀一種魔法射落去！"}</div>
+   ${g.done?`<div style="margin-top:12px"><button class="btn y" data-rh="znext">${g.i<g.q.length-1?"下一句 ▶":"完成 🎉"}</button></div>`:""}</div>`;
+  if (anim) requestAnimationFrame(()=>requestAnimationFrame(()=>{ const o = $("#obj"); if (o) o.classList.add(anim); })); }
+function zapFire(m){ const g = V.g; if (g.done || g.lock) return; const it = RH_ZAP[g.q[g.i]]; g.lock = true;
+  const lab = $("#lab"); lab.classList.remove("fire"); void lab.offsetWidth; lab.classList.add("fire");
+  tone(m === "小" ? 900 : 300, .35, "sawtooth", .06, 0, m === "小" ? 200 : 1200);
+  later(450, ()=>{ g.lock = false;
+    if (m === it[1]){ g.done = true; if (!g.bad) g.ok++; SFX.chest(); zapDraw(["good", "✔ "+esc(it[3])], m==="大"?"big":m==="小"?"small":"same"); }
+    else { g.bad++; SFX.bad(); const o = $("#obj"); if (o){ o.classList.add("same"); setTimeout(()=>o.classList.remove("same"), 500); }
+      if (g.bad === 1) miss(`誇張：${it[0]}`, it[3]);
+      fbSet("bad", esc(g.bad >= 2 ? it[3] : m === "無" ? "再諗吓：呢件事現實中真係會咁樣發生咩？" : it[1] === "無" ? "呢句講嘅嘢現實中真係會發生，有冇刻意誇大或縮小？" : m === "大" ? "唔係誇大喎，係咪刻意講到好細？" : "唔係縮小喎，係咪刻意講到好誇大？")); } }); }
+
+/* ---------- ⚖️ 對比遊樂場 ---------- */
+const SEE_WHY = {對比:"將兩樣相對或相反嘅情況放埋一齊對照，好似蹺蹺板一邊高一邊低。",排比:"三句或以上結構相同嘅句子排埋一齊，好似砌積木塔。",對偶:"兩句字數相等、結構相同，好似照鏡一樣。"};
+function seeStart(){ V.g = {k:"seesaw", q:shuffle(RH_SEE.map((_,i)=>i)), i:0, ok:0}; seeItem(); }
+function seeItem(){ const g = V.g; g.bad = 0; g.done = false; seeDraw(); }
+function seeShow(it){ const p = it[2];
+  if (it[1] === "對比") return `<div class="rh-saw"><div class="plank"></div><div class="fulc"></div><div class="seat" style="left:2%">${esc(p[0])}</div><div class="seat" style="right:2%">${esc(p[1])}</div></div>`;
+  if (it[1] === "排比") return `<div class="rh-tower">${p.map((x,i)=>`<div class="blk" style="animation-delay:${i*.2}s;--bc:${["#FFC93C","#FF7EB3","#5BC8FF"][i%3]}">${esc(x)}</div>`).join("")}</div>`;
+  return `<div class="rh-mirror" style="width:100%"><div class="m">${esc(p[0])}<small>${ccount(p[0])} 個字</small></div><div class="bar2"></div><div class="m">${esc(p[1])}<small>${ccount(p[1])} 個字</small></div></div>`; }
+function seeDraw(fb){ const g = V.g, it = RH_SEE[g.q[g.i]];
+  root().innerHTML = rbar(`對比遊樂場 ${g.i+1} / ${g.q.length}`) + `<div class="panel"><div class="rh-sent">${esc(it[0])}</div>
+   <div class="rh-show">${g.done?seeShow(it):`<span style="font-size:15px;color:var(--ink2);font-weight:800">揀一款遊樂設施，睇吓句子坐唔坐得落去！</span>`}</div>
+   <div class="rh-app">${[["對比","⚖️","蹺蹺板"],["排比","🧱","積木塔"],["對偶","🪞","魔鏡"]].map(([t,e,n])=>`<button class="btn" data-rh="see" data-a="${t}" ${g.done?"disabled":""}><span>${e}</span>${n}（${t}）</button>`).join("")}</div>
+   <div class="fbx ${fb?fb[0]:""}" id="rfb">${fb?fb[1]:""}</div>
+   ${g.done?`<div style="margin-top:12px"><button class="btn y" data-rh="snext">${g.i<g.q.length-1?"下一句 ▶":"完成 🎉"}</button></div>`:""}</div>`; }
+function seePick(t){ const g = V.g, it = RH_SEE[g.q[g.i]]; if (g.done) return;
+  if (t === it[1]){ g.done = true; if (!g.bad) g.ok++; SFX.chest(); seeDraw(["good", `✔ ${t}！${SEE_WHY[t]}`]); }
+  else { g.bad++; SFX.bad(); if (g.bad === 1) miss(`對比／排比／對偶：${it[0]}`, `${it[1]}：${SEE_WHY[it[1]]}`);
+    fbSet("bad", esc(g.bad >= 2 ? `提示：呢句係${it[1]}。${SEE_WHY[it[1]]}` : `坐唔落！${t}係：${SEE_WHY[t]}再睇吓句子。`)); } }
+
+/* ---------- 🚂 頂真火車 ---------- */
+const CARC = ["#FFC93C","#5BC8FF","#FF7EB3","#45D08A"];
+function trainStart(){ V.g = {k:"train", i:0, ok:0}; trainItem(); }
+function trainItem(){ const g = V.g; g.step = 1; g.li = 0; g.bad = false; g.state = ""; trainDraw(); }
+function markLinks(it, k, g){ const L = it.l || [], n = g.step >= 3 ? L.length : g.step === 2 ? g.li : 0; let mid = it.c[k], head = "", tail = "";
+  if (k > 0 && k-1 < n && mid.startsWith(L[k-1])){ head = `<mark>${esc(L[k-1])}</mark>`; mid = mid.slice(L[k-1].length); }
+  if (k < n && mid.endsWith(L[k])){ tail = `<mark>${esc(L[k])}</mark>`; mid = mid.slice(0, mid.length - L[k].length); }
+  return head + esc(mid) + tail; }
+function trainDraw(fb){ const g = V.g, it = RH_TRAIN[g.i];
+  const cars = it.c.map((c,k)=>{ const inner = (g.step === 2 && k === g.li+1) ? `<div class="rh-chars">${chars(c).map((ch,j)=>PUN.test(ch)?`<button class="rh-ch p" disabled>${esc(ch)}</button>`:`<button class="rh-ch" data-rh="tch" data-a="${j}">${esc(ch)}</button>`).join("")}</div>` : markLinks(it, k, g);
+    return `<div class="rh-car" style="--cc:${CARC[k%4]}">${k===0?`<span class="engine">🚂</span>`:""}${inner}</div>`; }).join("");
+  const full = it.c.map((c,k)=>c + (k < it.c.length-1 ? it.sep[k] : it.end)).join("");
+  const step = g.step === 1 ? `<p style="font-weight:800;margin:0 0 8px">上一卡車尾同下一卡車頭係咪同一個詞？車卡接唔接得埋？</p><div class="rh-big"><button class="btn g" data-rh="tyes">🔗 接得埋（頂真）</button><button class="btn" data-rh="tno">✂️ 接唔埋</button></div>`
+    : g.step === 2 ? `<p style="font-weight:800;margin:0">👆 喺第 ${g.li+2} 卡車頭，撳出同第 ${g.li+1} 卡車尾一樣嘅詞。</p>` : "";
+  root().innerHTML = rbar(`頂真火車 ${g.i+1} / ${RH_TRAIN.length}`) + `<div class="rh-train ${g.state}" id="train">${cars}</div>
+   <div class="panel"><div class="rh-sent" style="margin:0 0 8px">${esc(full)} ${sayBtn(full,true)}</div>${it.src?`<p style="margin:0 0 8px;font-size:14px;color:var(--ink2)">📖 ${esc(it.src)}</p>`:""}${step}
+   <div class="fbx ${fb?fb[0]:""}" id="rfb">${fb?fb[1]:""}</div>
+   ${g.step===3?`<div style="margin-top:12px"><button class="btn y" data-rh="trnext">${g.i<RH_TRAIN.length-1?"下一架火車 ▶":"完成 🎉"}</button></div>`:""}</div>`; }
+function trainWrong(t){ const g = V.g; SFX.bad(); if (!g.bad){ g.bad = true; const it = RH_TRAIN[g.i]; miss(`頂真：${it.c.join("，")}`, it.l ? `頂真：「${it.l.join("」「")}」頭尾蟬聯` : it.why); } fbSet("bad", esc(t)); }
+function trainYes(){ const g = V.g, it = RH_TRAIN[g.i]; if (g.step !== 1) return;
+  if (it.l){ g.step = 2; g.li = 0; SFX.good(); trainDraw(["good", "✔ 啱！而家搵出接駁嘅詞。"]); }
+  else trainWrong(`接唔埋喎！${it.why}`); }
+function trainNo(){ const g = V.g, it = RH_TRAIN[g.i]; if (g.step !== 1) return;
+  if (!it.l){ g.step = 3; g.state = "split"; if (!g.bad) g.ok++; SFX.chest(); trainDraw(["good", `✔ 冇用頂真。${esc(it.why)}`]); }
+  else trainWrong("其實接得埋！再睇吓上一卡車尾同下一卡車頭。"); }
+function trainCh(j){ const g = V.g, it = RH_TRAIN[g.i]; if (g.step !== 2) return; const w = it.l[g.li];
+  if (j < chars(w).length){ g.li++; noise(.08,.16); tone(180,.12,"square",.06);
+    if (g.li >= it.l.length){ g.step = 3; g.state = "coupled"; if (!g.bad) g.ok++; SFX.chest(); trainDraw(["good", `✔ 「${esc(it.l.join("」「"))}」頭尾蟬聯，車卡全部接埋！詞句遞接緊湊，表達生動暢達。`]);
+      later(900, ()=>{ const t = $("#train"); if (t) t.classList.add("go"); C2.snd("嗚嗚", true); }); }
+    else trainDraw(["good", `✔ 「${esc(w)}」接埋！仲有下一卡。`]); }
+  else trainWrong("唔係呢個字，睇吓上一卡車尾最後嗰個詞。"); }
+
+/* ---------- 🎢 修辭過山車 ---------- */
+const RUSH_HP = 1500;
+function rushStart(){ V.g = {k:"rush", q:shuffle(RH_RUSH.map((_,i)=>i)), qi:0, t:60, hp:RUSH_HP, dmg:0, combo:0, ok:0, n:0, lock:false, ended:false};
+  root().innerHTML = rbar("修辭過山車") + `<div class="panel rh-rush-top"><div class="mm" id="mm">${mmSVG("bob")}</div><div><div class="hpbox"><div class="bn"><span>悶悶怪</span><span id="rhp">HP ${RUSH_HP}</span></div><div class="hp"><i id="rhpb" style="width:100%"></i></div></div><div class="rh-timer"><i id="rtm" style="width:100%"></i></div><div class="rh-hud" style="margin:6px 0 0"><span class="chip">⏱️ <span id="rts">60</span> 秒</span><span class="chip">🔥 連擊 <span id="rco">0</span></span><span class="chip">✔ <span id="rok">0</span></span></div></div></div>
+   <div class="panel"><div class="rh-sent" id="rq"></div><div class="rh-opts" id="ropts"></div><div class="fbx" id="rfb"></div></div>`;
+  rushNext(); rushLoop(); }
+function rushNext(){ const g = V.g; if (g.ended) return; if (g.qi >= g.q.length){ g.q = shuffle(g.q); g.qi = 0; }
+  const it = RH_RUSH[g.q[g.qi++]]; g.cur = it; g.lock = false;
+  const ex = new Set([it[1], ...it[2].split(" ").filter(Boolean)]);
+  const opts = shuffle([it[1], ...shuffle(RH_ORDER.filter(n=>!ex.has(n))).slice(0,3)]);
+  $("#rq").textContent = it[0]; $("#ropts").innerHTML = opts.map(o=>`<button class="btn" data-rh="rans" data-a="${o}">${o}</button>`).join(""); }
+function rushLoop(){ loop(dt=>{ const g = V.g; if (g.ended) return false; g.t -= dt; const tm = $("#rtm"); if (tm) tm.style.width = Math.max(0, g.t/60*100) + "%"; const ts = $("#rts"); if (ts) ts.textContent = Math.max(0, Math.ceil(g.t));
+  if (g.t <= 0){ rushEnd(); return false; } return true; }); }
+function rushAns(o, el){ const g = V.g; if (!g || g.k !== "rush" || g.lock || g.ended) return; const it = g.cur; g.n++; g.lock = true;
+  if (o === it[1]){ g.ok++; g.combo++; g.dmg += 100 + Math.min(g.combo, 10)*10; g.hp = Math.max(0, RUSH_HP - g.dmg); SFX.hit(); el.classList.add("right");
+    const mm = $("#mm .bsvg"); if (mm){ mm.classList.add("hurt"); setTimeout(()=>mm.classList.remove("hurt"), 350); } flash($("#mm"), "hit", 400);
+    $("#rhp").textContent = "HP " + g.hp; $("#rhpb").style.width = (g.hp/RUSH_HP*100) + "%"; $("#rco").textContent = g.combo; $("#rok").textContent = g.ok;
+    if (g.hp <= 0){ rushEnd(); return; } later(260, rushNext); }
+  else { g.combo = 0; $("#rco").textContent = 0; SFX.bad(); el.classList.add("wrong"); miss(`修辭過山車：${it[0]}`, `${it[1]}：${RH_KEY[it[1]]}`);
+    $$("#ropts .btn").forEach(b=>{ if (b.dataset.a === it[1]) b.classList.add("right"); });
+    fbSet("bad", `係「${it[1]}」：${esc(RH_KEY[it[1]])}`); later(1300, ()=>{ fbSet("", ""); rushNext(); }); } }
+function rushEnd(){ const g = V.g; if (g.ended) return; g.ended = true; stopLoop(); ensure(); const win = g.hp <= 0; S.dlc.best = Math.max(S.dlc.best||0, g.dmg); save();
+  if (win){ const mm = $("#mm .bsvg"); if (mm) mm.classList.add("hurt"); }
+  later(win ? 700 : 200, ()=>finish("rush", win ? 3 : g.dmg >= 1000 ? 2 : 1, win ? `打敗悶悶怪！答啱 ${g.ok} / ${g.n} 題，用咗 ${Math.round(60 - g.t)} 秒。` : `時間到！造成 ${g.dmg} 傷害（悶悶怪仲有 ${g.hp} HP）。答啱 ${g.ok} / ${g.n} 題。`)); }
+
+/* ---------- 路由 ---------- */
+const PLAY = {magic:magicStart, belt:beltStart, idiom:idiomStart, spring:springStart, portal:portalStart, echo:echoStart, qbro:qbStart, mirror:mirrorStart, zap:zapStart, seesaw:seeStart, train:trainStart, rush:rushStart};
+function render(){ stopLoop(); V.g = null; renderMap(); }
+const nextOr = (key, len, done) => { const g = V.g; g.i++; if (g.i >= len) done(); else return true; };
+const ACT = {
+ map(){ closeModal(); render(); window.scrollTo(0,0); },
+ intro(a){ renderIntro(+a || 0); },
+ introdone(){ ensure(); S.dlc.intro = true; save(); SFX.good(); renderMap(); },
+ book(){ stopLoop(); V.g = null; renderBook(); window.scrollTo(0,0); },
+ spr1(a){ spriteModal(a); },
+ ride(a){ closeModal(); stopLoop(); V.g = null; guide(a); window.scrollTo(0,0); },
+ play(a){ closeModal(); stopLoop(); PLAY[a](); window.scrollTo(0,0); },
+ mch(a){ magicChunk(+a); }, mnone(){ magicNone(); }, mtype(a){ magicType(a); },
+ mnext(){ if (nextOr("magic", RH_MAGIC.length, ()=>finish("magic", rate(V.g.ok, RH_MAGIC.length), `一次答啱 ${V.g.ok} / ${RH_MAGIC.length} 句。`))) magicItem(); },
+ bin(a){ beltBin(a); },
+ ich(a, el){ idiomCh(a, el); },
+ inext(){ if (nextOr("idiom", RH_IDIOM.length, ()=>finish("idiom", rate(V.g.ok, RH_IDIOM.length), `一次填啱 ${V.g.ok} / ${RH_IDIOM.length} 個成語。`))) idiomItem(); },
+ spr(a){ springTap(+a); },
+ pside(a){ portalSide(a); },
+ pnext(){ if (nextOr("portal", V.g.q.length, ()=>finish("portal", rate(V.g.ok, V.g.q.length), `一次答啱 ${V.g.ok} / ${V.g.q.length} 句。`))) portalItem(); },
+ ech(a){ echoTap(+a); }, etype(a){ echoType(a); }, efx(a){ echoFx(+a); },
+ enext(){ if (nextOr("echo", RH_ECHO.length, ()=>finish("echo", rate(V.g.ok, RH_ECHO.length), `一次答啱 ${V.g.ok} / ${RH_ECHO.length} 句。`))) echoItem(); },
+ bro(a){ qbBro(a); }, qhid(a){ qbHid(+a); },
+ mir(a){ mirTap(+a); }, tw(a){ towerTap(a); }, topen(){ towerOpen(); },
+ tnext(){ const g = V.g; g.t++; if (g.t >= RH_TOWER.length) finish("mirror", g.err===0?3:g.err<=2?2:1, `搵齊 3 組對偶句，砌好 ${RH_TOWER.length} 座排比塔，錯咗 ${g.err} 次。`); else towerItem(); },
+ zap(a){ zapFire(a); },
+ znext(){ if (nextOr("zap", V.g.q.length, ()=>finish("zap", rate(V.g.ok, V.g.q.length), `一次答啱 ${V.g.ok} / ${V.g.q.length} 句。`))) zapItem(); },
+ see(a){ seePick(a); },
+ snext(){ if (nextOr("seesaw", V.g.q.length, ()=>finish("seesaw", rate(V.g.ok, V.g.q.length), `一次答啱 ${V.g.ok} / ${V.g.q.length} 句。`))) seeItem(); },
+ tyes(){ trainYes(); }, tno(){ trainNo(); }, tch(a){ trainCh(+a); },
+ trnext(){ if (nextOr("train", RH_TRAIN.length, ()=>finish("train", rate(V.g.ok, RH_TRAIN.length), `一次答啱 ${V.g.ok} / ${RH_TRAIN.length} 架火車。`))) trainItem(); },
+ rans(a, el){ rushAns(a, el); },
+ clr3(){ askConfirm("清空修辭樂園錯題簿？", "清空", ()=>{ ensure(); S.dlc.m = {}; save(); RENDER.report(); }); }
+};
+document.addEventListener("click", e=>{ const b = e.target.closest("[data-rh]"); if (!b || b.disabled) return; const f = ACT[b.dataset.rh]; if (!f) return; e.preventDefault(); f(b.dataset.a || "", b); });
+window.addEventListener("resize", ()=>{ if (V.g && V.g.k === "belt") placeCard(); if (V.g && V.g.k === "qbro") placeBall(); });
+RENDER.dlc = render;
+
+/* 成績表＋首頁整合 */
+const _rep = RENDER.report;
+RENDER.report = function(){ _rep(); ensure(); const ms = Object.entries(S.dlc.m).sort((a,b)=>b[1].n-a[1].n); const got = RH_ORDER.filter(unlocked).length;
+  const html = `<div class="panel" style="margin-bottom:20px"><h4 style="margin:0 0 10px;font-size:20px">🎡 修辭樂園（已收集精靈 ${got} / 14）</h4>
+   <div class="rgrid" style="margin-bottom:12px">${ZONES.map(z=>`<div><b>${z.name}</b> <small>${z.ws}</small>${z.rides.map(r=>`<div class="rline"><span>${RIDES[r].ic} ${RIDES[r].name}</span><span>${starsHTML(st(r))}</span></div>`).join("")}</div>`).join("")}
+    <div><b>🎢 修辭過山車</b><div class="rline"><span>最佳傷害</span><span>${S.dlc.best||0} / ${RUSH_HP}</span></div><div class="rline"><span>星星</span><span>${starsHTML(st("rush"))}</span></div></div></div>
+   <h4 style="margin:12px 0 8px">📒 修辭錯題簿</h4>
+   ${ms.length ? `<div class="mlist">${ms.map(([k,o])=>`<div class="mitem" style="grid-template-columns:1fr auto"><div><span style="font-weight:800">${esc(k)}</span>${o.t?`<small>${esc(o.t)}</small>`:""}</div><div class="cnt">錯 ${o.n} 次</div></div>`).join("")}</div><button class="btn sm" style="margin-top:10px" data-rh="clr3">清空修辭樂園錯題簿</button>` : `<p style="margin:0">暫時未有錯題。</p>`}</div>`;
+  const btns = $("#reportBody > div:last-child"); if (btns) btns.insertAdjacentHTML("beforebegin", html); };
+const _home = RENDER.home;
+RENDER.home = function(){ _home(); ensure(); const got = RH_ORDER.filter(unlocked).length;
+  const card = `<button class="spot dlcspot" data-go="dlc" style="--c:#fff"><span class="ic" style="font-size:40px">🎡</span><span><b>DLC：修辭樂園</b>比喻、比擬、反復、設問反問、對偶排比、誇張、對比、頂真：11 部機動遊戲＋過山車。<span class="prog">已收集修辭精靈 ${got} / 14</span></span></button>`;
+  const c2 = $("#map .c2spot"); if (c2) c2.insertAdjacentHTML("afterend", card); else $("#map").insertAdjacentHTML("afterbegin", card); };
+return {ensure, unlocked, RIDES, stopLoop, sprite};
 })();
 
 /* init */
