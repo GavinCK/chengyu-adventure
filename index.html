@@ -48,6 +48,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .chip{display:inline-flex;align-items:center;gap:4px;border:2.5px solid var(--ink);border-radius:999px;padding:1px 10px;font-weight:800;font-size:14px;background:#fff;white-space:nowrap}
 .tog{cursor:pointer;background:#fff}
 .tog.off{opacity:.45;text-decoration:line-through}
+@media (max-width:1320px) and (min-width:901px){
+  .chip.hide-sm{display:none}
+  .nav button{padding:5px 8px;font-size:14px}
+}
+@media (max-width:1120px) and (min-width:901px){
+  .logo .logo-t{display:none}
+  .nav{margin-left:0}
+  .nav button .ni{font-size:16px}
+}
 @media (max-width:900px){
   body{padding-bottom:96px}
   .topbar{padding-block:6px}
@@ -341,6 +350,212 @@ mark{background:linear-gradient(transparent 55%,#FFE27A 55%);color:inherit;font-
   .vcards{grid-template-columns:1fr}
   .vlist{grid-template-columns:1fr}
 }
+/* ================= 第二章 ================= */
+.c2-hero{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin-bottom:18px;background:linear-gradient(135deg,#2E2357 0%,#4B3A8C 100%);color:#fff;border-color:var(--ink)}
+.c2-hero h2{color:#fff;margin:0 0 4px}
+.c2-hero p{margin:0 0 10px}
+.c2-hero .bsvg{width:140px;height:140px}
+.row-btns{display:flex;flex-wrap:wrap;gap:10px}
+.c2-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:22px}
+.c2-area{position:relative;text-align:left;color:var(--ink);cursor:pointer;background:#fff;border:3px solid var(--ink);border-radius:22px;box-shadow:0 6px 0 var(--ink);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.c2-area:active{transform:translateY(4px);box-shadow:0 2px 0 var(--ink)}
+.c2-area .top{height:96px;display:grid;place-items:center;font-size:52px;background:var(--c);border-bottom:3px solid var(--ink);filter:grayscale(.85) brightness(.85);transition:filter .4s}
+.c2-area.lit .top{filter:none}
+.c2-area .bd{padding:10px 14px 14px;display:flex;flex-direction:column;gap:4px}
+.c2-area b{font-size:18px;font-weight:900}
+.c2-area small{color:var(--ink2);font-weight:700}
+.c2-area .pbar{height:12px;border:2.5px solid var(--ink);border-radius:999px;overflow:hidden;background:#fff;margin-top:4px}
+.c2-area .pbar i{display:block;height:100%;background:var(--c)}
+.c2-area .badge2{position:absolute;top:8px;right:8px;background:#fff;border:2.5px solid var(--ink);border-radius:999px;font-size:12px;font-weight:900;padding:0 8px}
+.c2-plan h3{margin:0 0 6px;font-size:20px;font-weight:900}
+.c2-plan .day{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:center;padding:8px 6px;border-bottom:2px dotted #E2DDEE}
+.c2-plan .day:last-child{border-bottom:0}
+.c2-plan .day.next{background:var(--warnBg);border-radius:12px}
+.c2-plan .dn{font-weight:900;background:var(--ink);color:#fff;border-radius:8px;padding:0 8px;font-size:14px;white-space:nowrap}
+.c2-plan .tick{width:30px;height:30px;border:2.5px solid var(--ink);border-radius:8px;background:#fff;font-size:18px;cursor:pointer;display:grid;place-items:center;padding:0}
+.c2-plan .tick.on{background:var(--leaf)}
+.c2-plan .txt{font-size:15px;line-height:1.45;min-width:0}
+.c2-plan .txt small{display:block;color:var(--ink2)}
+.c2-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.c2-bar .ttl{font-weight:900;font-size:20px}
+.c2-bar .sp{flex:1}
+.c2-head{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin-bottom:16px;background:var(--c)}
+.c2-head .big{font-size:64px;line-height:1;width:96px;height:96px;display:grid;place-items:center;background:#fff;border:3px solid var(--ink);border-radius:20px}
+.c2-head h2{margin:0;font-size:26px;font-weight:900}
+.c2-head p{margin:4px 0 0}
+.c2-stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.c2-stage{text-align:left;color:var(--ink);cursor:pointer;background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:0 5px 0 var(--ink);padding:12px 14px;display:flex;flex-direction:column;gap:2px;font-size:14px;line-height:1.45}
+.c2-stage:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.c2-stage b{font-size:17px;font-weight:900}
+.c2-stage .stars{font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip2{font-family:var(--kai);font-weight:800;font-size:22px;border:3px solid var(--ink);border-radius:14px;background:#fff;padding:4px 12px;box-shadow:0 3px 0 var(--ink);cursor:pointer;color:var(--ink);display:inline-flex;align-items:center;gap:6px;line-height:1.2}
+.chip2:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+.chip2.used{opacity:.35}
+.chip2.bad{background:var(--badBg);border-color:var(--bad);animation:shake .4s}
+.chip2.good{background:var(--goodBg);border-color:var(--good)}
+.chip2.sel{background:var(--sun)}
+.chip2:disabled{cursor:default}
+.chip2 .mini{font-family:var(--font);font-size:13px;border:2px solid var(--ink);border-radius:50%;width:24px;height:24px;display:inline-grid;place-items:center;background:#fff}
+.slot{display:inline-flex;align-items:center;justify-content:center;min-width:2.6em;padding:0 .3em;height:1.6em;margin:0 .15em;border:2.5px dashed var(--ink2);border-radius:8px;background:#FFFDF2;font-family:var(--kai);font-weight:800;vertical-align:middle;line-height:1}
+.slot.cur{border-style:solid;border-color:#2E7DFF;background:#EAF3FF;animation:pulse 1.2s infinite}
+.slot.ok{border-style:solid;border-color:var(--good);background:var(--goodBg);color:var(--good)}
+.slot.bad{border-color:var(--bad);background:var(--badBg)}
+.c2-text{font-size:clamp(18px,2.6vw,21px);line-height:2.2;margin:6px 0 14px;white-space:pre-line}
+.fbx{border-radius:14px;padding:10px 12px;font-weight:700;margin-top:10px}
+.fbx:empty{display:none}
+.fbx.good{background:var(--goodBg);color:#0C7A49}
+.fbx.bad{background:var(--badBg);color:#B3261E}
+.fbx.info{background:#EEF5FF;color:#1F4E9A}
+mark.k{background:#FFE27A;border-radius:4px;padding:0 2px;font-weight:900}
+/* scenes */
+.scene-wrap{position:relative;border:3px solid var(--ink);border-radius:20px;overflow:hidden;margin-bottom:14px;background:#BDEBFF}
+.scene{display:block;width:100%;height:clamp(170px,30vw,290px)}
+.scene .rainl,.scene .bugnotes,.scene .birdnotes,.scene .flash{opacity:0}
+.scene.fx-rain .rainl{opacity:1}
+.scene .rainl line{animation:rainfall .6s linear infinite}
+@keyframes rainfall{from{transform:translateY(-30px)}to{transform:translateY(30px)}}
+.scene.fx-thunder .sky{fill:#6E7896}
+.scene.flashing .flash{animation:flash 1s}
+@keyframes flash{0%,100%{opacity:0}10%{opacity:.95}20%{opacity:.1}30%{opacity:.8}}
+.scene.shaking{animation:shake .5s}
+.scene .horse{transform-box:fill-box;transform-origin:50% 100%}
+.scene.fx-horse .horse{animation:horseJump 1.4s ease-in-out infinite}
+@keyframes horseJump{0%,60%,100%{transform:none}20%{transform:translateY(-8px) rotate(-12deg)}40%{transform:translateY(-4px) rotate(-6deg)}}
+.scene.fx-bugs .bugnotes{opacity:1}
+.scene .bugnotes text,.scene .birdnotes text{animation:noteUp 1.6s ease-in-out infinite}
+@keyframes noteUp{0%{transform:translateY(6px);opacity:0}40%{opacity:1}100%{transform:translateY(-14px);opacity:0}}
+.scene .ripple{stroke-dasharray:8 14;opacity:.25}
+.scene.fx-stream .ripple{opacity:1;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-44}}
+.scene .bird{transform-box:fill-box;transform-origin:50% 100%}
+.scene.fx-birds .bird{animation:hop .45s ease-in-out infinite alternate}
+.scene.fx-birds .birdnotes{opacity:1}
+@keyframes hop{to{transform:translateY(-6px)}}
+.scene .leaves{transform-box:fill-box;transform-origin:50% 100%}
+.scene.fx-leaves .leaves{animation:sway 1.4s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+.scene .dim{transition:opacity .6s}
+.unlocked{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.unlocked button{font-size:14px}
+/* sound cards */
+.ono-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.ono{background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:0 5px 0 var(--ink);padding:12px;display:flex;flex-direction:column;gap:6px}
+.ono .hd{display:flex;align-items:center;gap:8px}
+.ono .em{font-size:34px}
+.ono .w{font-family:var(--kai);font-size:28px;font-weight:900;flex:1}
+.ono .tag{font-size:12px;font-weight:900;border:2px solid var(--ink);border-radius:999px;padding:0 6px;background:var(--sun);white-space:nowrap}
+.ono .zi{font-size:13px;background:var(--warnBg);border-radius:10px;padding:4px 8px}
+/* memory */
+.mem{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.mcard{aspect-ratio:1/1.05;border:3px solid var(--ink);border-radius:14px;background:repeating-linear-gradient(45deg,#45D08A 0 10px,#5ADB97 10px 20px);box-shadow:0 4px 0 var(--ink);cursor:pointer;display:grid;place-items:center;font-size:clamp(13px,1.9vw,17px);font-weight:800;padding:4px;text-align:center;line-height:1.3;color:var(--ink)}
+.mcard .f{display:none}
+.mcard.open,.mcard.done{background:#fff}
+.mcard.open .f,.mcard.done .f{display:block}
+.mcard.open .q,.mcard.done .q{display:none}
+.mcard .q{font-size:30px;color:#fff;text-shadow:0 2px 0 var(--ink)}
+.mcard.done{background:var(--goodBg);border-color:var(--good);cursor:default}
+.mcard .f.kai{font-family:var(--kai);font-size:clamp(18px,2.6vw,24px);font-weight:900}
+/* shop */
+.shop{position:relative;border:3px solid var(--ink);border-radius:20px;overflow:hidden;height:250px;background:linear-gradient(#FFE7C2 0 62%,#C97B3A 62% 66%,#A85F28 66%);margin-bottom:14px}
+.shop .shelf{position:absolute;left:0;right:0;height:10px;background:#A85F28;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.shop .goods{position:absolute;left:12px;right:12px;font-size:26px;letter-spacing:6px;white-space:nowrap;overflow:hidden;opacity:.85}
+.shop .keeper{position:absolute;left:3%;bottom:6px;width:120px}
+.shop .cust{position:absolute;right:4%;bottom:12px;display:flex;flex-direction:column;align-items:center;transition:transform .5s,opacity .5s}
+.shop .cust.out{transform:translateX(160px);opacity:0}
+.shop .cust.in{animation:custIn .5s}
+@keyframes custIn{from{transform:translateX(160px);opacity:0}}
+.shop .face{width:96px;height:96px;border-radius:50%;background:#fff;border:3px solid var(--ink);display:grid;place-items:center;font-size:58px;box-shadow:0 4px 0 var(--ink)}
+.shop .order{position:absolute;right:calc(4% + 110px);top:24px;max-width:min(360px,52%);background:#fff;border:3px solid var(--ink);border-radius:16px;padding:8px 12px;font-weight:800;font-size:17px;box-shadow:0 3px 0 var(--ink)}
+.shop .order .item{font-size:30px;display:block}
+.shop .order .ph{font-family:var(--kai);font-size:24px}
+.shop .hearts{position:absolute;right:4%;top:8px;font-size:18px}
+.shop .coins{position:absolute;left:12px;top:8px;background:#fff;border:2.5px solid var(--ink);border-radius:999px;padding:0 10px;font-weight:900}
+.flyitem{position:fixed;font-size:44px;z-index:90;pointer-events:none;transition:transform .7s cubic-bezier(.3,1.2,.5,1),opacity .7s}
+.story-emo{font-size:64px;text-align:center;line-height:1.2;margin:4px 0}
+.storybook{background:#FFFDF2;border:2.5px dashed var(--ink2);border-radius:14px;padding:10px 14px;font-size:17px;line-height:2;margin-bottom:12px}
+.storybook .done{color:var(--good);font-weight:800}
+.news{font-size:19px;line-height:2.3}
+.news input{width:2.4em;font-family:var(--kai);font-size:22px;font-weight:800;text-align:center;border:3px solid var(--ink);border-radius:10px;padding:0 4px;background:#FFFDF2;vertical-align:middle}
+.news input.ok{border-color:var(--good);background:var(--goodBg)}
+.news input.bad{border-color:var(--bad);background:var(--badBg)}
+/* post */
+.letter{position:relative;background:#FFFDF2;border:3px solid var(--ink);border-radius:16px;padding:16px 16px 14px 70px;box-shadow:0 5px 0 var(--ink);font-size:clamp(18px,2.6vw,22px);line-height:1.8;margin-bottom:16px;min-height:90px;transition:transform .5s,opacity .5s}
+.letter::before{content:"✉️";position:absolute;left:16px;top:14px;font-size:38px}
+.letter.fly{transform:translateY(80px) scale(.3);opacity:0}
+.letter.back{animation:shake .45s}
+.street{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:14px;border:3px solid var(--ink);border-radius:20px;background:linear-gradient(transparent 82%,#BFB6D6 82%),#DFF6FF}
+.house{position:relative;cursor:pointer;border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;color:var(--ink)}
+.house .roof{width:100%;height:34px;background:var(--hc);clip-path:polygon(50% 0,100% 100%,0 100%);position:relative}
+.house .body{width:86%;background:#fff;border:3px solid var(--ink);border-top:0;border-radius:0 0 10px 10px;padding:6px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.house .nm{font-weight:900;font-size:clamp(14px,2vw,17px)}
+.house .door{width:22px;height:26px;background:var(--hc);border:2.5px solid var(--ink);border-radius:8px 8px 0 0}
+.house .cnt{font-size:12px;font-weight:800;color:var(--ink2)}
+.house.glow .body{box-shadow:0 0 0 5px rgba(255,201,60,.9)}
+.house.shake{animation:shake .45s}
+.house.hint .body{box-shadow:0 0 0 5px rgba(22,167,101,.8);animation:pulse 1s infinite}
+.htype{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.htype .card{border:3px solid var(--ink);border-radius:18px;background:#fff;box-shadow:0 5px 0 var(--ink);overflow:hidden}
+.htype .card .h{background:var(--hc);padding:8px 12px;font-weight:900;font-size:19px;border-bottom:3px solid var(--ink)}
+.htype .card .b{padding:10px 12px;font-size:15px;line-height:1.6}
+.htype .card .cn{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.htype .card .cn span{font-family:var(--kai);font-weight:800;font-size:16px;border:2px solid var(--ink);border-radius:8px;padding:0 6px;background:#FFFDF2}
+/* bridge */
+.river{position:relative;border:3px solid var(--ink);border-radius:20px;overflow:hidden;margin-bottom:14px;background:#BDEBFF}
+.river svg{display:block;width:100%;height:clamp(130px,22vw,230px)}
+.river .walker{position:absolute;bottom:38%;left:4%;width:clamp(56px,9vw,96px);transition:left 1.6s ease-in-out}
+.river.cross .walker{left:82%}
+.river .planks rect{transition:transform .5s,opacity .5s;transform-box:fill-box}
+.river .planks.hide rect{opacity:0;transform:translateY(-40px)}
+.river .planks.fall rect{opacity:0;transform:translateY(60px) rotate(25deg);transition:transform .7s ease-in,opacity .7s}
+.pairs2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pairs2 .col{display:flex;flex-direction:column;gap:10px}
+.mtn{display:flex;gap:6px;flex-wrap:wrap;align-items:flex-end;margin:6px 0 12px}
+.mtn span{width:34px;border:2.5px solid var(--ink);border-radius:8px 8px 0 0;background:#E2DDEE;display:grid;place-items:end center;font-size:12px;font-weight:900;padding-bottom:2px}
+.mtn span.on{background:var(--leaf)}
+.mtn span.me{background:var(--sun)}
+.build-slots{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:clamp(18px,2.6vw,22px);font-weight:700;margin:10px 0 14px}
+.bslot{min-width:3em;min-height:1.8em;border:2.5px dashed var(--ink2);border-radius:10px;padding:2px 8px;display:inline-flex;align-items:center;justify-content:center;background:#FFFDF2;cursor:pointer;font-family:var(--kai);font-weight:800}
+.bslot.fill{border-style:solid;border-color:var(--ink)}
+.bslot.ok{border-color:var(--good);background:var(--goodBg)}
+.bslot.bad{border-color:var(--bad);background:var(--badBg)}
+/* mole */
+.mole-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.mole-sent{font-family:var(--kai);font-size:clamp(20px,3vw,26px);font-weight:800;line-height:1.8;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 14px;margin-bottom:10px;letter-spacing:.04em}
+.mole-sent .x{color:var(--bad);text-decoration:line-through;text-decoration-thickness:3px}
+.mole-sent .ok{color:var(--good)}
+.mole-sent .ring{border:3px solid var(--bad);border-radius:50%;padding:0 3px}
+.field{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:44px 14px 14px;border:3px solid var(--ink);border-radius:20px;background:#7CCB6B;touch-action:manipulation}
+.hole{position:relative;height:clamp(100px,12vw,140px);overflow:visible;clip-path:inset(-80px -20px 0 -20px);-webkit-clip-path:inset(-80px -20px 0 -20px)}
+.hole::after{content:"";position:absolute;left:8%;right:8%;bottom:0;height:24%;background:#5A3A1E;border-radius:50%;border:3px solid var(--ink);z-index:2}
+.mole{position:absolute;left:50%;bottom:0;width:min(72%,120px);transform:translate(-50%,110%);transition:transform .16s ease-out;z-index:1;cursor:pointer;border:0;background:none;padding:0}
+.mole.up{transform:translate(-50%,-14%)}
+.mole .sign{position:absolute;left:50%;top:-4px;transform:translateX(-50%);background:#fff;border:3px solid var(--ink);border-radius:10px;font-family:var(--kai);font-weight:900;font-size:clamp(26px,4vw,34px);width:1.5em;height:1.5em;display:grid;place-items:center;color:var(--ink);line-height:1}
+.mole svg{width:100%;height:auto;display:block;margin-top:22px}
+.mole.hit{animation:whack .35s}
+@keyframes whack{40%{transform:translate(-50%,-14%) scaleY(.7)}}
+.pow{position:absolute;z-index:5;font-weight:900;font-size:24px;color:#fff;-webkit-text-stroke:1.5px var(--ink);text-shadow:0 3px 0 var(--ink);pointer-events:none;animation:dmg .9s forwards}
+.mlist2{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mlist2 .it{background:#fff;border:2.5px solid var(--ink);border-radius:14px;padding:10px 12px;font-size:15px;line-height:1.6}
+.mlist2 .it .s{font-family:var(--kai);font-size:18px}
+.mlist2 .it .s .x{color:var(--bad);text-decoration:line-through}
+.mlist2 .it .s .ok{color:var(--good);font-weight:900}
+.c2spot{grid-column:1/-1;background:linear-gradient(135deg,#2E2357,#4B3A8C)!important;color:#fff!important}
+.c2spot .ic{background:#fff!important}
+.c2spot .prog{color:#FFE27A!important}
+@media (max-width:640px){
+  .c2-hero{grid-template-columns:1fr;text-align:left}
+  .c2-hero .bsvg{width:110px;height:110px}
+  .street{grid-template-columns:repeat(2,1fr)}
+  .mem{grid-template-columns:repeat(4,1fr)}
+  .shop{height:230px}
+  .shop .keeper{width:86px}
+  .shop .order{right:auto;left:12px;top:36px;max-width:62%}
+  .shop .face{width:76px;height:76px;font-size:44px}
+  .pairs2{gap:10px}
+  .c2-head{grid-template-columns:1fr}
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
@@ -356,6 +571,7 @@ mark{background:linear-gradient(transparent 55%,#FFE27A 55%);color:inherit;font-
     <button data-go="battle"><span class="ni">⚔️</span>擂台</button>
     <button data-go="fill"><span class="ni">💰</span>尋寶</button>
     <button data-go="typo"><span class="ni">🔍</span>偵探</button>
+    <button data-go="ch2"><span class="ni">🏰</span>第二章</button>
     <button data-go="report"><span class="ni">🏆</span>成績</button>
   </nav>
   <div class="stats">
@@ -429,6 +645,9 @@ mark{background:linear-gradient(transparent 55%,#FFE27A 55%);color:inherit;font-
       <div class="panel" id="typoPanel"></div>
     </div>
   </section>
+
+  <!-- CHAPTER 2 -->
+  <section class="screen" id="scr-ch2"><div id="c2"></div></section>
 
   <!-- REPORT -->
   <section class="screen" id="scr-report">
@@ -1598,6 +1817,746 @@ document.addEventListener("input", e=>{
 });
 $("#fillShuffle").addEventListener("click", ()=>{ fillOrder = fillOrder ? null : shuffle(VOCAB.map((_,i)=>i)); $("#fillShuffle").textContent = fillOrder ? "🔢 原本次序" : "🔀 打亂次序"; SFX.click(); RENDER.fill(); });
 $("#fillResetAll").addEventListener("click", ()=>{ askConfirm("重設呢個範圍全部 "+nV()+" 題填充？", "全部重設", ()=>{ vIds().forEach(i=>{ delete S.fill[i]; delete hintLv[i]; }); save(); RENDER.fill(); }); });
+
+/* ---------- 第二章題庫：只用工作紙（三）（五）（六）內容 ---------- */
+// 擬聲詞：表內 10 個（tbl）＋ 工作紙（三）詞庫
+const ONO = {
+ "劈劈啪啪":{m:"爆裂、拍打的聲音",e:"🔥",snd:"crackle",tbl:1},
+ "淙淙":{m:"水聲",e:"💧",snd:"stream",tbl:1,zi:"「淙」：水字旁加「宗」。"},
+ "蕭蕭":{m:"馬叫聲、風聲",e:"🐴",snd:"xiao",tbl:1,zi:"「蕭」：上面「艹」，下面「肅」。要寫齊兩邊各三筆！",hot:1},
+ "颯颯":{m:"風聲",e:"🌬️",snd:"gust",tbl:1,zi:"「颯」：左邊「立」，右邊「風」。"},
+ "霍霍":{m:"磨刀聲",e:"🔪",snd:"sharpen",tbl:1,zi:"「霍」：上面「雨」，下面「隹」。"},
+ "啁啾":{m:"鳥聲（也可以寫「啾啾」）",e:"🐦",snd:"birds",tbl:1,zi:"兩個字都是口字旁：「口＋周」「口＋秋」。"},
+ "吱吱":{m:"老鼠聲、小雞聲",e:"🐭",snd:"squeak",tbl:1},
+ "滴答":{m:"鬧鐘聲",e:"⏰",snd:"clock",tbl:1},
+ "嘩啦":{m:"大雨聲",e:"🌧️",snd:"heavyrain",tbl:1},
+ "喔喔":{m:"雞啼聲",e:"🐓",snd:"rooster",tbl:1},
+ "轟隆":{m:"雷聲、砲聲",e:"⛈️",snd:"rumble"},
+ "唧唧":{m:"蟲叫聲",e:"🦗",snd:"cricket",zi:"「唧」：口字旁加「即」。",hot:1},
+ "沙沙":{m:"樹葉被風吹動的聲音",e:"🍃",snd:"rustle"},
+ "淅瀝":{m:"小雨聲",e:"🌦️",snd:"lightrain"},
+ "哇哇":{m:"小孩大哭的聲音",e:"😭",snd:"cry"},
+ "琅琅":{m:"讀書聲",e:"📖",snd:"reading",zi:"「琅」：王字旁加「良」。常用詞：琅琅上口。",hot:1},
+ "呼呼":{m:"大風聲",e:"🌪️",snd:"wind"},
+ "汪汪":{m:"狗吠聲",e:"🐶",snd:"dog"},
+ "嗚嗚":{m:"低聲哭泣聲、汽笛聲",e:"🚂",snd:"whoo"},
+ "砰":{m:"槍聲、爆炸聲",e:"💥",snd:"bang"}
+};
+const SOUND_STORY = [
+ {title:"蒙古大草原", scene:"steppe",
+  parts:["在蒙古的大草原上，天空烏雲密佈，突然傳來（",0,"）的雷聲，嚇得馬兒（",1,"）地叫。不一會，更下起（",2,"）的大雨，蓋過了大樹上蟲兒（",3,"）的叫聲。"],
+  blanks:[{a:"轟隆",o:["轟隆","淙淙","喔喔","滴答"],fx:"thunder"},{a:"蕭蕭",o:["蕭蕭","吱吱","汪汪","啁啾"],fx:"horse"},{a:"嘩啦",o:["嘩啦","霍霍","滴答","琅琅"],fx:"rain",alt:"工作紙亦接受「嘩啦嘩啦」。"},{a:"唧唧",o:["唧唧","喔喔","砰","轟隆"],fx:"bugs"}]},
+ {title:"郊外小徑", scene:"path",
+  parts:["在郊外的小徑上，聽到遠處傳來（",0,"）的流水聲，原來一條小溪就在我們附近。樹上鳥兒（",1,"）的歌聲，樹葉發出（",2,"）的響聲，都彷彿在歡迎我們到訪。"],
+  blanks:[{a:"淙淙",o:["淙淙","劈劈啪啪","呼呼","哇哇"],fx:"stream",alt:"工作紙亦接受「潺潺」。"},{a:"啁啾",o:["啁啾","霍霍","汪汪","轟隆"],fx:"birds",alt:"工作紙亦接受「啾啾」。"},{a:"沙沙",o:["沙沙","滴答","砰","喔喔"],fx:"leaves"}]}
+];
+const SOUND_BANK = ["轟隆","唧唧","沙沙","淅瀝","淙淙","哇哇","琅琅","呼呼","汪汪","嗚嗚","砰","劈劈啪啪"];
+const SOUND_Q = [
+ ["春雨（{}）地下著。","淅瀝",""],
+ ["溪水（{}）的像訴說它的經歷。","淙淙",""],
+ ["（{}）的讀書聲充滿校園。","琅琅","常用詞：琅琅上口。"],
+ ["（{}）！遠處傳來一下槍聲。","砰","一下短促的聲音用「砰」。"],
+ ["秋蟲（{}）地叫着。","唧唧",""],
+ ["小妹妹不知為甚麼（{}）地大哭起來。","哇哇","「大哭」用「哇哇」；「嗚嗚」多形容低聲哭泣。"],
+ ["晚風輕輕掠過樹梢，樹葉發出（{}）的響聲。","沙沙",""],
+ ["（{}），是砲聲，還是雷聲？","轟隆",""],
+ ["大火在草原上蔓延，一直（{}）地燃燒三天才結束。","劈劈啪啪","東西燒到爆裂，就是「劈劈啪啪」。"],
+ ["寒風（{}）的吹着，好像要把大地捲起來。","呼呼",""]
+];
+
+// 量詞
+const SHOP_TIP = {則:"新聞、消息用「則」。",串:"連成一串的東西用「串」。",葉:"小船像一片葉子：一葉扁舟。",陣:"一段短時間內發生的感覺：一陣刺痛。",道:"光線、門用「道」：一道金光、一道門。",線:"很少、很細微：一線生機。",枚:"細小扁平的東西：一枚勳章。",面:"有平面的東西：一面彩旗。",批:"大量的貨物用「批」。",番:"花了很多心思：一番心血；問候一番。",段:"一段時間或事情：一段往事。",座:"大而有底座的東西：一座獎杯。",輪:"圓圓的太陽：一輪旭日。",劑:"藥用「劑」：一劑藥方。",幫:"一群人：一幫匪徒。",行:"一條條的眼淚：兩行眼淚。",縷:"細細一條的煙：一縷輕煙。",絲:"很少、很輕微：一絲涼意。",彎:"彎彎的月亮：一彎新月。",壺:"用壺裝的：一壺美酒。",趟:"來回走一次：走一趟。",頓:"吃飯一次：吃一頓。",遍:"從頭到尾一次：讀一遍。",次:"做一回：看一次。",下:"很短的動作：拍一下。",宗:"事件、案件：一宗交通意外。",袋:"用袋裝的：一袋蘋果。",束:"紮成一把的花：一束鮮花。",輛:"車用「輛」。",張:"薄薄平面的東西：一張心意卡。",本:"書用「本」。",股:"一陣流動的感覺：一股暖流。"};
+const SHOP_A = {key:"shop.a", title:"魔法貨架", bank:["道","則","番","葉","段","批","面","枚","陣","串","線","座","宗","場"],
+ q:[["一（{}）新聞","則","📰"],["一（{}）葡萄","串","🍇"],["一（{}）扁舟","葉","🛶"],["一（{}）刺痛","陣","⚡"],["一（{}）金光","道","✨"],["一（{}）生機","線","🌱",1],["一（{}）勳章","枚","🎖️"],["一（{}）彩旗","面","🚩"],["一（{}）貨物","批","📦"],["一（{}）心血","番","❤️"],["一（{}）往事","段","📜",1],["一（{}）獎杯","座","🏆"]]};
+const SHOP_B = {key:"shop.b", title:"表上量詞", bank:["輪","劑","幫","行","縷","絲","彎","壺","趟","頓","遍","次","下"],
+ q:[["一（{}）旭日","輪","🌅"],["一（{}）藥方","劑","💊"],["一（{}）匪徒","幫","🦹"],["兩（{}）眼淚","行","😢"],["一（{}）輕煙","縷","💨"],["一（{}）涼意","絲","🍃"],["一（{}）新月","彎","🌙"],["一（{}）美酒","壺","🍶"],["走一（{}）","趟","🚶"],["吃一（{}）","頓","🍚"],["讀一（{}）","遍","📖"],["看一（{}）","次","👀"],["拍一（{}）","下","👏"]]};
+const SHOP_STORY = {bank:["趟","束","宗","股","本","番","張","輛","袋","道","片","團"],
+ steps:[["📰🚑","聽到表哥遇上一（{}）交通意外的消息後，","宗"],["🏥","哥哥和我決定到醫院探望他一（{}）。","趟"],["🍎","那天，哥哥手裡拿著一（{}）蘋果，","袋"],["💐","我則拿著一（{}）鮮花，","束"],["🚕","乘坐一（{}）計程車往醫院去。","輛"],["🚪","推開那一（{}）門，只見表哥躺在床上，全身軟弱無力，看來傷勢不輕。","道",1],["💬","我們向他問候一（{}）之後，便準備離開。","番"],["💌","離開前我們留下了一（{}）心意卡","張"],["📕","和一（{}）小說給他，","本"],["❤️","希望他能感受到我們帶來的一（{}）暖流和真摯的問候。","股"]]};
+const SHOP_NEWS = {parts:["今天，我在報章上閱讀了一（",0,"）新聞，新聞裏報道了一位少年因被一（",1,"）貨車輾過，雙腿需要截肢。我閱後，心裏不期然感到一（",2,"）刺痛，雙眼不由自主地流下了兩（",3,"）眼淚。"], a:["則","輛","陣","行"], hintBank:["則","輛","陣","行","道","批"]};
+
+// 複句 8 類（跟工作紙六）
+const CTYPES = [
+ {id:"並列",c:"#5BC8FF",conn:["既……又","……也……","一方面……另一方面","一邊……一邊","也、又、還"],ex:"哥哥既是田徑好手，又是足球健將。",exk:["既","又"],tip:"幾件事情並排列出，沒有先後、輕重之分。"},
+ {id:"承接",c:"#45D08A",conn:["……就……","……便……","……然後……","先是……接著……然後"],ex:"他倆先是唱歌，接著跳舞，然後又一起打球。",exk:["先是","接著","然後"],tip:"事情一件接一件發生，有先後次序。"},
+ {id:"遞進",c:"#FFA94D",conn:["不但……而且","不只……也","不僅……還","尚且……何況"],ex:"智光不僅樂於助人，學業成績還不錯呢。",exk:["不僅","還"],tip:"後一句比前一句意思更進一步。"},
+ {id:"選擇",c:"#B49CFF",conn:["不是……就是","與其……不如","寧可……也不"],ex:"志堅很熱愛運動，每逢週末，不是去打球，就是去游泳。",exk:["不是","就是"],tip:"在兩樣東西或做法之中選一樣。"},
+ {id:"因果",c:"#FF7EB3",conn:["因為……所以","由於……因此","既然……就"],ex:"你既然知道自己錯了，就應該向對方道歉。",exk:["既然","就"],tip:"一句說原因，一句說結果。"},
+ {id:"假設",c:"#FFC93C",conn:["如果……就","即使……也","儘管……也","要是……就"],ex:"即使工作多麼繁忙，我也堅持每天做運動。",exk:["即使","也"],tip:"先假設一個情況，再說會怎樣。"},
+ {id:"轉折",c:"#FF5A4E",conn:["雖然……但是／可是","儘管……可是"],ex:"雖然實驗失敗了，但是愛迪生完全沒有灰心。",exk:["雖然","但是"],tip:"後一句的意思和前一句相反或不同。"},
+ {id:"條件",c:"#3FD1B5",conn:["只有……才","只要……就","除非……否則","無論……都","不管……都"],ex:"無論前路多崎嶇，我們都要勇往直前。",exk:["無論","都"],tip:"先說要有甚麼條件，再說會有甚麼結果。"}
+];
+const LETTERS = [
+ ["哥哥既是田徑好手，又是足球健將。","並列",["既","又"]],
+ ["我喜歡唱歌，妹妹也喜歡唱歌。","並列",["也"]],
+ ["我們一方面要努力讀書，另一方面也要注意身體。","並列",["一方面","另一方面"]],
+ ["弟弟一邊吃飯，一邊看電視。","並列",["一邊"]],
+ ["他倆先是唱歌，接著跳舞，然後又一起打球。","承接",["先是","接著","然後"]],
+ ["我一回到家，就馬上做功課。","承接",["就"]],
+ ["下課鐘聲一響，同學們便走出課室。","承接",["便"]],
+ ["我們吃過晚飯，然後一起去散步。","承接",["然後"]],
+ ["智光不僅樂於助人，學業成績還不錯呢。","遞進",["不僅","還"]],
+ ["明光不但改掉了懶惰的壞習慣，而且成了同學們的好榜樣。","遞進",["不但","而且"]],
+ ["我穿上厚厚的棉衣尚且覺得冷，何況你只是穿了一件薄襯衣。","遞進",["尚且","何況"]],
+ ["他不只會說英語，也會說法語。","遞進",["不只","也"]],
+ ["每逢週末，志堅不是去打球，就是去游泳。","選擇",["不是","就是"]],
+ ["爸爸寧可自己多做些工作，也不願意把擔子推給別人。","選擇",["寧可","也不"]],
+ ["與其在家看電視，不如出去做運動。","選擇",["與其","不如"]],
+ ["你既然知道自己錯了，就應該向對方道歉。","因果",["既然","就"]],
+ ["由於天文台已發出紅色暴雨警告，因此學校停課一天。","因果",["由於","因此"]],
+ ["因為下大雨，所以運動會要延期。","因果",["因為","所以"]],
+ ["即使工作多麼繁忙，我也堅持每天做運動。","假設",["即使","也"]],
+ ["如果明天天晴，我們就去郊遊。","假設",["如果","就"]],
+ ["要是你遲到，就會錯過校車。","假設",["要是","就"]],
+ ["儘管天氣很冷，他也堅持去游泳。","假設",["儘管","也"]],
+ ["雖然實驗失敗了，但是愛迪生完全沒有灰心。","轉折",["雖然","但是"]],
+ ["儘管你已忘了我是誰，可是我仍然深深感激當年你給我的幫忙。","轉折",["儘管","可是"]],
+ ["雖然我們取得很好的成績，但是也不能驕傲自滿。","轉折",["雖然","但是"]],
+ ["無論前路多崎嶇，我們都要勇往直前。","條件",["無論","都"]],
+ ["只有努力溫習，才能考到好成績。","條件",["只有","才"]],
+ ["只要你肯練習，就一定會進步。","條件",["只要","就"]],
+ ["除非下大雨，否則我們明天會去行山。","條件",["除非","否則"]],
+ ["不管天氣怎樣，爺爺都會去晨運。","條件",["不管","都"]]
+];
+
+// 關聯詞
+const PAIRS = [["既","又","並列"],["一方面","另一方面","並列"],["先是","接著","承接"],["不但","而且","遞進"],["不只","也","遞進"],["不僅","還","遞進"],["尚且","何況","遞進"],["不是","就是","選擇"],["與其","不如","選擇"],["寧可","也不","選擇"],["因為","所以","因果"],["由於","因此","因果"],["既然","就","因果"],["如果","就","假設"],["即使","也","假設"],["要是","就","假設"],["雖然","但是","轉折"],["只有","才","條件"],["只要","就","條件"],["除非","否則","條件"],["無論","都","條件"],["不管","都","條件"]];
+const BR1 = {bank:[["尚且","何況"],["不但","而且"],["既是","也是"],["由於","因此"],["儘管","可是"],["寧可","也不"]],
+ q:[["爸爸（{}）自己多做些工作，（{}）願意把擔子推給別人。",5,"選擇"],["（{}）你已忘了我是誰，（{}）我仍然深深感激當年你給我的幫忙。",4,"轉折"],["（{}）天文台已發出紅色暴雨警告，（{}）學校停課一天。",3,"因果"],["我穿上厚厚的棉衣（{}）覺得冷，（{}）你只是穿了一件薄襯衣。",0,"遞進"],["經過兩年的努力，明光（{}）改掉了懶惰的壞習慣，（{}）成了同學們的好榜樣。",1,"遞進"]]};
+const BR2 = {bank:["甚至","儘管","但是","如果","否則","然後","為了","因為","因此","或","又","就","既"],
+ parts:["笑，有益於健康；說話，可以表情達意，這都是人所共知的。（",0,"）有些人卻不宜大笑或多說話，（",1,"）會樂極生悲，誘發疾病，（",2,"）死亡。\n高血壓病人（",3,"）不宜大笑，（",4,"）不宜多說話。（",5,"）放縱大笑，血壓升高，（",6,"）會誘發腦溢血。高血壓病人還應少說話，（",7,"）多說話會令情緒激動，使血壓升高。（",8,"）我們對高血壓病人，應避免說一些使人極度悲傷（",9,"）極度興奮的談話。"],
+ a:["但是","否則","甚至","既","又","如果","就","因為","因此","或"]};
+const BUILD = [
+ {type:"轉折",src:"我們取得很好的成績。我們不能驕傲自滿。",pre:"",c:["雖然","但是"],cl:["我們取得很好的成績","也不能驕傲自滿"],d:["因為","所以"],ws:1},
+ {type:"因果",src:"天文台已發出紅色暴雨警告。學校停課一天。",pre:"",c:["由於","因此"],cl:["天文台已發出紅色暴雨警告","學校停課一天"],d:["雖然","但是"]},
+ {type:"條件",src:"努力溫習。能考到好成績。",pre:"",c:["只有","才"],cl:["努力溫習","能考到好成績"],d:["即使","也"]},
+ {type:"假設",src:"你遲到。你會錯過校車。",pre:"",c:["要是","就"],cl:["你遲到","會錯過校車"],d:["不但","而且"]},
+ {type:"遞進",src:"明光改掉了懶惰的壞習慣。明光成了同學們的好榜樣。",pre:"明光",c:["不但","而且"],cl:["改掉了懶惰的壞習慣","成了同學們的好榜樣"],d:["寧可","也不"]},
+ {type:"並列",src:"哥哥是田徑好手。哥哥是足球健將。",pre:"哥哥",c:["既","又"],cl:["是田徑好手","是足球健將"],d:["只要","就"]},
+ {type:"選擇",src:"在家看電視。出去做運動。",pre:"",c:["與其","不如"],cl:["在家看電視","出去做運動"],d:["由於","因此"]}
+];
+
+// 同音字、形近字（工作紙五）
+const MOLE = [
+ {s:"違法的人，一定會受到法律的制栽。",w:"栽",a:"裁",d:"載哉戴",t:"「裁」下面是「衣」，解裁決、制裁；「栽」下面是「木」，解栽種。",ex:1},
+ {s:"抱謙得很，我因事失約，請你原諒。",w:"謙",a:"歉",d:"嫌兼廉",t:"「歉」是欠字旁，表示對不起；「謙」是言字旁，解謙虛。"},
+ {s:"同學們正在綵排一齣話劇，准備在家長日演出。",w:"准",a:"準",d:"隼淮唯",t:"「準備」用「準」（下面有「十」）；「准」是批准。"},
+ {s:"明天的會議十分重要，請你準時出值。",w:"值",a:"席",d:"夕直植",t:"「出席」的「席」解座位；「值」是價值。"},
+ {s:"要不是生病的緣固，我一定不會退出這次比賽的。",w:"固",a:"故",d:"估姑古",t:"「緣故」的「故」解原因；「固」是堅固。"},
+ {s:"今天吃午餐的時候，我不小心在衣袖上留下了一片污積。",w:"積",a:"漬",d:"績債責",t:"「漬」是水字旁，指液體留下的痕跡；「積」是禾字旁，解累積。"},
+ {s:"你弄壞了我的照相機，一定要照原價倍償。",w:"倍",a:"賠",d:"陪培焙",t:"「賠」是貝字旁，和錢財有關；「倍」是加倍。"},
+ {s:"做事小心僅慎，才可以避免不必要的錯誤。",w:"僅",a:"謹",d:"勤饉槿",t:"「謹」是言字旁，解小心；「僅」解只有。"},
+ {s:"她愛在別人面前掩色自己的短處。",w:"色",a:"飾",d:"式釋識",t:"「掩飾」的「飾」解遮蓋、裝扮；「色」是顏色。"},
+ {s:"上次未能替他解決困難，使我心中感到十分內究。",w:"究",a:"疚",d:"救舊灸",t:"「疚」是病字頭（疒），心裏難過得像生病；「究」是研究。"},
+ {s:"經過一天的工作，我常常藉著散步來鬆馳神經。",w:"馳",a:"弛",d:"池施地",t:"「弛」是弓字旁，弓弦放鬆就是「鬆弛」；「馳」是馬字旁，解奔馳。"},
+ {s:"姨丈遇上車禍被送入醫院搶救，情況危急。",w:"急",a:"殆",d:"怠胎待",t:"「危殆」指非常危險（歹字旁）。「危急」本身也是詞語，但這題工作紙的答案是「危殆」。"},
+ {s:"他沉迷賭搏，若不及早覺悟，恐怕不能自拔了。",w:"搏",a:"博",d:"膊縛簿",t:"「賭博」的「博」是十字旁；「搏」是手字旁，解搏鬥。"},
+ {s:"警方懸賞十萬元，希望早日輯拿兇手歸案。",w:"輯",a:"緝",d:"揖葺楫",t:"「緝」是糸字旁，解追捕（緝拿）；「輯」是車字旁，解編輯。",hot:1},
+ {s:"為了維持社會秩序，警方現正大量招慕警員。",w:"慕",a:"募",d:"暮墓幕",t:"「募」下面是「力」，出力找人就是「招募」；「慕」下面是「心」，解羨慕。"},
+ {s:"從山頂眺望，我們都淘醉在香港那迷人的夜色中。",w:"淘",a:"陶",d:"掏萄濤",t:"「陶醉」的「陶」是阝旁；「淘」是水字旁，解淘米。"},
+ {s:"美好的璧玉，仍要經過啄磨，才能成為珍品。",w:"啄",a:"琢",d:"逐涿塚",t:"「琢」是玉（王）字旁，打磨玉石就是「琢磨」；「啄」是口字旁，指鳥用嘴啄。",hot:1},
+ {s:"開放日的會場裡，播放着悠洋的音樂。",w:"洋",a:"揚",d:"楊陽瘍",t:"「悠揚」的「揚」是手字旁，解揚起；「洋」是海洋。"},
+ {s:"笑可以改善人際關係，軀除人與人之間的隔膜。",w:"軀",a:"驅",d:"嘔區歐",t:"「驅」是馬字旁，解趕走（驅除）；「軀」是身字旁，指身體。",hot:1},
+ {s:"樹上的黃鶯，唱出清翠的歌聲，非常動聽。",w:"翠",a:"脆",d:"悴萃碎",t:"「清脆」的「脆」是月（肉）字旁；「翠」是羽字頭，解翠綠。",hot:1},
+ {s:"水災過後，無家可歸的災民露縮街頭，境況淒涼。",w:"縮",a:"宿",d:"速粟叔",t:"「宿」是宀字頭，解住、過夜（露宿）；「縮」是糸字旁，解縮小。"}
+];
+
+// 15 日溫習日程（每日 20–30 分鐘：主線約 15–20 分鐘＋溫習約 5–10 分鐘）
+const PLAN = [
+ {main:"看第二章故事＋🎧 聲音森林：聲音圖鑑、故事書①②", go:"c2:sound", rev:"📖 圖鑑：功課紙課次1、4"},
+ {main:"🛒 雜貨店：魔法貨架（配字 12 題）＋表上量詞", go:"c2:shop", rev:"🎧 聲音翻牌"},
+ {main:"✉️ 郵差派信：認識 8 間屋，再派一輪信", go:"c2:post", rev:"⚔️ 擂台：功課紙課次1"},
+ {main:"🌉 搭橋：關聯詞對對碰＋搭橋 5 條", go:"c2:bridge", rev:"🛒 雜貨店：探望表哥"},
+ {main:"🔨 錯字打地鼠（慢速）＋看錯字簿", go:"c2:mole", rev:"📒 成績表：錯題簿"},
+ {main:"⚔️ 擂台：功課紙課次4、6＋💰 尋寶（重點詞一）", go:"battle", rev:"🎧 聲音挑戰 10 句"},
+ {main:"🌉 搭橋：高血壓短文＋砌句工場", go:"c2:bridge", rev:"✉️ 郵差派信"},
+ {main:"⚔️ 擂台：功課紙課次8＋💰 尋寶（重點詞二、三）", go:"battle", rev:"🔨 錯字打地鼠"},
+ {main:"📗 五上：圖鑑＋擂台課次1、2", go:"learn", rev:"🛒 雜貨店：讀報（不供詞）"},
+ {main:"📗 五上：擂台課次4、6＋🔍 錯字偵探", go:"battle", rev:"🌉 關聯詞對對碰"},
+ {main:"💰 尋寶：五上《遊戲》《秋天的懷念》", go:"fill", rev:"✉️ 郵差派信"},
+ {main:"💰 尋寶：五上《沒有被忘掉的童話》《梅雨潭》", go:"fill", rev:"🎧 故事書再玩一次"},
+ {main:"第二章五個地方各玩一次，錯得最多的兩個再玩", go:"ch2", rev:"📒 錯題簿"},
+ {main:"兩個大魔王＋🔍 錯字偵探", go:"battle", rev:"🔨 打地鼠（正常速度）"},
+ {main:"總複習：看成績表，專攻錯題簿直至清零", go:"report", rev:"每個範疇挑最弱一關再玩"}
+];
+
+/* ================= 第二章：亂字魔大鬧語文王國 ================= */
+const C2 = (function(){
+"use strict";
+function ensure(){ if (!S.c2 || typeof S.c2 !== "object") S.c2 = {}; const d = {intro:false, st:{}, m:{}, plan:{}, slow:true}; for (const k in d) if (S.c2[k] === undefined) S.c2[k] = d[k]; }
+const st = k => { ensure(); return S.c2.st[k] || 0; };
+function setSt(k, n){ ensure(); S.c2.st[k] = Math.max(S.c2.st[k]||0, n); save(); }
+function miss(label, tip){ ensure(); const o = S.c2.m[label] || {n:0, t:""}; o.n++; if (tip) o.t = tip; S.c2.m[label] = o; save(); }
+const starTxt = n => '<span class="stars">'+[0,1,2].map(k=>`<span class="${k<n?"on":""}">★</span>`).join("")+'</span>';
+const rateStars = (ok, tot) => ok/tot >= .9 ? 3 : ok/tot >= .7 ? 2 : 1;
+const root = () => $("#c2");
+const V = {view:"map", g:null};
+
+/* ---------- 合成聲效（擬聲詞用） ---------- */
+function ctx(){ return ac(); }
+function genv(c, t, a, peak, hold, rel){ const g = c.createGain(); g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(peak, t+a); if (hold) g.gain.setValueAtTime(peak, t+a+hold); g.gain.exponentialRampToValueAtTime(.0001, t+a+(hold||0)+rel); return g; }
+function nb(t, d, peak, chain, a, hold){ const c = ctx(); if (!c) return []; a = a||.01; hold = hold||0;
+  const n = Math.max(1, Math.floor(c.sampleRate*(d+.1))), b = c.createBuffer(1, n, c.sampleRate), x = b.getChannelData(0);
+  for (let i=0;i<n;i++) x[i] = Math.random()*2-1;
+  const s = c.createBufferSource(); s.buffer = b; let node = s;
+  const fs = (chain||[]).map(([ty,f,q])=>{ const bf = c.createBiquadFilter(); bf.type = ty; bf.frequency.setValueAtTime(f, t); if (q!==undefined) bf.Q.value = q; node.connect(bf); node = bf; return bf; });
+  const g = genv(c, t, a, peak, hold, Math.max(.03, d-a-hold)); node.connect(g); g.connect(c.destination); s.start(t); s.stop(t+d+.1); return fs; }
+function vo(t, o){ const c = ctx(); if (!c) return null; const osc = c.createOscillator(); osc.type = o.type||"sine"; osc.frequency.setValueAtTime(o.f, t);
+  (o.path||[]).forEach(([dt,f])=>osc.frequency.linearRampToValueAtTime(f, t+dt));
+  if (o.vib){ const l = c.createOscillator(), lg = c.createGain(); l.frequency.value = o.vib[0]; lg.gain.value = o.vib[1]; l.connect(lg); lg.connect(osc.frequency); l.start(t); l.stop(t+o.d+.05); }
+  let node = osc; if (o.bp){ const bf = c.createBiquadFilter(); bf.type = "bandpass"; bf.frequency.value = o.bp[0]; bf.Q.value = o.bp[1]||1; osc.connect(bf); node = bf; }
+  const g = genv(c, t, o.a||.01, o.peak||.15, o.hold||0, Math.max(.03, o.d-(o.a||.01)-(o.hold||0))); node.connect(g); g.connect(c.destination); osc.start(t); osc.stop(t+o.d+.05); return osc; }
+const SYN = {
+  rumble(t){ nb(t,2.2,.7,[["lowpass",150,.7]],.12,.5); vo(t,{f:58,d:1.9,peak:.35,a:.08,path:[[1.8,34]]}); nb(t+.02,.35,.45,[["lowpass",900]],.004); },
+  bang(t){ nb(t,.45,.9,[["lowpass",2600]],.002); vo(t,{f:130,d:.4,peak:.6,a:.002,path:[[.35,40]]}); },
+  crackle(t){ for (let i=0;i<24;i++){ const tt = t+Math.random()*1.6; nb(tt,.03+Math.random()*.05,.25+Math.random()*.5,[["bandpass",1400+Math.random()*2600,1.4]],.002); } nb(t,1.7,.08,[["lowpass",500]],.2,.9); },
+  stream(t){ const fs = nb(t,2.2,.2,[["bandpass",1000,.9]],.3,1.2); if (fs[0]) for (let i=0;i<8;i++) fs[0].frequency.linearRampToValueAtTime(700+Math.random()*900, t+.26*(i+1));
+    for (let i=0;i<12;i++){ const tt = t+.1+Math.random()*1.9; vo(tt,{f:500+Math.random()*600,d:.08,peak:.1,a:.005,path:[[.07,1000+Math.random()*800]]}); } },
+  wind(t){ const fs = nb(t,2.2,.45,[["bandpass",350,4]],.6,.6); if (fs[0]){ fs[0].frequency.linearRampToValueAtTime(760,t+1); fs[0].frequency.linearRampToValueAtTime(380,t+2.1); } },
+  gust(t){ [0,.85].forEach(o=>{ const fs = nb(t+o,.75,.35,[["bandpass",900,2]],.25); if (fs[0]) fs[0].frequency.linearRampToValueAtTime(1500,t+o+.6); }); },
+  horse(t){ vo(t,{type:"sawtooth",f:650,d:1.1,peak:.16,a:.05,bp:[1300,1.2],vib:[13,60],path:[[.25,1350],[.6,950],[1.05,520]]}); },
+  xiao(t){ SYN.horse(t); SYN.gust(t+1.15); },
+  sharpen(t){ for (let i=0;i<3;i++){ const fs = nb(t+i*.45,.36,.28,[["highpass",2500],["bandpass",5200,1]],.18); if (fs[1]) fs[1].frequency.linearRampToValueAtTime(3600,t+i*.45+.34); } },
+  birds(t){ for (let i=0;i<8;i++){ const tt = t+i*.17+Math.random()*.05; vo(tt,{f:2900,d:.09,peak:.14,a:.005,path:[[.04,4300],[.09,3300]]}); } },
+  squeak(t){ for (let i=0;i<3;i++) vo(t+i*.16,{f:2600,d:.1,peak:.13,a:.006,path:[[.05,3400],[.1,2900]]}); },
+  clock(t){ for (let i=0;i<4;i++){ nb(t+i*.45,.04,.7,[["bandpass", i%2?2100:3300, 9]],.001); } },
+  heavyrain(t){ nb(t,2.3,.38,[["highpass",400],["lowpass",7000]],.35,1.3); for (let i=0;i<30;i++) vo(t+Math.random()*2.1,{f:1500+Math.random()*2500,d:.03,peak:.05,a:.002}); },
+  lightrain(t){ nb(t,2.0,.05,[["highpass",2500]],.4,1); for (let i=0;i<22;i++) vo(t+Math.random()*1.9,{f:1800+Math.random()*1800,d:.035,peak:.09,a:.002,path:[[.03,1200]]}); },
+  rooster(t){ vo(t,{type:"sawtooth",f:500,d:.28,peak:.13,bp:[1200,1.5],path:[[.25,620]]}); vo(t+.32,{type:"sawtooth",f:620,d:.28,peak:.13,bp:[1300,1.5],path:[[.25,780]]}); vo(t+.66,{type:"sawtooth",f:780,d:.85,peak:.14,bp:[1400,1.5],vib:[7,25],path:[[.3,940],[.8,560]]}); },
+  cricket(t){ for (let b=0;b<3;b++) for (let i=0;i<8;i++) vo(t+b*.45+i*.032,{f:4500,d:.022,peak:.09,a:.002}); },
+  rustle(t){ for (let i=0;i<14;i++) nb(t+i*.1+Math.random()*.06,.14,.12+Math.random()*.12,[["bandpass",3400+Math.random()*1500,.9]],.02); },
+  cry(t){ [0,.62].forEach(o=>vo(t+o,{type:"sawtooth",f:420,d:.55,peak:.12,a:.04,bp:[1100,1.5],vib:[6,22],path:[[.18,580],[.55,430]]})); },
+  reading(t){ for (let i=0;i<9;i++){ vo(t+i*.18,{type:"sawtooth",f:190+Math.random()*60,d:.15,peak:.07,a:.02,bp:[750,1.2]}); vo(t+i*.18+.02,{type:"sawtooth",f:230+Math.random()*60,d:.14,peak:.05,a:.02,bp:[900,1.2]}); } },
+  dog(t){ [0,.36].forEach(o=>{ vo(t+o,{type:"square",f:420,d:.16,peak:.12,a:.005,bp:[900,1.4],path:[[.14,300]]}); nb(t+o,.1,.18,[["bandpass",900,1.2]],.003); }); },
+  whoo(t){ vo(t,{f:420,d:1.3,peak:.16,a:.15,vib:[5,15],path:[[.6,680],[1.25,420]]}); }
+};
+function snd(word, auto){ if (auto && !S.sound) return; const c = ctx(); if (!c) return; const o = ONO[word]; const f = o && SYN[o.snd]; if (f) f(c.currentTime+.03); }
+
+/* ---------- 角色 ---------- */
+function ldmSVG(cls){ return `<svg class="bsvg ${cls||""}" viewBox="0 0 200 200" aria-hidden="true">
+  <text x="22" y="40" font-size="26" font-weight="900" fill="#FF7EB3" transform="rotate(-18 22 40)" font-family="serif">亂</text>
+  <text x="160" y="46" font-size="24" font-weight="900" fill="#FFC93C" transform="rotate(15 160 46)" font-family="serif">錯</text>
+  <text x="168" y="168" font-size="22" font-weight="900" fill="#5BC8FF" transform="rotate(-10 168 168)" font-family="serif">別</text>
+  <path d="M42 150 C20 120 30 72 58 54 C68 32 100 22 122 36 C152 30 178 58 172 92 C188 112 182 150 160 164 C150 184 120 188 100 176 C80 190 52 180 42 150Z" fill="#33255E" stroke="#fff" stroke-width="5"/>
+  <path d="M62 64 Q72 54 84 58" stroke="#7B5CFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M60 96 L90 106 M140 96 L110 106" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <g class="e-n"><ellipse cx="78" cy="116" rx="13" ry="11" fill="#fff"/><circle cx="81" cy="117" r="5.5" fill="#FF2D55"/><ellipse cx="122" cy="116" rx="13" ry="11" fill="#fff"/><circle cx="119" cy="117" r="5.5" fill="#FF2D55"/></g>
+  <g class="e-h" stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M70 108 L86 124 M86 108 L70 124 M114 108 L130 124 M130 108 L114 124"/></g>
+  <path d="M72 140 Q100 166 128 140 Q100 152 72 140Z" fill="#fff" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M86 143 L90 151 L94 145 M106 145 L110 151 L114 143" stroke="#33255E" stroke-width="3" fill="none"/>
+ </svg>`; }
+const moleSVG = `<svg viewBox="0 0 100 80" aria-hidden="true"><ellipse cx="50" cy="60" rx="38" ry="34" fill="#8B5A2B" stroke="${INK}" stroke-width="4"/><ellipse cx="50" cy="66" rx="22" ry="18" fill="#D9A774"/><circle cx="38" cy="44" r="5" fill="${INK}"/><circle cx="62" cy="44" r="5" fill="${INK}"/><circle cx="39.5" cy="42.5" r="1.6" fill="#fff"/><circle cx="63.5" cy="42.5" r="1.6" fill="#fff"/><ellipse cx="50" cy="54" rx="7" ry="5" fill="#FF7EB3" stroke="${INK}" stroke-width="2.5"/><path d="M44 62 h12" stroke="${INK}" stroke-width="2.5"/><path d="M47 62 v5 h6 v-5" fill="#fff" stroke="${INK}" stroke-width="2"/></svg>`;
+function rainLines(){ let h = ""; for (let i=0;i<46;i++){ const x = Math.round(Math.random()*400), y = Math.round(Math.random()*200); h += `<line x1="${x}" y1="${y}" x2="${x-4}" y2="${y+14}" stroke="#E6F4FF" stroke-width="2" stroke-linecap="round" style="animation-delay:-${(Math.random()*.6).toFixed(2)}s"/>`; } return h; }
+function sceneSVG(kind){
+  if (kind === "steppe") return `<svg class="scene" id="scene" viewBox="0 0 400 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+   <rect class="sky" width="400" height="210" fill="#9ED3F2" style="transition:fill .6s"/>
+   <g><ellipse cx="90" cy="38" rx="62" ry="22" fill="#6B6F8A"/><ellipse cx="146" cy="30" rx="48" ry="19" fill="#5E6280"/><ellipse cx="292" cy="42" rx="70" ry="24" fill="#6B6F8A"/><ellipse cx="346" cy="32" rx="44" ry="18" fill="#5E6280"/></g>
+   <path d="M0 145 Q100 118 200 138 T400 128 V210 H0Z" fill="#7CCB6B"/><path d="M0 172 Q120 152 240 170 T400 162 V210 H0Z" fill="#5FB356"/>
+   <g transform="translate(236 118)"><path d="M0 40 V18 Q30 -8 60 18 V40Z" fill="#fff" stroke="${INK}" stroke-width="3"/><path d="M1 26 H59" stroke="#E8443A" stroke-width="5"/><rect x="24" y="24" width="12" height="16" fill="#C97B3A" stroke="${INK}" stroke-width="2"/></g>
+   <g transform="translate(78 120)"><g class="horse"><path d="M10 22 Q30 8 52 16 L66 4 Q72 0 76 6 L72 14 Q64 18 60 24 Q58 34 50 36 L18 36 Q6 34 10 22Z" fill="#8B5A2B" stroke="${INK}" stroke-width="2.5"/><path d="M18 34 V50 M26 35 V50 M44 35 V50 M52 34 V50" stroke="${INK}" stroke-width="4" stroke-linecap="round"/><path d="M10 22 Q0 26 2 40" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M54 14 Q60 6 66 4" stroke="${INK}" stroke-width="4" fill="none"/><circle cx="70" cy="7" r="1.8" fill="${INK}"/></g></g>
+   <g transform="translate(330 56)"><rect x="12" y="50" width="12" height="60" fill="#8B5A2B" stroke="${INK}" stroke-width="2.5"/><g class="leaves"><circle cx="18" cy="40" r="30" fill="#3E9B4F" stroke="${INK}" stroke-width="2.5"/><circle cx="-4" cy="54" r="18" fill="#47AE5A" stroke="${INK}" stroke-width="2.5"/><circle cx="40" cy="54" r="18" fill="#47AE5A" stroke="${INK}" stroke-width="2.5"/></g></g>
+   <g class="bugnotes" font-size="18" font-weight="900" fill="${INK}"><text x="318" y="96">♪</text><text x="356" y="84" style="animation-delay:.5s">♫</text><text x="338" y="70" style="animation-delay:1s">♪</text></g>
+   <g class="rainl">${rainLines()}</g>
+   <rect class="flash" width="400" height="210" fill="#fff"/>
+  </svg>`;
+  return `<svg class="scene" id="scene" viewBox="0 0 400 210" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+   <rect class="sky" width="400" height="210" fill="#C8EEFF"/><circle cx="350" cy="36" r="20" fill="#FFE27A"/>
+   <path d="M0 120 Q90 92 200 112 T400 104 V210 H0Z" fill="#8FD67E"/>
+   <path d="M-10 170 C70 150 120 190 210 168 S340 140 410 160 L410 196 C340 178 280 214 200 202 S60 186 -10 206Z" fill="#5BC8FF" stroke="${INK}" stroke-width="2.5"/>
+   <path class="ripple" d="M20 186 C80 172 130 198 200 184 S330 160 390 176" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+   <path class="ripple" d="M40 196 C100 184 150 206 220 194 S330 176 380 188" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation-delay:-.6s"/>
+   <path d="M120 210 Q160 150 210 128 Q240 116 270 112" stroke="#E7CFA0" stroke-width="16" fill="none" stroke-linecap="round"/>
+   <g transform="translate(44 34)"><rect x="18" y="56" width="14" height="70" fill="#8B5A2B" stroke="${INK}" stroke-width="2.5"/><g class="leaves"><circle cx="25" cy="44" r="34" fill="#3E9B4F" stroke="${INK}" stroke-width="2.5"/><circle cx="0" cy="60" r="20" fill="#47AE5A" stroke="${INK}" stroke-width="2.5"/><circle cx="50" cy="60" r="20" fill="#47AE5A" stroke="${INK}" stroke-width="2.5"/></g>
+    <g class="bird" transform="translate(6 30)"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FFC93C" stroke="${INK}" stroke-width="2"/><path d="M19 7 l6 2 l-6 2z" fill="#FF7A45"/><circle cx="14" cy="6" r="1.5" fill="${INK}"/></g>
+    <g class="bird" transform="translate(40 22)" style="animation-delay:.2s"><ellipse cx="10" cy="8" rx="10" ry="7" fill="#FF7EB3" stroke="${INK}" stroke-width="2"/><path d="M1 7 l-6 2 l6 2z" fill="#FF7A45"/><circle cx="6" cy="6" r="1.5" fill="${INK}"/></g></g>
+   <g class="birdnotes" font-size="18" font-weight="900" fill="${INK}"><text x="40" y="54">♪</text><text x="96" y="46" style="animation-delay:.6s">♫</text></g>
+  </svg>`;
+}
+
+/* ---------- 地圖、故事 ---------- */
+const AREAS = [
+ {id:"sound",name:"聲音森林",ic:"🎧",c:"var(--leaf)",topic:"擬聲詞",lost:"亂字魔偷走咗森林所有聲音：雀仔唔識唱、溪水冇聲、連打雷都靜晒！揀啱擬聲詞，將聲音放返入去。",keys:["sound.story1","sound.story2","sound.match","sound.quiz"]},
+ {id:"shop",name:"墨墨雜貨店",ic:"🛒",c:"var(--orange)",topic:"量詞",lost:"亂字魔撕爛晒雜貨店嘅量詞標籤，客人嚟買嘢都唔知講「一串」定「一則」！",keys:["shop.a","shop.b","shop.story","shop.news"]},
+ {id:"post",name:"郵差派信",ic:"✉️",c:"var(--sky)",topic:"複句類型",lost:"亂字魔將全城嘅信撈亂晒。每封信係一句複句，要派返去啱嘅複句屋。",keys:["post"]},
+ {id:"bridge",name:"關聯詞搭橋",ic:"🌉",c:"var(--ghost)",topic:"關聯詞",lost:"亂字魔拆走咗橋上嘅關聯詞木板，兩岸嘅人過唔到河！",keys:["bridge.pairs","bridge.s1","bridge.s2","bridge.build"]},
+ {id:"mole",name:"錯字打地鼠",ic:"🔨",c:"var(--octo)",topic:"同音字、形近字",lost:"亂字魔派咗一群地鼠，舉住錯字周圍走！打中錯字，再搵返正確嗰個。",keys:["mole"]}
+];
+const AREA = id => AREAS.find(a=>a.id===id);
+const pct = a => Math.round(a.keys.filter(k=>st(k)>0).length / a.keys.length * 100);
+const INTRO = [
+ {who:"故事", txt:"語文王國本來好熱鬧：森林有雀仔唱歌，雜貨店貼滿標籤，橋樑連住兩岸，郵差每日準時派信。", art:"🏰"},
+ {who:"亂字魔", txt:"嘿嘿嘿！我偷走晒森林嘅聲音，撕爛晒雜貨店嘅標籤，拆咗啲橋，撈亂晒啲信，仲派地鼠周圍寫錯字！", art:"ldm"},
+ {who:"墨墨", txt:"", art:"cat"}
+];
+function renderIntro(i){
+  const p = INTRO[i];
+  const art = p.art==="ldm" ? `<div style="width:160px;margin:0 auto">${ldmSVG()}</div>` : p.art==="cat" ? `<div style="width:150px;margin:0 auto">${catSVG({cls:"bob"})}</div>` : `<div style="font-size:90px;text-align:center">${p.art}</div>`;
+  const txt = p.art==="cat" ? `${esc(nm())}，我哋一齊修復語文王國！五個地方，每個都有唔同玩法。修好晒，亂字魔就會投降！` : p.txt;
+  root().innerHTML = `<div class="panel" style="max-width:640px;margin:0 auto;text-align:center">
+    ${art}<p style="font-weight:900;margin:10px 0 4px">${p.who}</p><p style="font-size:19px;line-height:1.7;margin:0 0 16px">${esc(txt)}</p>
+    <div class="row-btns" style="justify-content:center">${i>0?`<button class="btn sm" data-c2="intro" data-a="${i-1}">◀ 上一頁</button>`:""}
+    ${i<INTRO.length-1?`<button class="btn y" data-c2="intro" data-a="${i+1}">下一頁 ▶</button>`:`<button class="btn y" data-c2="introdone">開始修復王國！</button>`}</div></div>`;
+  if (p.art==="ldm") SFX.bad();
+}
+function planHTML(){
+  ensure(); const nextI = PLAN.findIndex((_,i)=>!S.c2.plan[i]);
+  return `<div class="panel c2-plan" id="c2plan"><h3>📅 15 日溫習日程</h3><p style="margin:0 0 8px;color:var(--ink2)">每日 20–30 分鐘：先玩「主線」大約 15–20 分鐘，再做「溫習」5–10 分鐘。完成就剔一剔。第 16 日之後用嚟專攻錯題簿。</p>
+    ${PLAN.map((p,i)=>`<div class="day ${i===nextI?"next":""}"><button class="tick ${S.c2.plan[i]?"on":""}" data-c2="tick" data-a="${i}" aria-label="第 ${i+1} 日完成">${S.c2.plan[i]?"✓":""}</button><span class="dn">第 ${i+1} 日</span><span class="txt">${esc(p.main)}<small>溫習：${esc(p.rev)}</small></span><button class="btn sm ${i===nextI?"y":""}" data-c2="plango" data-a="${p.go}">去玩</button></div>`).join("")}</div>`;
+}
+function renderMap(){
+  ensure(); if (!S.c2.intro){ renderIntro(0); return; }
+  const done = AREAS.filter(a=>pct(a)===100).length;
+  root().innerHTML = `<div class="panel c2-hero"><div>${ldmSVG(done===5?"hurt":"bob")}</div><div>
+     <h2 class="sec">🏰 第二章：亂字魔大鬧語文王國</h2>
+     <p>${done===5 ? `${esc(nm())}同墨墨修復晒成個王國！亂字魔投降喇 🎉` : `已經修復 ${done} / 5 個地方。每個地方玩一種新玩法，修好嘅地方會亮返。`}</p>
+     <div class="row-btns"><button class="btn sm" data-c2="intro" data-a="0">📜 重睇故事</button><button class="btn sm y" data-c2="toplan">📅 15 日溫習日程</button></div></div></div>
+   <div class="c2-map">${AREAS.map(a=>{ const p = pct(a); return `<button class="c2-area ${p===100?"lit":""}" data-c2="area" data-a="${a.id}" style="--c:${a.c}">
+     ${p===100?`<span class="badge2">✓ 已修復</span>`:""}<span class="top">${a.ic}</span><span class="bd"><b>${a.name}</b><small>${a.topic}</small><span class="pbar"><i style="width:${p}%"></i></span><small>修復 ${p}%</small></span></button>`; }).join("")}</div>
+   ${planHTML()}`;
+}
+function bar(title, back){ return `<div class="c2-bar"><button class="btn sm" data-c2="${back?"area":"map"}" data-a="${back||""}">◀ ${back?"返回"+AREA(back).name:"王國地圖"}</button><span class="ttl">${title}</span><span class="sp"></span></div>`; }
+const STAGES = {
+ sound:[["learn","聲音圖鑑","20 個擬聲詞，撳一下聽聲效。",""],["story1","故事書①蒙古大草原","讀故事，揀擬聲詞將聲音放返入去。","sound.story1"],["story2","故事書②郊外小徑","溪水、雀仔、樹葉嘅聲音。","sound.story2"],["match","聲音翻牌","表入面 10 個擬聲詞配對聲音。","sound.match"],["quiz","聲音挑戰","工作紙 10 句，可以先聽聲效提示。","sound.quiz"]],
+ shop:[["catalog","量詞目錄","工作紙表格：量詞放喺名詞前面，同動詞後面。",""],["a","魔法貨架","配字 12 題：客人嚟買嘢，揀啱標籤。","shop.a"],["b","表上量詞","一輪旭日、走一趟……13 題。","shop.b"],["story","探望表哥","跟住故事去探病，填 10 個量詞。","shop.story"],["news","讀報","報章段落 4 格，不供詞，自己寫。","shop.news"]],
+ post:[["learn","認識 8 間屋","8 種複句同佢哋嘅關聯詞。",""],["play","派信","每輪 16 封信，派去啱嘅屋。","post"]],
+ bridge:[["pairs","關聯詞對對碰","上半個配下半個。","bridge.pairs"],["s1","搭橋","工作紙 5 句：揀啱一對關聯詞先砌到橋。","bridge.s1"],["s2","上山路","高血壓短文 10 格。","bridge.s2"],["build","砌句工場","揀關聯詞，將兩句砌成複句（7 句）。","bridge.build"]],
+ mole:[["learn","錯字簿","工作紙 20 題錯字同部首貼士。",""],["play","打地鼠","每輪 10 題：先打錯字，再打正確嘅字。","mole"]]
+};
+function renderArea(id){
+  const a = AREA(id);
+  root().innerHTML = bar(a.name) + `<div class="panel c2-head" style="--c:${a.c}"><div class="big">${a.ic}</div><div><h2>${a.name}（${a.topic}）</h2><p>${esc(a.lost)}</p></div></div>
+   <div class="c2-stages">${STAGES[id].map(([k,t,d,key])=>`<button class="c2-stage" data-c2="stage" data-a="${id}:${k}"><b>${t}</b><span>${d}</span>${key?starTxt(st(key)):`<span class="stars" style="color:var(--ink2);font-size:13px">學習</span>`}</button>`).join("")}</div>`;
+}
+function finish(key, n, msg, area, again){
+  setSt(key, n); SFX.win(); confetti(80);
+  const a = AREA(area), p = pct(a);
+  modal(`<div style="width:110px;margin:0 auto">${catSVG({cls:"happy bob"})}</div><h3>完成！</h3>
+    <div class="bigstars">${[0,1,2].map(k=>`<span class="${k<n?"on":""}" style="animation-delay:${.15+k*.2}s">★</span>`).join("")}</div>
+    <p style="margin:4px 0">${msg}</p><p style="margin:4px 0;font-weight:800">${a.name}修復進度：${p}%${p===100?" 🎉 修復完成！":""}</p>
+    <div class="row"><button class="btn y" data-c2="stage" data-a="${area}:${again}">↺ 再玩</button><button class="btn" data-c2="area" data-a="${area}">返回${a.name}</button></div>`);
+}
+
+/* ---------- 🎧 聲音森林 ---------- */
+function soundLearn(){
+  const words = Object.keys(ONO);
+  root().innerHTML = bar("聲音圖鑑","sound") + `<p class="sub">黃色標籤係工作紙表格入面嘅 10 個；其餘係工作紙練習用到嘅擬聲詞。撳「🔊 聽聲」聽合成聲效，撳「🗣」聽讀音。</p>
+   <div class="ono-grid">${words.map(w=>{ const o = ONO[w]; return `<div class="ono"><div class="hd"><span class="em">${o.e}</span><span class="w">${w}</span>${o.tbl?`<span class="tag">表</span>`:""}</div>
+    <div>${esc(o.m)}</div>${o.zi?`<div class="zi">✍️ ${esc(o.zi)}</div>`:""}
+    <div class="row-btns"><button class="btn sm g" data-c2="snd" data-a="${w}">🔊 聽聲</button>${sayBtn(w,true)}</div></div>`; }).join("")}</div>`;
+}
+function soundStory(pi){
+  const P = SOUND_STORY[pi]; V.g = {k:"story", pi, i:0, ok:0, err:0, firstMiss:false, fx:[]};
+  drawStory();
+}
+function drawStory(){
+  const g = V.g, P = SOUND_STORY[g.pi];
+  const txt = P.parts.map(x=> typeof x === "number" ? (x < g.i ? `<span class="slot ok">${P.blanks[x].a}</span>` : x===g.i ? `<span class="slot cur">？</span>` : `<span class="slot">　</span>`) : esc(x)).join("");
+  const B = P.blanks[g.i];
+  const done = g.i >= P.blanks.length;
+  root().innerHTML = bar(`故事書${g.pi+1}：${P.title}`,"sound") +
+   `<div class="scene-wrap">${sceneSVG(P.scene)}</div>
+    ${g.fx.length?`<div class="unlocked"><span style="font-weight:800">已經找回：</span>${g.fx.map(w=>`<button class="btn sm" data-c2="snd" data-a="${w}">${ONO[w].e} ${w}</button>`).join("")}</div>`:""}
+    <div class="panel"><div class="c2-text">${txt}</div>
+    ${done ? `<div class="fbx good">🎉 故事入面嘅聲音全部返嚟喇！${sayBtn(P.parts.map(x=>typeof x==="number"?P.blanks[x].a:x).join(""),true)} 聽返成段故事</div>
+       <div class="row-btns" style="margin-top:12px">${g.pi===0?`<button class="btn y" data-c2="stage" data-a="sound:story2">下一個故事 ▶</button>`:`<button class="btn y" data-c2="stage" data-a="sound:match">去玩聲音翻牌 ▶</button>`}<button class="btn" data-c2="area" data-a="sound">返回聲音森林</button></div>`
+     : `<p style="font-weight:800;margin:0 0 8px">第 ${g.i+1} 格要用邊個擬聲詞？可以先撳 🔊 聽吓：</p>
+       <div class="chips">${shuffle(B.o).map(w=>`<span class="chip2" style="cursor:default"><button class="chip2" style="box-shadow:none;border:0;padding:0" data-c2="sans" data-a="${w}">${w}</button><button class="mini" data-c2="snd" data-a="${w}" aria-label="聽${w}">🔊</button></span>`).join("")}</div>`}
+    <div class="fbx" id="sfb"></div></div>`;
+  const sc = $("#scene"); g.fx.forEach(w=>{ const b = P.blanks.find(b=>b.a===w); if (b) sc.classList.add("fx-"+b.fx); });
+}
+function storyAnswer(w){
+  const g = V.g, P = SOUND_STORY[g.pi], B = P.blanks[g.i]; if (!B) return;
+  if (w === B.a){
+    if (!g.firstMiss) g.ok++; g.firstMiss = false; g.i++; g.fx.push(B.a); SFX.good();
+    drawStory(); snd(B.a, false);
+    const sc = $("#scene"); if (B.fx==="thunder"){ sc.classList.add("flashing","shaking"); }
+    $("#sfb").className = "fbx good"; $("#sfb").innerHTML = `✔ 「${B.a}」——${esc(ONO[B.a].m)}！${B.alt?" "+B.alt:""}`;
+    if (g.i >= P.blanks.length) setTimeout(()=>finishStory(), 900);
+  } else {
+    g.err++; if (!g.firstMiss){ g.firstMiss = true; miss(`擬聲詞：${P.title}「${B.a}」`, ONO[B.a].m); }
+    SFX.bad(); $("#sfb").className = "fbx bad"; $("#sfb").innerHTML = `✘「${w}」係${esc(ONO[w]?ONO[w].m:"")}，唔啱呢度。再聽吓其他聲音！`;
+  }
+}
+function finishStory(){ const g = V.g, P = SOUND_STORY[g.pi]; finish("sound.story"+(g.pi+1), rateStars(g.ok, P.blanks.length), `一次答啱 ${g.ok} / ${P.blanks.length} 格。`, "sound", "story"+(g.pi+1)); }
+function soundMatch(){
+  const tbl = Object.keys(ONO).filter(w=>ONO[w].tbl);
+  const cards = shuffle(tbl.flatMap(w=>[{id:w,t:"w"},{id:w,t:"m"}]));
+  V.g = {k:"match", cards, open:[], done:new Set(), moves:0, lock:false};
+  drawMatch();
+}
+function drawMatch(){
+  const g = V.g;
+  root().innerHTML = bar("聲音翻牌","sound") + `<p class="sub">揭兩張牌：擬聲詞配啱佢嘅聲音來源。配啱會播聲效。已揭：${g.moves} 次</p>
+   <div class="mem">${g.cards.map((c,i)=>{ const o = ONO[c.id]; const open = g.open.includes(i), dn = g.done.has(c.id);
+     return `<button class="mcard ${open?"open":""} ${dn?"done":""}" data-c2="mflip" data-a="${i}"><span class="q">?</span><span class="f ${c.t==="w"?"kai":""}">${c.t==="w"?c.id:o.e+"<br>"+esc(o.m)}</span></button>`; }).join("")}</div>`;
+}
+function matchFlip(i){
+  const g = V.g; if (g.lock || g.open.includes(i) || g.done.has(g.cards[i].id)) return;
+  g.open.push(i); SFX.flip();
+  if (g.open.length === 2){
+    g.moves++; const [a,b] = g.open.map(k=>g.cards[k]);
+    if (a.id === b.id && a.t !== b.t){ g.done.add(a.id); g.open = []; snd(a.id, false); drawMatch();
+      if (g.done.size === 10) setTimeout(()=>finish("sound.match", g.moves<=14?3:g.moves<=20?2:1, `用咗 ${g.moves} 次配晒 10 對。`, "sound", "match"), 900);
+      return; }
+    g.lock = true; drawMatch(); setTimeout(()=>{ g.open = []; g.lock = false; drawMatch(); }, 900); return;
+  }
+  drawMatch();
+}
+function soundQuiz(){ V.g = {k:"quiz", q:shuffle(SOUND_Q.map((_,i)=>i)), i:0, ok:0, tries:0, used:new Set()}; drawQuiz(); }
+function drawQuiz(){
+  const g = V.g, q = SOUND_Q[g.q[g.i]];
+  root().innerHTML = bar(`聲音挑戰 ${Math.min(g.i+1,10)} / 10`,"sound") + `<div class="panel">
+   <div class="c2-text">${esc(q[0]).replace("{}", `<span class="slot cur" id="qslot">？</span>`)}</div>
+   <div class="row-btns" style="margin-bottom:12px"><button class="btn sm g" data-c2="snd" data-a="${q[1]}">🔊 聽聲提示</button></div>
+   <div class="chips">${SOUND_BANK.map(w=>`<button class="chip2 ${g.used.has(w)?"used":""}" data-c2="qans" data-a="${w}">${w}</button>`).join("")}</div>
+   <div class="fbx" id="qfb"></div><div id="qnext" style="margin-top:12px"></div></div>`;
+}
+function quizAnswer(w, el){
+  const g = V.g, q = SOUND_Q[g.q[g.i]]; if (g.lock) return;
+  if (w === q[1]){
+    if (g.tries===0) g.ok++; g.lock = true; g.used.add(w); snd(w, false); SFX.good();
+    const s = $("#qslot"); s.className = "slot ok"; s.textContent = w; el.classList.add("good");
+    $("#qfb").className = "fbx good"; $("#qfb").innerHTML = `✔ 答啱！「${w}」：${esc(ONO[w].m)}。${esc(q[2])} ${sayBtn(q[0].replace("{}",w),true)}`;
+    $("#qnext").innerHTML = `<button class="btn y" data-c2="qnext">${g.i<9?"下一句 ▶":"完成 🎉"}</button>`;
+  } else {
+    g.tries++; el.classList.add("bad"); SFX.bad(); if (g.tries===1) miss(`擬聲詞：${q[0].replace("{}",q[1])}`, ONO[q[1]].m);
+    $("#qfb").className = "fbx bad"; $("#qfb").innerHTML = g.tries>=2 ? `答案係「${q[1]}」（${esc(ONO[q[1]].m)}）。撳佢再試一次。` : `✘「${w}」係${esc(ONO[w].m)}。撳「🔊 聽聲提示」再諗吓！`;
+  }
+}
+function quizNext(){ const g = V.g; g.i++; g.tries = 0; g.lock = false; if (g.i >= 10) finish("sound.quiz", rateStars(g.ok,10), `一次答啱 ${g.ok} / 10 句。`, "sound", "quiz"); else drawQuiz(); }
+
+/* ---------- 🛒 雜貨店 ---------- */
+const CUST = ["🐼","🐰","🐸","🐻","🦊","🐧","🐨","🐯","🐷","🐵","🐮","🐔","🦁","🐶"];
+function shopCatalog(){
+  const nounB = SHOP_B.q.slice(0,8), verbB = SHOP_B.q.slice(8);
+  const row = q => `<div class="vrow" style="grid-template-columns:auto 1fr"><div class="vw" style="grid-column:auto;font-size:26px">${q[2]}</div><div><span class="kai" style="font-size:24px;font-weight:900">${esc(q[0]).replace("{}",`<mark>${q[1]}</mark>`)}</span><br><small>${esc(SHOP_TIP[q[1]]||"")}</small></div></div>`;
+  root().innerHTML = bar("量詞目錄","shop") + `<div class="panel" style="margin-bottom:14px"><b>量詞有兩種位置：</b><br>1. 放在名詞或形容詞的前面，例如「一<mark>輪</mark>旭日」。<br>2. 放在動詞的後面，例如「走一<mark>趟</mark>」。</div>
+   <div class="vgroup"><h3>1. 放在名詞前面</h3><div class="vlist">${nounB.map(row).join("")}</div></div>
+   <div class="vgroup"><h3>2. 放在動詞後面</h3><div class="vlist">${verbB.map(row).join("")}</div></div>
+   <div class="vgroup"><h3>配字練習用到嘅量詞</h3><div class="vlist">${SHOP_A.q.map(row).join("")}</div></div>`;
+}
+function shopRound(set){
+  const order = shuffle(set.q.map((_,i)=>i)).sort((a,b)=>(set.q[b][3]||0)-(set.q[a][3]||0));
+  V.g = {k:"shop", set, order, i:0, ok:0, coins:0, hearts:2, tries:0, cust:pick(CUST), lock:false}; drawShop(true);
+}
+function drawShop(newCust){
+  const g = V.g, q = g.set.q[g.order[g.i]];
+  root().innerHTML = bar(`${g.set.title} ${g.i+1} / ${g.order.length}`,"shop") + `
+   <div class="shop"><span class="coins">🪙 ${g.coins}</span>
+    <div class="shelf" style="top:70px"></div><div class="goods" style="top:34px">🍇📦🎖️🏆🚩🛶📰🍎💐</div>
+    <div class="shelf" style="top:140px"></div><div class="goods" style="top:104px">🍶💊🌙🌅📕💌✨🌱</div>
+    <div class="keeper">${catSVG({cls:"bob"})}</div>
+    <div class="order" id="order"><span class="item">${q[2]}</span>老闆，我要<br><span class="ph">「${esc(q[0]).replace("{}",`<span class="slot cur" id="sslot">？</span>`)}」</span></div>
+    <span class="hearts">${"❤️".repeat(g.hearts)}${"🤍".repeat(2-g.hearts)}</span>
+    <div class="cust ${newCust?"in":""}" id="cust"><div class="face">${g.cust}</div></div></div>
+   <div class="panel"><p style="font-weight:800;margin:0 0 8px">揀一張量詞標籤：</p><div class="chips">${g.set.bank.map(w=>`<button class="chip2" data-c2="shopans" data-a="${w}">${w}</button>`).join("")}</div>
+   <div class="fbx" id="shfb"></div><div id="shnext" style="margin-top:12px"></div></div>`;
+}
+function shopAnswer(w, el){
+  const g = V.g; if (g.lock) return; const q = g.set.q[g.order[g.i]];
+  if (w === q[1]){
+    g.lock = true; if (g.tries===0){ g.ok++; g.coins += 15; } else g.coins += 5;
+    SFX.chest(); el.classList.add("good"); const s = $("#sslot"); s.className = "slot ok"; s.textContent = w;
+    $("#order").innerHTML += `<br>多謝晒！😊`;
+    const r = el.getBoundingClientRect(), c = $("#cust").getBoundingClientRect(), f = document.createElement("div");
+    f.className = "flyitem"; f.textContent = q[2]; f.style.left = r.left+"px"; f.style.top = r.top+"px"; document.body.appendChild(f);
+    requestAnimationFrame(()=>{ f.style.transform = `translate(${c.left-r.left}px,${c.top-r.top}px) scale(.6)`; f.style.opacity = "0"; });
+    setTimeout(()=>f.remove(), 800);
+    $("#shfb").className = "fbx good"; $("#shfb").innerHTML = `✔ ${esc(q[0]).replace("{}",`<mark>${w}</mark>`)}。${esc(SHOP_TIP[w]||"")}`;
+    $("#shnext").innerHTML = `<button class="btn y" data-c2="shopnext">${g.i<g.order.length-1?"下一位客人 ▶":"收舖 🎉"}</button>`;
+  } else {
+    g.tries++; g.hearts = Math.max(0, g.hearts-1); el.classList.add("bad"); SFX.bad();
+    if (g.tries===1) miss(`量詞：${q[0].replace("{}",q[1])}`, SHOP_TIP[q[1]]);
+    $(".shop .hearts").textContent = "❤️".repeat(g.hearts)+"🤍".repeat(2-g.hearts);
+    $("#shfb").className = "fbx bad";
+    if (g.hearts===0){ $("#shfb").innerHTML = `客人話：「應該係『${q[0].replace("{}",q[1])}』呀！」撳「${q[1]}」交貨。`; }
+    else $("#shfb").innerHTML = `客人皺眉：「${esc(q[0]).replace("{}",w)}？唔係呢個喎……」再揀過！`;
+  }
+}
+function shopNext(){ const g = V.g; $("#cust").classList.add("out"); setTimeout(()=>{ g.i++; g.tries = 0; g.hearts = 2; g.lock = false; g.cust = pick(CUST);
+  if (g.i >= g.order.length) finish(g.set.key, rateStars(g.ok, g.order.length), `一次答啱 ${g.ok} / ${g.order.length}，賺咗 🪙${g.coins}。`, "shop", g.set.key==="shop.a"?"a":"b"); else drawShop(true); }, 350); }
+function shopStory(){ V.g = {k:"sstory", i:0, ok:0, tries:0, used:new Set()}; drawSStory(); }
+function drawSStory(){
+  const g = V.g, S2 = SHOP_STORY.steps, s = S2[g.i];
+  const book = S2.slice(0, g.i).map(x=>`<span class="done">${esc(x[1].replace("{}",x[2]))}</span>`).join("");
+  root().innerHTML = bar(`探望表哥 ${Math.min(g.i+1,10)} / 10`,"shop") + `<div class="storybook">${book||"<span style='color:var(--ink2)'>故事由呢度開始……</span>"}</div>
+   <div class="panel"><div class="story-emo">${s[0]}</div><div class="c2-text" style="text-align:center">${esc(s[1]).replace("{}",`<span class="slot cur" id="ssl">？</span>`)}</div>
+   <div class="chips" style="justify-content:center">${SHOP_STORY.bank.map(w=>`<button class="chip2 ${g.used.has(w)?"used":""}" data-c2="ssans" data-a="${w}">${w}</button>`).join("")}</div>
+   <div class="fbx" id="ssfb"></div><div id="ssnext" style="margin-top:12px;text-align:center"></div></div>`;
+}
+function sstoryAnswer(w, el){
+  const g = V.g, s = SHOP_STORY.steps[g.i]; if (g.lock) return;
+  if (w === s[2]){ g.lock = true; if (g.tries===0) g.ok++; g.used.add(w); SFX.good(); el.classList.add("good"); const sl = $("#ssl"); sl.className = "slot ok"; sl.textContent = w;
+    $("#ssfb").className = "fbx good"; $("#ssfb").innerHTML = `✔ ${esc(SHOP_TIP[w]||"")}`;
+    $("#ssnext").innerHTML = `<button class="btn y" data-c2="ssnext">${g.i<9?"繼續故事 ▶":"故事完成 🎉"}</button>`;
+  } else { g.tries++; el.classList.add("bad"); SFX.bad(); if (g.tries===1) miss(`量詞：${s[1].replace("{}",s[2]).replace(/[，。]$/,"")}`, SHOP_TIP[s[2]]);
+    $("#ssfb").className = "fbx bad"; $("#ssfb").innerHTML = g.tries>=2 ? `答案係「${s[2]}」。${esc(SHOP_TIP[s[2]]||"")}` : `✘「一${w}」唔啱呢度，再諗吓！`; }
+}
+function sstoryNext(){ const g = V.g; g.i++; g.tries = 0; g.lock = false;
+  if (g.i >= 10){ const full = SHOP_STORY.steps.map(x=>x[1].replace("{}",x[2])).join("");
+    root().innerHTML = bar("探望表哥（完成）","shop") + `<div class="panel"><div class="story-emo">🏥💐🍎</div><div class="storybook">${esc(full)}</div>${sayBtn(full,true)} 聽返成段故事</div>`;
+    finish("shop.story", rateStars(g.ok,10), `一次答啱 ${g.ok} / 10 格。`, "shop", "story"); }
+  else drawSStory(); }
+function shopNews(){ V.g = {k:"news", checks:0, hint:false}; drawNews(); }
+function drawNews(){
+  const g = V.g;
+  const txt = SHOP_NEWS.parts.map(x=> typeof x === "number" ? `<input id="nw${x}" maxlength="2" autocomplete="off" lang="zh-Hant-HK" aria-label="第 ${x+1} 格">` : esc(x)).join("");
+  root().innerHTML = bar("讀報（不供詞）","shop") + `<div class="panel"><div style="font-size:44px">📰</div><p class="sub" style="margin:0 0 8px">把正確的量詞填在格內（工作紙不供詞，要自己寫）。</p>
+   <div class="news">${txt}</div><div class="row-btns" style="margin-top:14px"><button class="btn y" data-c2="newscheck">核對</button><button class="btn sm v" data-c2="newshint">💡 提示</button><button class="btn sm" data-c2="newsshow">👀 看答案</button></div>
+   <div class="fbx" id="nfb"></div></div>`;
+}
+function newsCheck(){
+  const g = V.g; g.checks++; let ok = 0;
+  SHOP_NEWS.a.forEach((a,i)=>{ const el = $("#nw"+i), v = el.value.trim(); const r = v === a; el.className = r ? "ok" : (v ? "bad" : ""); if (r) ok++; else if (v && g.checks===1) miss(`量詞：報章段落「${["一則新聞","一輛貨車","一陣刺痛","兩行眼淚"][i]}」`, SHOP_TIP[a]); });
+  if (ok === 4){ SFX.good(); $("#nfb").className = "fbx good"; $("#nfb").innerHTML = `✔ 全部答啱！`; finish("shop.news", g.checks===1 && !g.hint ? 3 : g.hint ? 1 : 2, `答啱 4 / 4 格。`, "shop", "news"); }
+  else { SFX.bad(); $("#nfb").className = "fbx bad"; $("#nfb").innerHTML = `答啱 ${ok} / 4 格，紅色嗰啲再諗吓。`; }
+}
+function newsHint(){ V.g.hint = true; $("#nfb").className = "fbx info"; $("#nfb").innerHTML = `💡 答案喺呢幾個入面：${shuffle(SHOP_NEWS.hintBank).join("、")}`; }
+function newsShow(){ V.g.hint = true; SHOP_NEWS.a.forEach((a,i)=>{ const el = $("#nw"+i); el.value = a; el.className = "ok"; }); $("#nfb").className = "fbx info"; $("#nfb").innerHTML = `答案：一則新聞、一輛貨車、一陣刺痛、兩行眼淚。記熟再玩一次！`; }
+
+/* ---------- ✉️ 郵差派信 ---------- */
+function hlConn(s, ks){ let h = esc(s); [...new Set(ks)].sort((a,b)=>b.length-a.length).forEach(k=>{ h = h.split(k).join(`\u0001${k}\u0002`); }); return h.replace(/\u0001/g,'<mark class="k">').replace(/\u0002/g,'</mark>'); }
+function postLearn(){
+  root().innerHTML = bar("認識 8 間屋","post") + `<div class="panel" style="margin-bottom:14px">💡 分辨複句要睇<b>一對</b>關聯詞，尤其係後半個。例如「儘管……也」屬<b>假設</b>，「儘管……可是」屬<b>轉折</b>；「既……又」屬<b>並列</b>，「既然……就」屬<b>因果</b>。</div>
+   <div class="htype">${CTYPES.map(t=>`<div class="card" style="--hc:${t.c}"><div class="h">${t.id}複句</div><div class="b"><div class="cn">${t.conn.map(c=>`<span>${c}</span>`).join("")}</div><div>${hlConn(t.ex,t.exk)} ${sayBtn(t.ex,true)}</div><div style="color:var(--ink2);margin-top:4px">${t.tip}</div></div></div>`).join("")}</div>
+   <div style="text-align:center;margin-top:16px"><button class="btn y" data-c2="stage" data-a="post:play">開始派信 ▶</button></div>`;
+}
+function postPlay(){
+  const by = {}; LETTERS.forEach((l,i)=>{ (by[l[1]] = by[l[1]]||[]).push(i); });
+  const pickL = shuffle(CTYPES.flatMap(t=>shuffle(by[t.id]).slice(0,2)));
+  V.g = {k:"post", list:pickL, i:0, ok:0, tries:0, got:{}, lock:false}; drawPost();
+}
+function drawPost(){
+  const g = V.g, L = LETTERS[g.list[g.i]];
+  root().innerHTML = bar(`派信 ${g.i+1} / ${g.list.length}`,"post") + `<div class="letter" id="letter">${esc(L[0])}</div>
+   <div class="street">${CTYPES.map(t=>`<button class="house" data-c2="house" data-a="${t.id}" style="--hc:${t.c}" id="h-${t.id}"><span class="roof"></span><span class="body"><span class="nm">${t.id}</span><span class="door"></span><span class="cnt">📬 ${g.got[t.id]||0}</span></span></button>`).join("")}</div>
+   <div class="fbx" id="pfb"></div>`;
+}
+function postAnswer(id){
+  const g = V.g; if (g.lock) return; const L = LETTERS[g.list[g.i]], T = CTYPES.find(t=>t.id===L[1]);
+  if (id === L[1]){
+    g.lock = true; if (g.tries===0) g.ok++; g.got[id] = (g.got[id]||0)+1; SFX.chest();
+    $("#letter").innerHTML = hlConn(L[0], L[2]); $("#h-"+id).classList.add("glow");
+    $("#pfb").className = "fbx good"; $("#pfb").innerHTML = `✔ 派啱！有「${L[2].join("……")}」，係<b>${id}複句</b>：${T.tip}`;
+    setTimeout(()=>{ $("#letter").classList.add("fly"); }, 700);
+    setTimeout(()=>{ g.i++; g.tries = 0; g.lock = false; if (g.i >= g.list.length) finish("post", rateStars(g.ok, g.list.length), `一次派啱 ${g.ok} / ${g.list.length} 封。`, "post", "play"); else drawPost(); }, 1900);
+  } else {
+    g.tries++; SFX.bad(); snd("汪汪", true); $("#h-"+id).classList.add("shake"); setTimeout(()=>{ const h = $("#h-"+id); if (h) h.classList.remove("shake"); }, 500);
+    if (g.tries===1) miss(`複句：${L[0]}（${L[1]}）`, `留意「${L[2].join("……")}」`);
+    $("#letter").innerHTML = hlConn(L[0], L[2]); $("#letter").classList.add("back"); setTimeout(()=>{ const l = $("#letter"); if (l) l.classList.remove("back"); }, 500);
+    $("#pfb").className = "fbx bad";
+    $("#pfb").innerHTML = g.tries>=2 ? `退件！留意黃色嘅「${L[2].join("……")}」：呢封信屬於<b>${L[1]}複句</b>，發光嗰間屋就係。` : `退件！🐶 汪汪！留意黃色嘅關聯詞，再派一次。`;
+    if (g.tries>=2) $("#h-"+L[1]).classList.add("hint");
+  }
+}
+
+/* ---------- 🌉 關聯詞搭橋 ---------- */
+function riverHTML(){ let planks = ""; for (let i=0;i<8;i++) planks += `<rect x="${122+i*20}" y="66" width="17" height="10" rx="2" fill="#C97B3A" stroke="${INK}" stroke-width="2" style="transition-delay:${i*.05}s"/>`;
+  return `<div class="river" id="river"><svg viewBox="0 0 400 130" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="130" fill="#C8EEFF"/><rect x="118" y="80" width="164" height="50" fill="#5BC8FF"/><path class="ripple" d="M130 100 q20 -6 40 0 t40 0 t40 0 t20 0" stroke="#fff" stroke-width="3" fill="none"/><path d="M0 70 H120 V130 H0Z" fill="#7CCB6B" stroke="${INK}" stroke-width="3"/><path d="M280 70 H400 V130 H280Z" fill="#7CCB6B" stroke="${INK}" stroke-width="3"/><g class="planks hide" id="planks">${planks}</g></svg><div class="walker">${catSVG()}</div></div>`; }
+function bridgePairs(){
+  const pool = shuffle(PAIRS); const chosen = []; const lefts = new Set();
+  for (const p of pool){ if (chosen.length>=6) break; if (lefts.has(p[0])) continue; lefts.add(p[0]); chosen.push(p); }
+  V.g = {k:"pairs", P:chosen, L:shuffle(chosen.map((p,i)=>i)), R:shuffle(chosen.map((p,i)=>i)), sel:null, doneL:new Set(), doneR:new Set(), err:0}; drawPairs();
+}
+function drawPairs(){
+  const g = V.g;
+  root().innerHTML = bar("關聯詞對對碰","bridge") + `<div class="panel"><p style="font-weight:800;margin:0 0 10px">先撳左邊上半個，再撳右邊配對嘅下半個。</p>
+   <div class="pairs2"><div class="col">${g.L.map(i=>`<button class="chip2 ${g.doneL.has(i)?"good":""} ${g.sel===i?"sel":""}" data-c2="pl" data-a="${i}" ${g.doneL.has(i)?"disabled":""}>${g.P[i][0]}……</button>`).join("")}</div>
+   <div class="col">${g.R.map(i=>`<button class="chip2 ${g.doneR.has(i)?"good":""}" data-c2="pr" data-a="${i}" ${g.doneR.has(i)?"disabled":""}>……${g.P[i][1]}</button>`).join("")}</div></div>
+   <div class="fbx" id="pfb2"></div></div>`;
+}
+function pairLeft(i){ V.g.sel = i; SFX.click(); drawPairs(); }
+function pairRight(j, el){
+  const g = V.g; if (g.sel === null){ $("#pfb2").className = "fbx info"; $("#pfb2").textContent = "先揀左邊嘅上半個。"; return; }
+  const L = g.P[g.sel], R = g.P[j];
+  if (L[1] === R[1]){ g.doneL.add(g.sel); g.doneR.add(j); SFX.good(); const msg = `✔ ${L[0]}……${L[1]}：${L[2]}複句`; g.sel = null; drawPairs(); $("#pfb2").className = "fbx good"; $("#pfb2").textContent = msg;
+    if (g.doneL.size === g.P.length) setTimeout(()=>finish("bridge.pairs", g.err===0?3:g.err<=2?2:1, `錯咗 ${g.err} 次。`, "bridge", "pairs"), 700); }
+  else { g.err++; SFX.bad(); el.classList.add("bad"); if (g.err) miss(`關聯詞：${L[0]}……${L[1]}`, `${L[2]}複句`); $("#pfb2").className = "fbx bad"; $("#pfb2").textContent = `✘「${L[0]}」唔係配「${R[1]}」，再試吓！`; }
+}
+function bridgeS1(){ V.g = {k:"s1", order:shuffle(BR1.q.map((_,i)=>i)), i:0, ok:0, tries:0, lock:false}; drawS1(); }
+function drawS1(){
+  const g = V.g, q = BR1.q[g.order[g.i]]; const parts = q[0].split("{}");
+  root().innerHTML = bar(`搭橋 ${g.i+1} / 5`,"bridge") + riverHTML() + `<div class="panel"><div class="c2-text">${esc(parts[0])}<span class="slot cur" id="b1a">？</span>${esc(parts[1])}<span class="slot cur" id="b1b">？</span>${esc(parts[2])}</div>
+   <div class="chips">${BR1.bank.map((p,i)=>`<button class="chip2" data-c2="b1" data-a="${i}">${p[0]}……${p[1]}</button>`).join("")}</div><div class="fbx" id="b1fb"></div><div id="b1next" style="margin-top:12px"></div></div>`;
+}
+function s1Answer(k, el){
+  const g = V.g; if (g.lock) return; const q = BR1.q[g.order[g.i]], p = BR1.bank[k];
+  $("#b1a").textContent = p[0]; $("#b1b").textContent = p[1];
+  const pl = $("#planks");
+  if (k === q[1]){ g.lock = true; if (g.tries===0) g.ok++; SFX.good(); el.classList.add("good"); $("#b1a").className = "slot ok"; $("#b1b").className = "slot ok";
+    pl.classList.remove("hide"); setTimeout(()=>$("#river").classList.add("cross"), 500);
+    $("#b1fb").className = "fbx good"; $("#b1fb").innerHTML = `✔ 橋砌好喇！「${p[0]}……${p[1]}」係${q[2]}複句。 ${sayBtn(q[0].replace("{}",p[0]).replace("{}",p[1]),true)}`;
+    $("#b1next").innerHTML = `<button class="btn y" data-c2="b1next">${g.i<4?"下一條橋 ▶":"全部橋砌好 🎉"}</button>`;
+  } else { g.tries++; SFX.bad(); el.classList.add("bad"); $("#b1a").className = "slot bad"; $("#b1b").className = "slot bad";
+    if (g.tries===1) miss(`關聯詞：${q[0].replace("{}",BR1.bank[q[1]][0]).replace("{}",BR1.bank[q[1]][1])}`, `${q[2]}複句`);
+    pl.classList.remove("hide"); setTimeout(()=>pl.classList.add("fall"), 60); snd("淙淙", true);
+    setTimeout(()=>{ pl.classList.remove("fall"); pl.classList.add("hide"); $("#b1a").className = "slot cur"; $("#b1b").className = "slot cur"; $("#b1a").textContent = "？"; $("#b1b").textContent = "？"; }, 900);
+    $("#b1fb").className = "fbx bad"; $("#b1fb").innerHTML = g.tries>=2 ? `木板跌落水！提示：呢句係<b>${q[2]}複句</b>。` : `木板跌落水！讀吓成句意思，再揀過。`; }
+}
+function s1Next(){ const g = V.g; g.i++; g.tries = 0; g.lock = false; if (g.i >= 5) finish("bridge.s1", rateStars(g.ok,5), `一次砌啱 ${g.ok} / 5 條橋。`, "bridge", "s1"); else drawS1(); }
+function bridgeS2(){ V.g = {k:"s2", i:0, ok:0, tries:0, used:new Set(), lock:false}; drawS2(); }
+function drawS2(){
+  const g = V.g;
+  const txt = BR2.parts.map(x=> typeof x === "number" ? (x < g.i ? `<span class="slot ok">${BR2.a[x]}</span>` : x===g.i ? `<span class="slot cur" id="s2cur">${x+1}</span>` : `<span class="slot">${x+1}</span>`) : esc(x)).join("");
+  root().innerHTML = bar(`上山路 ${Math.min(g.i+1,10)} / 10`,"bridge") + `<div class="mtn">${BR2.a.map((_,k)=>`<span class="${k<g.i?"on":k===g.i?"me":""}" style="height:${20+k*7}px">${k===g.i?"🐱":k+1}</span>`).join("")}<span style="border:0;background:none;font-size:26px;width:auto">🚩</span></div>
+   <div class="panel"><div class="c2-text" style="font-size:18px">${txt}</div>
+   ${g.i<10?`<div class="chips">${BR2.bank.map(w=>`<button class="chip2 ${g.used.has(w)?"used":""}" data-c2="s2" data-a="${w}">${w}</button>`).join("")}</div>`:""}
+   <div class="fbx" id="s2fb"></div></div>`;
+}
+function s2Answer(w, el){
+  const g = V.g; if (g.i >= 10) return; const a = BR2.a[g.i];
+  if (w === a){ if (g.tries===0) g.ok++; g.used.add(w); g.i++; g.tries = 0; SFX.good(); drawS2(); $("#s2fb").className = "fbx good"; $("#s2fb").textContent = `✔ 第 ${g.i} 格：「${w}」`;
+    if (g.i >= 10) setTimeout(()=>finish("bridge.s2", rateStars(g.ok,10), `一次答啱 ${g.ok} / 10 格。`, "bridge", "s2"), 700); }
+  else { g.tries++; SFX.bad(); el.classList.add("bad"); if (g.tries===1) miss(`關聯詞：高血壓短文第 ${g.i+1} 格（${a}）`, "");
+    $("#s2fb").className = "fbx bad"; $("#s2fb").textContent = g.tries>=2 ? `提示：答案係「${a}」。` : `✘ 讀吓前後句嘅意思，再揀過。`; }
+}
+function bridgeBuild(){ V.g = {k:"build", order:BUILD.map((_,i)=>i), i:0, ok:0, tries:0, slots:[null,null,null,null], tiles:null}; newBuild(); }
+function newBuild(){ const g = V.g, b = BUILD[g.order[g.i]]; g.slots = [null,null,null,null]; g.tiles = shuffle([b.c[0],b.c[1],b.cl[0],b.cl[1],b.d[0],b.d[1]].map((t,i)=>({t,i}))); g.tries = 0; g.lock = false; drawBuild(); }
+function drawBuild(res){
+  const g = V.g, b = BUILD[g.order[g.i]];
+  const slot = k => `<button class="bslot ${g.slots[k]!==null?"fill":""} ${res?(res[k]?"ok":"bad"):""}" data-c2="bslot" data-a="${k}">${g.slots[k]!==null?esc(g.tiles.find(x=>x.i===g.slots[k]).t):(k%2?"句子":"關聯詞")}</button>`;
+  root().innerHTML = bar(`砌句工場 ${g.i+1} / ${BUILD.length}`,"bridge") + `<div class="panel">
+   <p style="margin:0 0 6px"><b>原句：</b>${esc(b.src)}</p><p style="margin:0 0 6px"><b>任務：</b>加上適當的關聯詞，組成<mark>${b.type}複句</mark>。${b.ws?" <small>（工作紙原題）</small>":""}</p>
+   <div class="build-slots">${b.pre?`<span>${esc(b.pre)}</span>`:""}${slot(0)}${slot(1)}<span>，</span>${slot(2)}${slot(3)}<span>。</span></div>
+   <div class="chips">${g.tiles.map(x=>`<button class="chip2 ${g.slots.includes(x.i)?"used":""}" data-c2="btile" data-a="${x.i}" ${g.slots.includes(x.i)?"disabled":""}>${esc(x.t)}</button>`).join("")}</div>
+   <div class="row-btns" style="margin-top:12px"><button class="btn y" data-c2="bcheck" ${g.slots.includes(null)?"disabled":""}>核對</button><button class="btn sm" data-c2="bclear">↺ 清除</button></div>
+   <div class="fbx" id="bfb"></div><div id="bnext" style="margin-top:12px"></div></div>`;
+}
+function buildTile(i){ const g = V.g; if (g.lock) return; const k = g.slots.indexOf(null); if (k<0) return; g.slots[k] = i; SFX.click(); drawBuild(); }
+function buildSlot(k){ const g = V.g; if (g.lock) return; g.slots[k] = null; drawBuild(); }
+function buildCheck(){
+  const g = V.g, b = BUILD[g.order[g.i]]; const t = k => g.slots[k]===null ? null : g.tiles.find(x=>x.i===g.slots[k]).t;
+  const res = [t(0)===b.c[0], t(1)===b.cl[0], t(2)===b.c[1], t(3)===b.cl[1]];
+  const full = b.pre + b.c[0] + b.cl[0] + "，" + b.c[1] + b.cl[1] + "。";
+  if (res.every(Boolean)){ g.lock = true; if (g.tries===0) g.ok++; SFX.good(); drawBuild(res);
+    $("#bfb").className = "fbx good"; $("#bfb").innerHTML = `✔ ${esc(full)} ${sayBtn(full,true)}`;
+    $("#bnext").innerHTML = `<button class="btn y" data-c2="bnext">${g.i<BUILD.length-1?"下一句 ▶":"完成 🎉"}</button>`; }
+  else { g.tries++; SFX.bad(); drawBuild(res); if (g.tries===1) miss(`關聯詞：砌${b.type}複句（${b.c.join("……")}）`, full);
+    $("#bfb").className = "fbx bad"; $("#bfb").innerHTML = g.tries>=2 ? `提示：${b.type}複句用「${b.c[0]}……${b.c[1]}」，紅色格要改。` : `紅色格唔啱，撳佢清除再揀過。`; }
+}
+function buildNext(){ const g = V.g; g.i++; if (g.i >= BUILD.length) finish("bridge.build", rateStars(g.ok, BUILD.length), `一次砌啱 ${g.ok} / ${BUILD.length} 句。`, "bridge", "build"); else newBuild(); }
+
+/* ---------- 🔨 錯字打地鼠 ---------- */
+let moleTimer = null;
+function stopMole(){ if (moleTimer){ clearInterval(moleTimer); moleTimer = null; } }
+function moleLearn(){
+  root().innerHTML = bar("錯字簿","mole") + `<p class="sub">每題都有一個別字。紅色係錯字，綠色係正確寫法。記住部首就唔易寫錯！</p>
+   <div class="mlist2">${MOLE.map((m,i)=>{ const k = m.s.indexOf(m.w); return `<div class="it" ${m.hot?`style="border-color:var(--bad)"`:""}><div class="s">${m.ex?"例：":i+"."} ${esc(m.s.slice(0,k))}<span class="x">${m.w}</span><span class="ok">（${m.a}）</span>${esc(m.s.slice(k+1))}</div><div>📌 ${esc(m.t)}</div>${m.hot?`<div style="color:var(--bad);font-weight:800">⚠️ 工作紙上圈咗呢題，要特別留意</div>`:""}</div>`; }).join("")}</div>
+   <div style="text-align:center;margin-top:16px"><button class="btn y" data-c2="stage" data-a="mole:play">去打地鼠 ▶</button></div>`;
+}
+function molePlay(){
+  ensure(); stopMole();
+  const items = MOLE.map((m,i)=>i).filter(i=>!MOLE[i].ex);
+  const missed = items.filter(i=>S.c2.m[`錯字：${MOLE[i].s.replace(MOLE[i].w,"（"+MOLE[i].a+"）")}`]);
+  const pri = [...new Set([...shuffle(items.filter(i=>MOLE[i].hot)), ...shuffle(missed)])];
+  const rest = shuffle(items.filter(i=>!pri.includes(i)));
+  const order = shuffle([...pri.slice(0,5), ...rest].slice(0,10));
+  V.g = {k:"mole", order, i:0, step:1, score:0, combo:0, perfect:0, err:0, holes:Array(9).fill(null), lock:false};
+  drawMole(); startMole();
+}
+function sentHTML(m, step){ const k = m.s.indexOf(m.w); return esc(m.s.slice(0,k)) + (step===1 ? esc(m.w) : step===2 ? `<span class="ring">${m.w}</span>` : `<span class="x">${m.w}</span><span class="ok">${m.a}</span>`) + esc(m.s.slice(k+1)); }
+function drawMole(){
+  const g = V.g, m = MOLE[g.order[g.i]];
+  root().innerHTML = bar(`打地鼠 ${g.i+1} / ${g.order.length}`,"mole") + `<div class="mole-top"><span class="chip">⭐ ${g.score} 分</span><span class="chip">🔥 連擊 ${g.combo}</span><span class="sp" style="flex:1"></span>
+    <button class="chip tog ${S.c2.slow?"":"off"}" data-c2="mslow">🐢 慢速${S.c2.slow?"：開":"：關"}</button></div>
+   <div class="mole-sent" id="msent">${sentHTML(m, g.step)}</div>
+   <p class="step" id="mstep">${g.step===1?"第一步：句子入面有一個別字，打中舉住錯字嘅地鼠！🔨":g.step===2?`第二步：「${m.w}」應該寫成邊個字？打中舉住正確字嘅地鼠！`:"✔ 答啱！"}</p>
+   <div class="field" id="field">${g.holes.map((_,k)=>`<div class="hole" id="hole${k}"><button class="mole" id="mole${k}" data-c2="whack" data-a="${k}"><span class="sign" id="sign${k}"></span>${moleSVG}</button></div>`).join("")}</div>
+   <div class="fbx" id="mfb"></div><div id="mnext" style="margin-top:12px"></div>`;
+}
+function startMole(){ stopMole(); moleTimer = setInterval(moleTick, S.c2.slow ? 950 : 650); }
+function moleTick(){
+  if (current !== "ch2" || !V.g || V.g.k !== "mole" || !$("#field")){ stopMole(); return; }
+  const g = V.g; if (g.step === 3) return; const m = MOLE[g.order[g.i]];
+  const up = g.holes.filter(Boolean).length; if (up >= 3) return;
+  const free = g.holes.map((h,k)=>h?null:k).filter(k=>k!==null); if (!free.length) return;
+  const k = pick(free); let ch;
+  if (g.step === 1){ const others = [...new Set(chars(m.s).filter(c=>c!==m.w && !/[，。！？、；：「」（）]/.test(c)))]; ch = (Math.random()<.4 && !g.holes.includes(m.w)) ? m.w : pick(others); }
+  else { const pool = [m.a, ...chars(m.d)]; ch = (Math.random()<.4 && !g.holes.includes(m.a)) ? m.a : pick(chars(m.d)); if (g.holes.includes(ch)) ch = pick(pool); }
+  g.holes[k] = ch; const el = $("#mole"+k), sg = $("#sign"+k); if (!el) return; sg.textContent = ch; el.classList.add("up");
+  const stay = S.c2.slow ? 2300 : 1500;
+  setTimeout(()=>{ if (V.g === g && g.holes[k] === ch){ g.holes[k] = null; const e = $("#mole"+k); if (e) e.classList.remove("up"); } }, stay);
+}
+function pow(k, txt){ const h = $("#hole"+k); if (!h) return; const p = document.createElement("div"); p.className = "pow"; p.textContent = txt; p.style.left = "20%"; p.style.top = "10%"; h.appendChild(p); setTimeout(()=>p.remove(), 900); }
+function whack(k){
+  const g = V.g; if (!g || g.k !== "mole" || g.step === 3) return; const ch = g.holes[k]; if (!ch) return; const m = MOLE[g.order[g.i]];
+  const el = $("#mole"+k); el.classList.add("hit"); setTimeout(()=>el.classList.remove("hit"), 350);
+  const target = g.step === 1 ? m.w : m.a;
+  if (ch === target){
+    g.combo++; g.score += 100 + g.combo*10; snd("砰", true); pow(k, g.step===1?"砰！":"啱晒！");
+    g.holes = Array(9).fill(null); $$(".mole").forEach(e=>e.classList.remove("up"));
+    if (g.step === 1){ g.step = 2; $("#msent").innerHTML = sentHTML(m, 2); $("#mstep").textContent = `第二步：「${m.w}」應該寫成邊個字？打中舉住正確字嘅地鼠！`; }
+    else { g.step = 3; if (!g.miss) g.perfect++; $("#msent").innerHTML = sentHTML(m, 3); $("#mstep").textContent = "✔ 答啱！";
+      $("#mfb").className = "fbx good"; $("#mfb").innerHTML = `📌 ${esc(m.t)}`;
+      $("#mnext").innerHTML = `<button class="btn y" data-c2="mnext">${g.i<g.order.length-1?"下一題 ▶":"完成 🎉"}</button>`; }
+  } else {
+    g.combo = 0; g.err++; SFX.bad(); pow(k, "唔係呢個！");
+    if (!g.miss){ g.miss = true; miss(`錯字：${m.s.replace(m.w,"（"+m.a+"）")}`, m.t); }
+    g.holes[k] = null; el.classList.remove("up");
+    $("#mfb").className = "fbx bad"; $("#mfb").textContent = g.step===1 ? `「${ch}」冇寫錯，再搵吓邊個字唔啱！` : `「${ch}」唔啱，諗吓部首同意思！`;
+  }
+}
+function moleNext(){ const g = V.g; g.i++; g.step = 1; g.miss = false; g.holes = Array(9).fill(null);
+  if (g.i >= g.order.length){ stopMole(); finish("mole", rateStars(g.perfect, g.order.length), `完美答啱 ${g.perfect} / ${g.order.length} 題，得分 ${g.score}。`, "mole", "play"); }
+  else drawMole(); }
+
+/* ---------- 路由 ---------- */
+function openStage(arg){
+  closeModal(); stopMole(); const [a, k] = arg.split(":"); V.view = a;
+  const f = {sound:{learn:soundLearn,story1:()=>soundStory(0),story2:()=>soundStory(1),match:soundMatch,quiz:soundQuiz},
+    shop:{catalog:shopCatalog,a:()=>shopRound(SHOP_A),b:()=>shopRound(SHOP_B),story:shopStory,news:shopNews},
+    post:{learn:postLearn,play:postPlay}, bridge:{pairs:bridgePairs,s1:bridgeS1,s2:bridgeS2,build:bridgeBuild}, mole:{learn:moleLearn,play:molePlay}}[a][k];
+  if (f){ f(); window.scrollTo(0,0); }
+}
+function render(){ stopMole(); V.view = "map"; V.g = null; renderMap(); }
+const ACT = {
+  map(){ closeModal(); render(); window.scrollTo(0,0); },
+  intro(a){ renderIntro(+a||0); },
+  introdone(){ ensure(); S.c2.intro = true; save(); SFX.good(); renderMap(); },
+  toplan(){ const p = $("#c2plan"); if (p) p.scrollIntoView({behavior:"smooth"}); },
+  area(a){ closeModal(); stopMole(); V.view = a; V.g = null; renderArea(a); window.scrollTo(0,0); },
+  stage(a){ openStage(a); },
+  tick(a){ ensure(); S.c2.plan[a] = !S.c2.plan[a]; save(); SFX.click(); const y = window.scrollY; renderMap(); window.scrollTo(0,y); },
+  plango(a){ if (a.startsWith("c2:")) ACT.area(a.slice(3)); else if (a==="ch2") render(); else go(a); },
+  snd(a){ snd(a, false); },
+  sans(a){ storyAnswer(a); },
+  mflip(a){ matchFlip(+a); },
+  qans(a, el){ quizAnswer(a, el); }, qnext(){ quizNext(); },
+  shopans(a, el){ shopAnswer(a, el); }, shopnext(){ shopNext(); },
+  ssans(a, el){ sstoryAnswer(a, el); }, ssnext(){ sstoryNext(); },
+  newscheck(){ newsCheck(); }, newshint(){ newsHint(); }, newsshow(){ newsShow(); },
+  house(a){ postAnswer(a); },
+  pl(a){ pairLeft(+a); }, pr(a, el){ pairRight(+a, el); },
+  b1(a, el){ s1Answer(+a, el); }, b1next(){ s1Next(); },
+  s2(a, el){ s2Answer(a, el); },
+  btile(a){ buildTile(+a); }, bslot(a){ buildSlot(+a); }, bcheck(){ buildCheck(); }, bclear(){ if (V.g.lock) return; V.g.slots = [null,null,null,null]; drawBuild(); }, bnext(){ buildNext(); },
+  whack(a){ whack(+a); }, mnext(){ moleNext(); },
+  mslow(){ ensure(); S.c2.slow = !S.c2.slow; save(); const b = $("[data-c2='mslow']"); if (b){ b.classList.toggle("off", !S.c2.slow); b.textContent = "🐢 慢速"+(S.c2.slow?"：開":"：關"); } startMole(); }
+};
+document.addEventListener("click", e=>{
+  const b = e.target.closest("[data-c2]"); if (!b || b.disabled) return;
+  const f = ACT[b.dataset.c2]; if (!f) return; e.preventDefault(); f(b.dataset.a || "", b);
+});
+document.addEventListener("pointerdown", e=>{ const b = e.target.closest("[data-c2='whack']"); if (b && b.classList.contains("up")){ e.preventDefault(); whack(+b.dataset.a); b.dataset.done = "1"; } }, {passive:false});
+RENDER.ch2 = render;
+
+/* 錯題簿＋成績表整合 */
+function reportHTML(){
+  ensure(); const ms = Object.entries(S.c2.m).sort((a,b)=>b[1].n-a[1].n);
+  return `<div class="panel" style="margin-bottom:20px"><h4 style="margin:0 0 10px;font-size:20px">🏰 第二章：語文王國修復進度</h4>
+    <div class="rgrid" style="margin-bottom:12px">${AREAS.map(a=>`<div><div class="rline"><span>${a.ic} ${a.name}（${a.topic}）</span><span>${pct(a)}%</span></div><div class="mbar" style="--c:${a.c}"><i style="width:${pct(a)}%"></i></div>
+      <small>${STAGES[a.id].filter(s=>s[3]).map(s=>`${s[1]} ${"★".repeat(st(s[3]))||"—"}`).join("　")}</small></div>`).join("")}</div>
+    <h4 style="margin:12px 0 8px">📒 第二章錯題簿</h4>
+    ${ms.length ? `<div class="mlist">${ms.map(([k,o])=>`<div class="mitem" style="grid-template-columns:1fr auto"><div><span style="font-weight:800">${esc(k)}</span>${o.t?`<small>${esc(o.t)}</small>`:""}</div><div class="cnt">錯 ${o.n} 次</div></div>`).join("")}</div>
+      <button class="btn sm" style="margin-top:10px" data-c2="clr2">清空第二章錯題簿</button>` : `<p style="margin:0">暫時未有錯題。</p>`}</div>`;
+}
+ACT.clr2 = ()=>askConfirm("清空第二章錯題簿？", "清空", ()=>{ ensure(); S.c2.m = {}; save(); RENDER.report(); });
+const _rep = RENDER.report;
+RENDER.report = function(){ _rep(); const btns = $("#reportBody > div:last-child"); if (btns) btns.insertAdjacentHTML("beforebegin", reportHTML()); };
+const _home = RENDER.home;
+RENDER.home = function(){ _home(); ensure(); const done = AREAS.filter(a=>pct(a)===100).length; const nextI = PLAN.findIndex((_,i)=>!S.c2.plan[i]);
+  $("#map").insertAdjacentHTML("afterbegin", `<button class="spot c2spot" data-go="ch2" style="--c:#fff"><span class="ic" style="font-size:40px">🏰</span><span><b>第二章：亂字魔大鬧語文王國</b>量詞、擬聲詞、複句、關聯詞、同音形近字：五個地方，五種玩法。<span class="prog">已修復 ${done} / 5${nextI>=0?`　📅 今日：第 ${nextI+1} 日`:""}</span></span></button>`); };
+return {ensure, SYN, snd, stopMole, AREAS, pct};
+})();
 
 /* init */
 $("#logoCat").innerHTML = `<svg viewBox="40 20 120 130" width="42" height="42" aria-hidden="true"><path d="M52 80 L44 26 L92 58 Z" fill="${INK}" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><path d="M148 80 L156 26 L108 58 Z" fill="#fff" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><ellipse cx="100" cy="100" rx="60" ry="50" fill="#fff" stroke="${INK}" stroke-width="6"/><path d="M100 54 C108 64 106 72 100 72 C94 72 92 64 100 54Z" fill="${INK}"/><ellipse cx="78" cy="100" rx="7" ry="10" fill="${INK}"/><ellipse cx="122" cy="100" rx="7" ry="10" fill="${INK}"/><path d="M90 114 Q95 121 100 114 Q105 121 110 114" fill="none" stroke="${INK}" stroke-width="4" stroke-linecap="round"/></svg>`;
